@@ -4,62 +4,66 @@ on:
     - cron: "30 5,17 * * *"
 
 jobs:
-  mirror_tags:
-    name: Tag ${{ matrix.repo }}
-    strategy:
-      fail-fast: false
-      matrix:
-        repo:
-          # Please keep this sorted.
-          - astro/deadnix
-          - cachix/nixpkgs-python
-          - figsoda/utf8
-          - hyprwm/Hyprland
-          - infinisil/nixus
-          - kamadorueda/alejandra
-          - kamadorueda/nixel
-          - Mic92/nix-update
-          - Mic92/nixos-shell
-          - Mic92/nixpkgs-review
-          - Mic92/ssh-to-age
-          - nerdypepper/statix
-          - nix-community/disko
-          - nix-community/lanzaboote
-          - nix-community/nh
-          - nix-community/nix-direnv
-          - nix-community/nix-eval-jobs
-          - nix-community/nixd
-          - nix-community/nixpkgs-fmt
-          - NixOS/nix
-          - vlinkz/nix-software-center
-          - zhaofengli/colmena
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write # In order to upload artifacts to GitHub releases
-      id-token: write # In order to request a JWT for AWS auth
-    steps:
-      - uses: DeterminateSystems/nix-installer-action@main
-      - uses: DeterminateSystems/flakehub-cache-action@main
-      - uses: oprypin/find-latest-tag@v1
-        with:
-          repository: ${{ matrix.repo }}
-        id: tagfetch
-
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          repository: ${{ matrix.repo }}
-          ref: ${{ steps.tagfetch.outputs.tag }}
-
-      - name: Release to FlakeHub
-        uses: DeterminateSystems/flakehub-push@main
-        with:
-          mirror: true
-          visibility: public
-          repository: ${{ matrix.repo }}
-          tag: ${{ steps.tagfetch.outputs.tag }}
-          log-directives: flakehub_push=trace
-          logger: pretty
+  # mirror_tags:
+  #   name: Tag ${{ matrix.repo }}
+  #   strategy:
+  #     fail-fast: false
+  #     matrix:
+  #       repo:
+  #         # Please keep this sorted.
+  #         - astro/deadnix
+  #         - cachix/nixpkgs-python
+  #         - figsoda/utf8
+  #         - hyprwm/Hyprland
+  #         - infinisil/nixus
+  #         - kamadorueda/alejandra
+  #         - kamadorueda/nixel
+  #         - Mic92/nix-update
+  #         - Mic92/nixos-shell
+  #         - Mic92/nixpkgs-review
+  #         - Mic92/ssh-to-age
+  #         - nerdypepper/statix
+  #         - nix-community/disko
+  #         - nix-community/lanzaboote
+  #         - nix-community/nh
+  #         - nix-community/nix-direnv
+  #         - nix-community/nix-eval-jobs
+  #         - nix-community/nixd
+  #         - nix-community/nixpkgs-fmt
+  #         - NixOS/nix
+  #         - vlinkz/nix-software-center
+  #         - zhaofengli/colmena
+  #   runs-on: ubuntu-latest
+  #   permissions:
+  #     contents: write # In order to upload artifacts to GitHub releases
+  #     id-token: write # In order to request a JWT for AWS auth
+  #   steps:
+  #     - uses: DeterminateSystems/nix-installer-action@main
+  #     - uses: DeterminateSystems/flakehub-cache-action@main
+  #     - uses: oprypin/find-latest-tag@v1
+  #       with:
+  #         repository: ${{ matrix.repo }}
+  #       id: tagfetch
+  #
+  #     - name: Checkout
+  #       uses: actions/checkout@v4
+  #       with:
+  #         repository: ${{ matrix.repo }}
+  #         ref: ${{ steps.tagfetch.outputs.tag }}
+  #
+  #     - name: Set FlakeHub name
+  #       id: flake-name
+  #       run: echo "name=jhofer-cloud/$(echo '${{ matrix.repo }}' | tr '/' '-')" >> $GITHUB_OUTPUT
+  #
+  #     - name: Release to FlakeHub
+  #       uses: DeterminateSystems/flakehub-push@main
+  #       with:
+  #         name: ${{ steps.flake-name.outputs.name }}
+  #         visibility: public
+  #         repository: jhofer-cloud/${{ matrix.repo }}
+  #         tag: ${{ steps.tagfetch.outputs.tag }}
+  #         log-directives: flakehub_push=trace
+  #         logger: pretty
 
   rolling:
     name: Branch ${{ matrix.repo }}#${{ matrix.branch }}
@@ -68,97 +72,101 @@ jobs:
       matrix:
         include:
           # Please keep this sorted.
-          - repo: cachix/git-hooks.nix
-            branch: master
-          - repo: cole-h/nixos-config
-            branch: darwin
-          - repo: nix-community/stylix
-            branch: master
-          - repo: DeterminateSystems/nix-netboot-serve
+          # - repo: cachix/git-hooks.nix
+          #   branch: master
+          # - repo: cole-h/nixos-config
+          #   branch: darwin
+          - repo: frostplexx/nixkit
             branch: main
-          - repo: Gerschtli/nix-formatter-pack
-            branch: master
-          - repo: helix-editor/helix
-            branch: master
-          - repo: hercules-ci/flake-parts
-            branch: main
-          - repo: Mic92/sops-nix
-            branch: master
-          - repo: nix-community/home-manager
-            branch: master
-            too-big: true
-            run-on: UbuntuLatest32Cores128G
-          - repo: nix-community/impermanence
-            branch: master
-          - repo: nix-community/naersk
-            branch: master
-          - repo: nix-community/nixos-generators
-            branch: master
-          - repo: nix-community/poetry2nix
-            branch: master
-          - repo: nix-darwin/nix-darwin
-            branch: master
-          - repo: nixified-ai/flake
-            branch: master
+          # - repo: nix-community/stylix
+          #   branch: master
+          # - repo: DeterminateSystems/nix-netboot-serve
+          #   branch: main
+          # - repo: Gerschtli/nix-formatter-pack
+          #   branch: master
+          # - repo: helix-editor/helix
+          #   branch: master
+          # - repo: hercules-ci/flake-parts
+          #   branch: main
+          # - repo: Mic92/sops-nix
+          #   branch: master
+          # - repo: nix-community/home-manager
+          #   branch: master
+          #   too-big: true
+          #   run-on: UbuntuLatest32Cores128G
+          # - repo: nix-community/impermanence
+          #   branch: master
+          # - repo: nix-community/naersk
+          #   branch: master
+          # - repo: nix-community/nixos-generators
+          #   branch: master
+          # - repo: nix-community/poetry2nix
+          #   branch: master
+          # - repo: nix-darwin/nix-darwin
+          #   branch: master
+          # - repo: nixified-ai/flake
+          #   branch: master
+          # - repo: NixOS/nixpkgs
+          #   branch: nixos-unstable
           - repo: NixOS/nixpkgs
-            branch: nixos-unstable
-          - repo: NixOS/nixos-hardware
-            branch: master
-          - repo: numtide/flake-utils
-            branch: main
-          - repo: oxalica/rust-overlay
-            branch: master
-          - repo: ryantm/nixpkgs-update
-            branch: main
-          - repo: zhaofengli/attic
-            branch: main
+            branch: nixpkgs-unstable
+          # - repo: NixOS/nixos-hardware
+          #   branch: master
+          # - repo: numtide/flake-utils
+          #   branch: main
+          # - repo: oxalica/rust-overlay
+          #   branch: master
+          # - repo: ryantm/nixpkgs-update
+          #   branch: main
+          # - repo: zhaofengli/attic
+          #   branch: main
           # Python
-          - repo: pyproject-nix/pyproject.nix
-            branch: master
-          - repo: pyproject-nix/uv2nix
-            branch: master
-          - repo: pyproject-nix/build-system-pkgs
-            branch: master
+          # - repo: pyproject-nix/pyproject.nix
+          #   branch: master
+          # - repo: pyproject-nix/uv2nix
+          #   branch: master
+          # - repo: pyproject-nix/build-system-pkgs
+          #   branch: master
 
           # Pulled out of the alpha-sorted list, since they're handled special
           # in the rapid, fast-acting update handling.
-          - repo: NixOS/nixpkgs
-            branch: nixos-24.05
-            rolling-minor: 2405
-
-          - repo: NixOS/nixpkgs
-            branch: nixos-24.11
-            rolling-minor: 2411
-
-          - repo: NixOS/nixpkgs
-            branch: nixos-25.05
-            rolling-minor: 2505
-
-          - repo: nix-darwin/nix-darwin
-            branch: nix-darwin-24.11
-            rolling-minor: 2411
-
-          - repo: nix-darwin/nix-darwin
-            branch: nix-darwin-25.05
-            rolling-minor: 2505
-
-          - repo: nix-community/home-manager
-            branch: release-24.05
-            rolling-minor: 2405
-            too-big: true
-            run-on: UbuntuLatest32Cores128G
-
-          - repo: nix-community/home-manager
-            branch: release-24.11
-            rolling-minor: 2411
-            too-big: true
-            run-on: UbuntuLatest32Cores128G
-
-          - repo: nix-community/home-manager
-            branch: release-25.05
-            rolling-minor: 2505
-            too-big: true
-            run-on: UbuntuLatest32Cores128G
+          # - repo: NixOS/nixpkgs
+          #   branch: nixos-24.05
+          #   rolling-minor: 2405
+          #
+          # - repo: NixOS/nixpkgs
+          #   branch: nixos-24.11
+          #   rolling-minor: 2411
+          #
+          # - repo: NixOS/nixpkgs
+          #   branch: nixos-25.05
+          #   rolling-minor: 2505
+          #
+          # - repo: nix-darwin/nix-darwin
+          #   branch: nix-darwin-24.11
+          #   rolling-minor: 2411
+          #
+          # - repo: nix-darwin/nix-darwin
+          #   branch: nix-darwin-25.05
+          #   rolling-minor: 2505
+          #
+          # - repo: nix-community/home-manager
+          #   branch: release-24.05
+          #   rolling-minor: 2405
+          #   too-big: true
+          #   run-on: UbuntuLatest32Cores128G
+          #
+          # - repo: nix-community/home-manager
+          #   branch: release-24.11
+          #   rolling-minor: 2411
+          #   too-big: true
+          #   run-on: UbuntuLatest32Cores128G
+          #
+          # - repo: nix-community/home-manager
+          #   branch: release-25.05
+          #   rolling-minor: 2505
+          #   too-big: true
+          #   run-on: UbuntuLatest32Cores128G
 
     runs-on: ${{ matrix.run-on || 'ubuntu-latest' }}
     permissions:
@@ -174,10 +182,14 @@ jobs:
           repository: ${{ matrix.repo }}
           ref: ${{ matrix.branch }}
 
+      - name: Set FlakeHub name
+        id: flake-name
+        run: echo "name=jhofer-cloud/$(echo '${{ matrix.repo }}' | tr '/' '-')" >> $GITHUB_OUTPUT
+
       - name: Release to FlakeHub
         uses: DeterminateSystems/flakehub-push@main
         with:
-          mirror: true
+          name: ${{ steps.flake-name.outputs.name }}
           visibility: public
           repository: ${{ matrix.repo }}
           rolling: true
