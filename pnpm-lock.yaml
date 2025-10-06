@@ -21,7 +21,7 @@ devDependencies:
     version: 4.3.0(prettier@3.6.2)
   '@types/node':
     specifier: ^24.0.0
-    version: 24.3.1
+    version: 24.7.0
   '@typescript-eslint/eslint-plugin':
     specifier: ^7.18.0
     version: 7.18.0(@typescript-eslint/parser@7.18.0)(eslint@8.57.1)(typescript@5.9.2)
@@ -54,7 +54,7 @@ devDependencies:
     version: 5.9.2
   vitest:
     specifier: ^3.2.4
-    version: 3.2.4(@types/node@24.3.1)
+    version: 3.2.4(@types/node@24.7.0)
 
 packages:
 
@@ -1161,10 +1161,10 @@ packages:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
     dev: true
 
-  /@types/node@24.3.1:
-    resolution: {integrity: sha512-3vXmQDXy+woz+gnrTvuvNrPzekOi+Ds0ReMxw0LzBiK3a+1k0kQn9f2NWk+lgD4rJehFUmYy2gMhJ2ZI+7YP9g==}
+  /@types/node@24.7.0:
+    resolution: {integrity: sha512-IbKooQVqUBrlzWTi79E8Fw78l8k1RNtlDDNWsFZs7XonuQSJ8oNYfEeclhprUldXISRMLzBpILuKgPlIxm+/Yw==}
     dependencies:
-      undici-types: 7.10.0
+      undici-types: 7.14.0
     dev: true
 
   /@typescript-eslint/eslint-plugin@7.18.0(@typescript-eslint/parser@7.18.0)(eslint@8.57.1)(typescript@5.9.2):
@@ -1492,7 +1492,7 @@ packages:
       '@vitest/spy': 3.2.4
       estree-walker: 3.0.3
       magic-string: 0.30.19
-      vite: 7.1.5(@types/node@24.3.1)
+      vite: 7.1.5(@types/node@24.7.0)
     dev: true
 
   /@vitest/pretty-format@3.2.4:
@@ -4364,8 +4364,8 @@ packages:
       which-boxed-primitive: 1.1.1
     dev: true
 
-  /undici-types@7.10.0:
-    resolution: {integrity: sha512-t5Fy/nfn+14LuOc2KNYg75vZqClpAiqscVvMygNnlsHBFpSXdJaYtXMcdNLpl/Qvc3P2cB3s6lOV51nqsFq4ag==}
+  /undici-types@7.14.0:
+    resolution: {integrity: sha512-QQiYxHuyZ9gQUIrmPo3IA+hUl4KYk8uSA7cHrcKd/l3p1OTpZcM0Tbp9x7FAtXdAYhlasd60ncPpgu6ihG6TOA==}
     dev: true
 
   /undici@5.29.0:
@@ -4428,7 +4428,7 @@ packages:
     hasBin: true
     dev: false
 
-  /vite-node@3.2.4(@types/node@24.3.1):
+  /vite-node@3.2.4(@types/node@24.7.0):
     resolution: {integrity: sha512-EbKSKh+bh1E1IFxeO0pg1n4dvoOTt0UDiXMd/qn++r98+jPO1xtJilvXldeuQ8giIB5IkpjCgMleHMNEsGH6pg==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     hasBin: true
@@ -4437,7 +4437,7 @@ packages:
       debug: 4.4.1
       es-module-lexer: 1.7.0
       pathe: 2.0.3
-      vite: 7.1.5(@types/node@24.3.1)
+      vite: 7.1.5(@types/node@24.7.0)
     transitivePeerDependencies:
       - '@types/node'
       - jiti
@@ -4453,7 +4453,7 @@ packages:
       - yaml
     dev: true
 
-  /vite@7.1.5(@types/node@24.3.1):
+  /vite@7.1.5(@types/node@24.7.0):
     resolution: {integrity: sha512-4cKBO9wR75r0BeIWWWId9XK9Lj6La5X846Zw9dFfzMRw38IlTk2iCcUt6hsyiDRcPidc55ZParFYDXi0nXOeLQ==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
@@ -4493,7 +4493,7 @@ packages:
       yaml:
         optional: true
     dependencies:
-      '@types/node': 24.3.1
+      '@types/node': 24.7.0
       esbuild: 0.25.9
       fdir: 6.5.0(picomatch@4.0.3)
       picomatch: 4.0.3
@@ -4504,7 +4504,7 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /vitest@3.2.4(@types/node@24.3.1):
+  /vitest@3.2.4(@types/node@24.7.0):
     resolution: {integrity: sha512-LUCP5ev3GURDysTWiP47wRRUpLKMOfPh+yKTx3kVIEiu5KOMeqzpnYNsKyOoVrULivR8tLcks4+lga33Whn90A==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     hasBin: true
@@ -4533,7 +4533,7 @@ packages:
         optional: true
     dependencies:
       '@types/chai': 5.2.2
-      '@types/node': 24.3.1
+      '@types/node': 24.7.0
       '@vitest/expect': 3.2.4
       '@vitest/mocker': 3.2.4(vite@7.1.5)
       '@vitest/pretty-format': 3.2.4
@@ -4553,8 +4553,8 @@ packages:
       tinyglobby: 0.2.15
       tinypool: 1.1.1
       tinyrainbow: 2.0.0
-      vite: 7.1.5(@types/node@24.3.1)
-      vite-node: 3.2.4(@types/node@24.3.1)
+      vite: 7.1.5(@types/node@24.7.0)
+      vite-node: 3.2.4(@types/node@24.7.0)
       why-is-node-running: 2.3.0
     transitivePeerDependencies:
       - jiti
