@@ -2,36 +2,31 @@
 {
   description = "Development environment for the flakehub-mirror Action";
 
-  inputs.nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0";
+  inputs.nixpkgs.url = "https://flakehub.com/f/JHOFER-Cloud/NixOS-nixpkgs/0.1.tar.gz";
 
-  outputs =
-    { self, ... }@inputs:
-    let
-      supportedSystems = [
-        "x86_64-linux"
-        "aarch64-darwin"
-      ];
-      forEachSupportedSystem =
-        f:
-        inputs.nixpkgs.lib.genAttrs supportedSystems (
-          system: f { pkgs = import inputs.nixpkgs { inherit system; }; }
-        );
-    in
-    {
-      formatter = forEachSupportedSystem ({ pkgs }: pkgs.nixfmt-rfc-style);
-
-      devShells = forEachSupportedSystem (
-        { pkgs }:
-        {
-          default = pkgs.mkShell {
-            packages = with pkgs; [
-              nodejs_latest
-              nodePackages_latest.pnpm
-              nodePackages_latest.typescript-language-server
-              self.formatter.${system}
-            ];
-          };
-        }
+  outputs = {self, ...} @ inputs: let
+    supportedSystems = [
+      "x86_64-linux"
+      "aarch64-darwin"
+    ];
+    forEachSupportedSystem = f:
+      inputs.nixpkgs.lib.genAttrs supportedSystems (
+        system: f {pkgs = import inputs.nixpkgs {inherit system;};}
       );
-    };
+  in {
+    formatter = forEachSupportedSystem ({pkgs}: pkgs.nixfmt-rfc-style);
+
+    devShells = forEachSupportedSystem (
+      {pkgs}: {
+        default = pkgs.mkShell {
+          packages = with pkgs; [
+            nodejs_latest
+            nodePackages_latest.pnpm
+            nodePackages_latest.typescript-language-server
+            self.formatter.${system}
+          ];
+        };
+      }
+    );
+  };
 }
