@@ -8,5 +8,11 @@
     "automerge": true,
     "schedule": ["at any time"]
   },
-  "automergeType": "pr"
+  "automergeType": "pr",
+  "packageRules": [
+    {
+      "groupName": "ESLint packages",
+      "matchPackagePatterns": ["^eslint", "@typescript-eslint"]
+    }
+  ]
 }
