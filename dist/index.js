@@ -1757,7 +1757,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.downloadCacheStorageSDK = exports.downloadCacheHttpClientConcurrent = exports.downloadCacheHttpClient = exports.DownloadProgress = void 0;
 const core = __importStar(__nccwpck_require__(16966));
 const http_client_1 = __nccwpck_require__(21966);
-const storage_blob_1 = __nccwpck_require__(46465);
+const storage_blob_1 = __nccwpck_require__(32917);
 const buffer = __importStar(__nccwpck_require__(20181));
 const fs = __importStar(__nccwpck_require__(79896));
 const stream = __importStar(__nccwpck_require__(2203));
@@ -2904,7 +2904,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.uploadCacheArchiveSDK = exports.UploadProgress = void 0;
 const core = __importStar(__nccwpck_require__(16966));
-const storage_blob_1 = __nccwpck_require__(46465);
+const storage_blob_1 = __nccwpck_require__(32917);
 const errors_1 = __nccwpck_require__(16209);
 /**
  * Class for tracking the upload state and displaying stats.
@@ -45294,7 +45294,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.deserializationPolicyName = void 0;
 exports.deserializationPolicy = deserializationPolicy;
 const interfaces_js_1 = __nccwpck_require__(43791);
-const core_rest_pipeline_1 = __nccwpck_require__(46312);
+const core_rest_pipeline_1 = __nccwpck_require__(81591);
 const serializer_js_1 = __nccwpck_require__(43315);
 const operationHelpers_js_1 = __nccwpck_require__(56225);
 const defaultJsonContentTypes = ["application/json", "text/json"];
@@ -45532,7 +45532,7 @@ async function parse(jsonContentTypes, xmlContentTypes, operationResponse, opts,
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getCachedDefaultHttpClient = getCachedDefaultHttpClient;
-const core_rest_pipeline_1 = __nccwpck_require__(46312);
+const core_rest_pipeline_1 = __nccwpck_require__(81591);
 let cachedHttpClient;
 function getCachedDefaultHttpClient() {
     if (!cachedHttpClient) {
@@ -45772,7 +45772,7 @@ function getOperationRequestInfo(request) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.createClientPipeline = createClientPipeline;
 const deserializationPolicy_js_1 = __nccwpck_require__(68548);
-const core_rest_pipeline_1 = __nccwpck_require__(46312);
+const core_rest_pipeline_1 = __nccwpck_require__(81591);
 const serializationPolicy_js_1 = __nccwpck_require__(22153);
 /**
  * Creates a new Pipeline for use with a Service Client.
@@ -46901,7 +46901,7 @@ exports.MapperTypeNames = {
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ServiceClient = void 0;
-const core_rest_pipeline_1 = __nccwpck_require__(46312);
+const core_rest_pipeline_1 = __nccwpck_require__(81591);
 const pipeline_js_1 = __nccwpck_require__(18913);
 const utils_js_1 = __nccwpck_require__(76758);
 const httpClientCache_js_1 = __nccwpck_require__(39664);
@@ -47485,7 +47485,7 @@ function flattenResponse(fullResponse, responseSpec) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ExtendedServiceClient = void 0;
 const disableKeepAlivePolicy_js_1 = __nccwpck_require__(49855);
-const core_rest_pipeline_1 = __nccwpck_require__(46312);
+const core_rest_pipeline_1 = __nccwpck_require__(81591);
 const core_client_1 = __nccwpck_require__(99307);
 const response_js_1 = __nccwpck_require__(52809);
 /**
@@ -47694,7 +47694,7 @@ function createRequestPolicyFactoryPolicy(factories) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.toCompatResponse = toCompatResponse;
 exports.toPipelineResponse = toPipelineResponse;
-const core_rest_pipeline_1 = __nccwpck_require__(46312);
+const core_rest_pipeline_1 = __nccwpck_require__(81591);
 const util_js_1 = __nccwpck_require__(93722);
 const originalResponse = Symbol("Original FullOperationResponse");
 /**
@@ -47773,7 +47773,7 @@ exports.HttpHeaders = void 0;
 exports.toPipelineRequest = toPipelineRequest;
 exports.toWebResourceLike = toWebResourceLike;
 exports.toHttpHeadersLike = toHttpHeadersLike;
-const core_rest_pipeline_1 = __nccwpck_require__(46312);
+const core_rest_pipeline_1 = __nccwpck_require__(81591);
 // We use a custom symbol to cache a reference to the original request without
 // exposing it on the public interface.
 const originalRequestSymbol = Symbol("Original PipelineRequest");
@@ -49385,7 +49385,7 @@ exports.buildCreatePoller = buildCreatePoller;
 
 /***/ }),
 
-/***/ 97981:
+/***/ 4154:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -49393,13 +49393,13 @@ exports.buildCreatePoller = buildCreatePoller;
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.DEFAULT_RETRY_POLICY_COUNT = exports.SDK_VERSION = void 0;
-exports.SDK_VERSION = "1.22.1";
+exports.SDK_VERSION = "1.22.2";
 exports.DEFAULT_RETRY_POLICY_COUNT = 3;
 //# sourceMappingURL=constants.js.map
 
 /***/ }),
 
-/***/ 34536:
+/***/ 45179:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -49407,21 +49407,21 @@ exports.DEFAULT_RETRY_POLICY_COUNT = 3;
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.createPipelineFromOptions = createPipelineFromOptions;
-const logPolicy_js_1 = __nccwpck_require__(15232);
-const pipeline_js_1 = __nccwpck_require__(384);
-const redirectPolicy_js_1 = __nccwpck_require__(18701);
-const userAgentPolicy_js_1 = __nccwpck_require__(66685);
-const multipartPolicy_js_1 = __nccwpck_require__(98817);
-const decompressResponsePolicy_js_1 = __nccwpck_require__(6817);
-const defaultRetryPolicy_js_1 = __nccwpck_require__(27272);
-const formDataPolicy_js_1 = __nccwpck_require__(84295);
+const logPolicy_js_1 = __nccwpck_require__(37454);
+const pipeline_js_1 = __nccwpck_require__(23357);
+const redirectPolicy_js_1 = __nccwpck_require__(34126);
+const userAgentPolicy_js_1 = __nccwpck_require__(69184);
+const multipartPolicy_js_1 = __nccwpck_require__(23560);
+const decompressResponsePolicy_js_1 = __nccwpck_require__(62926);
+const defaultRetryPolicy_js_1 = __nccwpck_require__(7671);
+const formDataPolicy_js_1 = __nccwpck_require__(52768);
 const core_util_1 = __nccwpck_require__(33000);
-const proxyPolicy_js_1 = __nccwpck_require__(82021);
-const setClientRequestIdPolicy_js_1 = __nccwpck_require__(46164);
-const agentPolicy_js_1 = __nccwpck_require__(59040);
-const tlsPolicy_js_1 = __nccwpck_require__(48168);
-const tracingPolicy_js_1 = __nccwpck_require__(82859);
-const wrapAbortSignalLikePolicy_js_1 = __nccwpck_require__(60804);
+const proxyPolicy_js_1 = __nccwpck_require__(11164);
+const setClientRequestIdPolicy_js_1 = __nccwpck_require__(59155);
+const agentPolicy_js_1 = __nccwpck_require__(24429);
+const tlsPolicy_js_1 = __nccwpck_require__(64581);
+const tracingPolicy_js_1 = __nccwpck_require__(83438);
+const wrapAbortSignalLikePolicy_js_1 = __nccwpck_require__(11193);
 /**
  * Create a new pipeline with a default set of customizable policies.
  * @param options - Options to configure a custom pipeline.
@@ -49462,7 +49462,7 @@ function createPipelineFromOptions(options) {
 
 /***/ }),
 
-/***/ 2726:
+/***/ 96469:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -49470,8 +49470,8 @@ function createPipelineFromOptions(options) {
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.createDefaultHttpClient = createDefaultHttpClient;
-const ts_http_runtime_1 = __nccwpck_require__(44758);
-const wrapAbortSignal_js_1 = __nccwpck_require__(74131);
+const ts_http_runtime_1 = __nccwpck_require__(60957);
+const wrapAbortSignal_js_1 = __nccwpck_require__(17310);
 /**
  * Create the correct HttpClient for the current environment.
  */
@@ -49485,7 +49485,6 @@ function createDefaultHttpClient() {
                 ? (0, wrapAbortSignal_js_1.wrapAbortSignalLike)(request.abortSignal)
                 : {};
             try {
-                // eslint-disable-next-line no-param-reassign
                 request.abortSignal = abortSignal;
                 return await client.sendRequest(request);
             }
@@ -49499,7 +49498,7 @@ function createDefaultHttpClient() {
 
 /***/ }),
 
-/***/ 9290:
+/***/ 59033:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -49507,7 +49506,7 @@ function createDefaultHttpClient() {
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.createHttpHeaders = createHttpHeaders;
-const ts_http_runtime_1 = __nccwpck_require__(44758);
+const ts_http_runtime_1 = __nccwpck_require__(60957);
 /**
  * Creates an object that satisfies the `HttpHeaders` interface.
  * @param rawHeaders - A simple object representing initial headers
@@ -49519,7 +49518,7 @@ function createHttpHeaders(rawHeaders) {
 
 /***/ }),
 
-/***/ 46312:
+/***/ 81591:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -49527,83 +49526,83 @@ function createHttpHeaders(rawHeaders) {
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.createFileFromStream = exports.createFile = exports.agentPolicyName = exports.agentPolicy = exports.auxiliaryAuthenticationHeaderPolicyName = exports.auxiliaryAuthenticationHeaderPolicy = exports.ndJsonPolicyName = exports.ndJsonPolicy = exports.bearerTokenAuthenticationPolicyName = exports.bearerTokenAuthenticationPolicy = exports.formDataPolicyName = exports.formDataPolicy = exports.tlsPolicyName = exports.tlsPolicy = exports.userAgentPolicyName = exports.userAgentPolicy = exports.defaultRetryPolicy = exports.tracingPolicyName = exports.tracingPolicy = exports.retryPolicy = exports.throttlingRetryPolicyName = exports.throttlingRetryPolicy = exports.systemErrorRetryPolicyName = exports.systemErrorRetryPolicy = exports.redirectPolicyName = exports.redirectPolicy = exports.getDefaultProxySettings = exports.proxyPolicyName = exports.proxyPolicy = exports.multipartPolicyName = exports.multipartPolicy = exports.logPolicyName = exports.logPolicy = exports.setClientRequestIdPolicyName = exports.setClientRequestIdPolicy = exports.exponentialRetryPolicyName = exports.exponentialRetryPolicy = exports.decompressResponsePolicyName = exports.decompressResponsePolicy = exports.isRestError = exports.RestError = exports.createPipelineRequest = exports.createHttpHeaders = exports.createDefaultHttpClient = exports.createPipelineFromOptions = exports.createEmptyPipeline = void 0;
-var pipeline_js_1 = __nccwpck_require__(384);
+var pipeline_js_1 = __nccwpck_require__(23357);
 Object.defineProperty(exports, "createEmptyPipeline", ({ enumerable: true, get: function () { return pipeline_js_1.createEmptyPipeline; } }));
-var createPipelineFromOptions_js_1 = __nccwpck_require__(34536);
+var createPipelineFromOptions_js_1 = __nccwpck_require__(45179);
 Object.defineProperty(exports, "createPipelineFromOptions", ({ enumerable: true, get: function () { return createPipelineFromOptions_js_1.createPipelineFromOptions; } }));
-var defaultHttpClient_js_1 = __nccwpck_require__(2726);
+var defaultHttpClient_js_1 = __nccwpck_require__(96469);
 Object.defineProperty(exports, "createDefaultHttpClient", ({ enumerable: true, get: function () { return defaultHttpClient_js_1.createDefaultHttpClient; } }));
-var httpHeaders_js_1 = __nccwpck_require__(9290);
+var httpHeaders_js_1 = __nccwpck_require__(59033);
 Object.defineProperty(exports, "createHttpHeaders", ({ enumerable: true, get: function () { return httpHeaders_js_1.createHttpHeaders; } }));
-var pipelineRequest_js_1 = __nccwpck_require__(10531);
+var pipelineRequest_js_1 = __nccwpck_require__(14444);
 Object.defineProperty(exports, "createPipelineRequest", ({ enumerable: true, get: function () { return pipelineRequest_js_1.createPipelineRequest; } }));
-var restError_js_1 = __nccwpck_require__(40388);
+var restError_js_1 = __nccwpck_require__(36155);
 Object.defineProperty(exports, "RestError", ({ enumerable: true, get: function () { return restError_js_1.RestError; } }));
 Object.defineProperty(exports, "isRestError", ({ enumerable: true, get: function () { return restError_js_1.isRestError; } }));
-var decompressResponsePolicy_js_1 = __nccwpck_require__(6817);
+var decompressResponsePolicy_js_1 = __nccwpck_require__(62926);
 Object.defineProperty(exports, "decompressResponsePolicy", ({ enumerable: true, get: function () { return decompressResponsePolicy_js_1.decompressResponsePolicy; } }));
 Object.defineProperty(exports, "decompressResponsePolicyName", ({ enumerable: true, get: function () { return decompressResponsePolicy_js_1.decompressResponsePolicyName; } }));
-var exponentialRetryPolicy_js_1 = __nccwpck_require__(92546);
+var exponentialRetryPolicy_js_1 = __nccwpck_require__(5745);
 Object.defineProperty(exports, "exponentialRetryPolicy", ({ enumerable: true, get: function () { return exponentialRetryPolicy_js_1.exponentialRetryPolicy; } }));
 Object.defineProperty(exports, "exponentialRetryPolicyName", ({ enumerable: true, get: function () { return exponentialRetryPolicy_js_1.exponentialRetryPolicyName; } }));
-var setClientRequestIdPolicy_js_1 = __nccwpck_require__(46164);
+var setClientRequestIdPolicy_js_1 = __nccwpck_require__(59155);
 Object.defineProperty(exports, "setClientRequestIdPolicy", ({ enumerable: true, get: function () { return setClientRequestIdPolicy_js_1.setClientRequestIdPolicy; } }));
 Object.defineProperty(exports, "setClientRequestIdPolicyName", ({ enumerable: true, get: function () { return setClientRequestIdPolicy_js_1.setClientRequestIdPolicyName; } }));
-var logPolicy_js_1 = __nccwpck_require__(15232);
+var logPolicy_js_1 = __nccwpck_require__(37454);
 Object.defineProperty(exports, "logPolicy", ({ enumerable: true, get: function () { return logPolicy_js_1.logPolicy; } }));
 Object.defineProperty(exports, "logPolicyName", ({ enumerable: true, get: function () { return logPolicy_js_1.logPolicyName; } }));
-var multipartPolicy_js_1 = __nccwpck_require__(98817);
+var multipartPolicy_js_1 = __nccwpck_require__(23560);
 Object.defineProperty(exports, "multipartPolicy", ({ enumerable: true, get: function () { return multipartPolicy_js_1.multipartPolicy; } }));
 Object.defineProperty(exports, "multipartPolicyName", ({ enumerable: true, get: function () { return multipartPolicy_js_1.multipartPolicyName; } }));
-var proxyPolicy_js_1 = __nccwpck_require__(82021);
+var proxyPolicy_js_1 = __nccwpck_require__(11164);
 Object.defineProperty(exports, "proxyPolicy", ({ enumerable: true, get: function () { return proxyPolicy_js_1.proxyPolicy; } }));
 Object.defineProperty(exports, "proxyPolicyName", ({ enumerable: true, get: function () { return proxyPolicy_js_1.proxyPolicyName; } }));
 Object.defineProperty(exports, "getDefaultProxySettings", ({ enumerable: true, get: function () { return proxyPolicy_js_1.getDefaultProxySettings; } }));
-var redirectPolicy_js_1 = __nccwpck_require__(18701);
+var redirectPolicy_js_1 = __nccwpck_require__(34126);
 Object.defineProperty(exports, "redirectPolicy", ({ enumerable: true, get: function () { return redirectPolicy_js_1.redirectPolicy; } }));
 Object.defineProperty(exports, "redirectPolicyName", ({ enumerable: true, get: function () { return redirectPolicy_js_1.redirectPolicyName; } }));
-var systemErrorRetryPolicy_js_1 = __nccwpck_require__(65432);
+var systemErrorRetryPolicy_js_1 = __nccwpck_require__(1431);
 Object.defineProperty(exports, "systemErrorRetryPolicy", ({ enumerable: true, get: function () { return systemErrorRetryPolicy_js_1.systemErrorRetryPolicy; } }));
 Object.defineProperty(exports, "systemErrorRetryPolicyName", ({ enumerable: true, get: function () { return systemErrorRetryPolicy_js_1.systemErrorRetryPolicyName; } }));
-var throttlingRetryPolicy_js_1 = __nccwpck_require__(93290);
+var throttlingRetryPolicy_js_1 = __nccwpck_require__(66495);
 Object.defineProperty(exports, "throttlingRetryPolicy", ({ enumerable: true, get: function () { return throttlingRetryPolicy_js_1.throttlingRetryPolicy; } }));
 Object.defineProperty(exports, "throttlingRetryPolicyName", ({ enumerable: true, get: function () { return throttlingRetryPolicy_js_1.throttlingRetryPolicyName; } }));
-var retryPolicy_js_1 = __nccwpck_require__(45803);
+var retryPolicy_js_1 = __nccwpck_require__(58126);
 Object.defineProperty(exports, "retryPolicy", ({ enumerable: true, get: function () { return retryPolicy_js_1.retryPolicy; } }));
-var tracingPolicy_js_1 = __nccwpck_require__(82859);
+var tracingPolicy_js_1 = __nccwpck_require__(83438);
 Object.defineProperty(exports, "tracingPolicy", ({ enumerable: true, get: function () { return tracingPolicy_js_1.tracingPolicy; } }));
 Object.defineProperty(exports, "tracingPolicyName", ({ enumerable: true, get: function () { return tracingPolicy_js_1.tracingPolicyName; } }));
-var defaultRetryPolicy_js_1 = __nccwpck_require__(27272);
+var defaultRetryPolicy_js_1 = __nccwpck_require__(7671);
 Object.defineProperty(exports, "defaultRetryPolicy", ({ enumerable: true, get: function () { return defaultRetryPolicy_js_1.defaultRetryPolicy; } }));
-var userAgentPolicy_js_1 = __nccwpck_require__(66685);
+var userAgentPolicy_js_1 = __nccwpck_require__(69184);
 Object.defineProperty(exports, "userAgentPolicy", ({ enumerable: true, get: function () { return userAgentPolicy_js_1.userAgentPolicy; } }));
 Object.defineProperty(exports, "userAgentPolicyName", ({ enumerable: true, get: function () { return userAgentPolicy_js_1.userAgentPolicyName; } }));
-var tlsPolicy_js_1 = __nccwpck_require__(48168);
+var tlsPolicy_js_1 = __nccwpck_require__(64581);
 Object.defineProperty(exports, "tlsPolicy", ({ enumerable: true, get: function () { return tlsPolicy_js_1.tlsPolicy; } }));
 Object.defineProperty(exports, "tlsPolicyName", ({ enumerable: true, get: function () { return tlsPolicy_js_1.tlsPolicyName; } }));
-var formDataPolicy_js_1 = __nccwpck_require__(84295);
+var formDataPolicy_js_1 = __nccwpck_require__(52768);
 Object.defineProperty(exports, "formDataPolicy", ({ enumerable: true, get: function () { return formDataPolicy_js_1.formDataPolicy; } }));
 Object.defineProperty(exports, "formDataPolicyName", ({ enumerable: true, get: function () { return formDataPolicy_js_1.formDataPolicyName; } }));
-var bearerTokenAuthenticationPolicy_js_1 = __nccwpck_require__(58459);
+var bearerTokenAuthenticationPolicy_js_1 = __nccwpck_require__(25558);
 Object.defineProperty(exports, "bearerTokenAuthenticationPolicy", ({ enumerable: true, get: function () { return bearerTokenAuthenticationPolicy_js_1.bearerTokenAuthenticationPolicy; } }));
 Object.defineProperty(exports, "bearerTokenAuthenticationPolicyName", ({ enumerable: true, get: function () { return bearerTokenAuthenticationPolicy_js_1.bearerTokenAuthenticationPolicyName; } }));
-var ndJsonPolicy_js_1 = __nccwpck_require__(94193);
+var ndJsonPolicy_js_1 = __nccwpck_require__(52234);
 Object.defineProperty(exports, "ndJsonPolicy", ({ enumerable: true, get: function () { return ndJsonPolicy_js_1.ndJsonPolicy; } }));
 Object.defineProperty(exports, "ndJsonPolicyName", ({ enumerable: true, get: function () { return ndJsonPolicy_js_1.ndJsonPolicyName; } }));
-var auxiliaryAuthenticationHeaderPolicy_js_1 = __nccwpck_require__(45468);
+var auxiliaryAuthenticationHeaderPolicy_js_1 = __nccwpck_require__(22029);
 Object.defineProperty(exports, "auxiliaryAuthenticationHeaderPolicy", ({ enumerable: true, get: function () { return auxiliaryAuthenticationHeaderPolicy_js_1.auxiliaryAuthenticationHeaderPolicy; } }));
 Object.defineProperty(exports, "auxiliaryAuthenticationHeaderPolicyName", ({ enumerable: true, get: function () { return auxiliaryAuthenticationHeaderPolicy_js_1.auxiliaryAuthenticationHeaderPolicyName; } }));
-var agentPolicy_js_1 = __nccwpck_require__(59040);
+var agentPolicy_js_1 = __nccwpck_require__(24429);
 Object.defineProperty(exports, "agentPolicy", ({ enumerable: true, get: function () { return agentPolicy_js_1.agentPolicy; } }));
 Object.defineProperty(exports, "agentPolicyName", ({ enumerable: true, get: function () { return agentPolicy_js_1.agentPolicyName; } }));
-var file_js_1 = __nccwpck_require__(43955);
+var file_js_1 = __nccwpck_require__(69056);
 Object.defineProperty(exports, "createFile", ({ enumerable: true, get: function () { return file_js_1.createFile; } }));
 Object.defineProperty(exports, "createFileFromStream", ({ enumerable: true, get: function () { return file_js_1.createFileFromStream; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 73282:
+/***/ 87305:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -49617,7 +49616,7 @@ exports.logger = (0, logger_1.createClientLogger)("core-rest-pipeline");
 
 /***/ }),
 
-/***/ 384:
+/***/ 23357:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -49625,7 +49624,7 @@ exports.logger = (0, logger_1.createClientLogger)("core-rest-pipeline");
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.createEmptyPipeline = createEmptyPipeline;
-const ts_http_runtime_1 = __nccwpck_require__(44758);
+const ts_http_runtime_1 = __nccwpck_require__(60957);
 /**
  * Creates a totally empty pipeline.
  * Useful for testing or creating a custom one.
@@ -49637,7 +49636,7 @@ function createEmptyPipeline() {
 
 /***/ }),
 
-/***/ 10531:
+/***/ 14444:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -49645,7 +49644,7 @@ function createEmptyPipeline() {
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.createPipelineRequest = createPipelineRequest;
-const ts_http_runtime_1 = __nccwpck_require__(44758);
+const ts_http_runtime_1 = __nccwpck_require__(60957);
 /**
  * Creates a new pipeline request with the given options.
  * This method is to allow for the easy setting of default values and not required.
@@ -49661,7 +49660,7 @@ function createPipelineRequest(options) {
 
 /***/ }),
 
-/***/ 59040:
+/***/ 24429:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -49670,7 +49669,7 @@ function createPipelineRequest(options) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.agentPolicyName = void 0;
 exports.agentPolicy = agentPolicy;
-const policies_1 = __nccwpck_require__(18384);
+const policies_1 = __nccwpck_require__(43507);
 /**
  * Name of the Agent Policy
  */
@@ -49685,7 +49684,7 @@ function agentPolicy(agent) {
 
 /***/ }),
 
-/***/ 45468:
+/***/ 22029:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -49694,8 +49693,8 @@ function agentPolicy(agent) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.auxiliaryAuthenticationHeaderPolicyName = void 0;
 exports.auxiliaryAuthenticationHeaderPolicy = auxiliaryAuthenticationHeaderPolicy;
-const tokenCycler_js_1 = __nccwpck_require__(36068);
-const log_js_1 = __nccwpck_require__(73282);
+const tokenCycler_js_1 = __nccwpck_require__(31493);
+const log_js_1 = __nccwpck_require__(87305);
 /**
  * The programmatic identifier of the auxiliaryAuthenticationHeaderPolicy.
  */
@@ -49757,7 +49756,7 @@ function auxiliaryAuthenticationHeaderPolicy(options) {
 
 /***/ }),
 
-/***/ 58459:
+/***/ 25558:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -49767,9 +49766,9 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.bearerTokenAuthenticationPolicyName = void 0;
 exports.bearerTokenAuthenticationPolicy = bearerTokenAuthenticationPolicy;
 exports.parseChallenges = parseChallenges;
-const tokenCycler_js_1 = __nccwpck_require__(36068);
-const log_js_1 = __nccwpck_require__(73282);
-const restError_js_1 = __nccwpck_require__(40388);
+const tokenCycler_js_1 = __nccwpck_require__(31493);
+const log_js_1 = __nccwpck_require__(87305);
+const restError_js_1 = __nccwpck_require__(36155);
 /**
  * The programmatic identifier of the bearerTokenAuthenticationPolicy.
  */
@@ -50003,7 +50002,7 @@ function getCaeChallengeClaims(challenges) {
 
 /***/ }),
 
-/***/ 6817:
+/***/ 62926:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -50012,7 +50011,7 @@ function getCaeChallengeClaims(challenges) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.decompressResponsePolicyName = void 0;
 exports.decompressResponsePolicy = decompressResponsePolicy;
-const policies_1 = __nccwpck_require__(18384);
+const policies_1 = __nccwpck_require__(43507);
 /**
  * The programmatic identifier of the decompressResponsePolicy.
  */
@@ -50028,7 +50027,7 @@ function decompressResponsePolicy() {
 
 /***/ }),
 
-/***/ 27272:
+/***/ 7671:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -50037,7 +50036,7 @@ function decompressResponsePolicy() {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.defaultRetryPolicyName = void 0;
 exports.defaultRetryPolicy = defaultRetryPolicy;
-const policies_1 = __nccwpck_require__(18384);
+const policies_1 = __nccwpck_require__(43507);
 /**
  * Name of the {@link defaultRetryPolicy}
  */
@@ -50055,7 +50054,7 @@ function defaultRetryPolicy(options = {}) {
 
 /***/ }),
 
-/***/ 92546:
+/***/ 5745:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -50064,7 +50063,7 @@ function defaultRetryPolicy(options = {}) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.exponentialRetryPolicyName = void 0;
 exports.exponentialRetryPolicy = exponentialRetryPolicy;
-const policies_1 = __nccwpck_require__(18384);
+const policies_1 = __nccwpck_require__(43507);
 /**
  * The programmatic identifier of the exponentialRetryPolicy.
  */
@@ -50080,7 +50079,7 @@ function exponentialRetryPolicy(options = {}) {
 
 /***/ }),
 
-/***/ 84295:
+/***/ 52768:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -50089,7 +50088,7 @@ function exponentialRetryPolicy(options = {}) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.formDataPolicyName = void 0;
 exports.formDataPolicy = formDataPolicy;
-const policies_1 = __nccwpck_require__(18384);
+const policies_1 = __nccwpck_require__(43507);
 /**
  * The programmatic identifier of the formDataPolicy.
  */
@@ -50104,7 +50103,7 @@ function formDataPolicy() {
 
 /***/ }),
 
-/***/ 15232:
+/***/ 37454:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -50113,8 +50112,8 @@ function formDataPolicy() {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.logPolicyName = void 0;
 exports.logPolicy = logPolicy;
-const log_js_1 = __nccwpck_require__(73282);
-const policies_1 = __nccwpck_require__(18384);
+const log_js_1 = __nccwpck_require__(87305);
+const policies_1 = __nccwpck_require__(43507);
 /**
  * The programmatic identifier of the logPolicy.
  */
@@ -50133,7 +50132,7 @@ function logPolicy(options = {}) {
 
 /***/ }),
 
-/***/ 98817:
+/***/ 23560:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -50142,8 +50141,8 @@ function logPolicy(options = {}) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.multipartPolicyName = void 0;
 exports.multipartPolicy = multipartPolicy;
-const policies_1 = __nccwpck_require__(18384);
-const file_js_1 = __nccwpck_require__(43955);
+const policies_1 = __nccwpck_require__(43507);
+const file_js_1 = __nccwpck_require__(69056);
 /**
  * Name of multipart policy
  */
@@ -50171,7 +50170,7 @@ function multipartPolicy() {
 
 /***/ }),
 
-/***/ 94193:
+/***/ 52234:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -50206,7 +50205,7 @@ function ndJsonPolicy() {
 
 /***/ }),
 
-/***/ 82021:
+/***/ 11164:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -50216,7 +50215,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.proxyPolicyName = void 0;
 exports.getDefaultProxySettings = getDefaultProxySettings;
 exports.proxyPolicy = proxyPolicy;
-const policies_1 = __nccwpck_require__(18384);
+const policies_1 = __nccwpck_require__(43507);
 /**
  * The programmatic identifier of the proxyPolicy.
  */
@@ -50245,7 +50244,7 @@ function proxyPolicy(proxySettings, options) {
 
 /***/ }),
 
-/***/ 18701:
+/***/ 34126:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -50254,7 +50253,7 @@ function proxyPolicy(proxySettings, options) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.redirectPolicyName = void 0;
 exports.redirectPolicy = redirectPolicy;
-const policies_1 = __nccwpck_require__(18384);
+const policies_1 = __nccwpck_require__(43507);
 /**
  * The programmatic identifier of the redirectPolicy.
  */
@@ -50272,7 +50271,7 @@ function redirectPolicy(options = {}) {
 
 /***/ }),
 
-/***/ 45803:
+/***/ 58126:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -50281,8 +50280,8 @@ function redirectPolicy(options = {}) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.retryPolicy = retryPolicy;
 const logger_1 = __nccwpck_require__(2764);
-const constants_js_1 = __nccwpck_require__(97981);
-const policies_1 = __nccwpck_require__(18384);
+const constants_js_1 = __nccwpck_require__(4154);
+const policies_1 = __nccwpck_require__(43507);
 const retryPolicyLogger = (0, logger_1.createClientLogger)("core-rest-pipeline retryPolicy");
 /**
  * retryPolicy is a generic policy to enable retrying requests when certain conditions are met
@@ -50300,7 +50299,7 @@ function retryPolicy(strategies, options = { maxRetries: constants_js_1.DEFAULT_
 
 /***/ }),
 
-/***/ 46164:
+/***/ 59155:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -50334,7 +50333,7 @@ function setClientRequestIdPolicy(requestIdHeaderName = "x-ms-client-request-id"
 
 /***/ }),
 
-/***/ 65432:
+/***/ 1431:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -50343,7 +50342,7 @@ function setClientRequestIdPolicy(requestIdHeaderName = "x-ms-client-request-id"
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.systemErrorRetryPolicyName = void 0;
 exports.systemErrorRetryPolicy = systemErrorRetryPolicy;
-const policies_1 = __nccwpck_require__(18384);
+const policies_1 = __nccwpck_require__(43507);
 /**
  * Name of the {@link systemErrorRetryPolicy}
  */
@@ -50361,7 +50360,7 @@ function systemErrorRetryPolicy(options = {}) {
 
 /***/ }),
 
-/***/ 93290:
+/***/ 66495:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -50370,7 +50369,7 @@ function systemErrorRetryPolicy(options = {}) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.throttlingRetryPolicyName = void 0;
 exports.throttlingRetryPolicy = throttlingRetryPolicy;
-const policies_1 = __nccwpck_require__(18384);
+const policies_1 = __nccwpck_require__(43507);
 /**
  * Name of the {@link throttlingRetryPolicy}
  */
@@ -50392,7 +50391,7 @@ function throttlingRetryPolicy(options = {}) {
 
 /***/ }),
 
-/***/ 48168:
+/***/ 64581:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -50401,7 +50400,7 @@ function throttlingRetryPolicy(options = {}) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.tlsPolicyName = void 0;
 exports.tlsPolicy = tlsPolicy;
-const policies_1 = __nccwpck_require__(18384);
+const policies_1 = __nccwpck_require__(43507);
 /**
  * Name of the TLS Policy
  */
@@ -50416,7 +50415,7 @@ function tlsPolicy(tlsSettings) {
 
 /***/ }),
 
-/***/ 82859:
+/***/ 83438:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -50426,12 +50425,12 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.tracingPolicyName = void 0;
 exports.tracingPolicy = tracingPolicy;
 const core_tracing_1 = __nccwpck_require__(26637);
-const constants_js_1 = __nccwpck_require__(97981);
-const userAgent_js_1 = __nccwpck_require__(80633);
-const log_js_1 = __nccwpck_require__(73282);
+const constants_js_1 = __nccwpck_require__(4154);
+const userAgent_js_1 = __nccwpck_require__(57356);
+const log_js_1 = __nccwpck_require__(87305);
 const core_util_1 = __nccwpck_require__(33000);
-const restError_js_1 = __nccwpck_require__(40388);
-const util_1 = __nccwpck_require__(49654);
+const restError_js_1 = __nccwpck_require__(36155);
+const util_1 = __nccwpck_require__(38233);
 /**
  * The programmatic identifier of the tracingPolicy.
  */
@@ -50557,7 +50556,7 @@ function tryProcessResponse(span, response) {
 
 /***/ }),
 
-/***/ 66685:
+/***/ 69184:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -50566,7 +50565,7 @@ function tryProcessResponse(span, response) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.userAgentPolicyName = void 0;
 exports.userAgentPolicy = userAgentPolicy;
-const userAgent_js_1 = __nccwpck_require__(80633);
+const userAgent_js_1 = __nccwpck_require__(57356);
 const UserAgentHeaderName = (0, userAgent_js_1.getUserAgentHeaderName)();
 /**
  * The programmatic identifier of the userAgentPolicy.
@@ -50593,7 +50592,7 @@ function userAgentPolicy(options = {}) {
 
 /***/ }),
 
-/***/ 60804:
+/***/ 11193:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -50602,7 +50601,7 @@ function userAgentPolicy(options = {}) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.wrapAbortSignalLikePolicyName = void 0;
 exports.wrapAbortSignalLikePolicy = wrapAbortSignalLikePolicy;
-const wrapAbortSignal_js_1 = __nccwpck_require__(74131);
+const wrapAbortSignal_js_1 = __nccwpck_require__(17310);
 exports.wrapAbortSignalLikePolicyName = "wrapAbortSignalLikePolicy";
 /**
  * Policy that ensure that any AbortSignalLike is wrapped in a native AbortSignal for processing by the pipeline.
@@ -50618,7 +50617,6 @@ function wrapAbortSignalLikePolicy() {
                 return next(request);
             }
             const { abortSignal, cleanup } = (0, wrapAbortSignal_js_1.wrapAbortSignalLike)(request.abortSignal);
-            // eslint-disable-next-line no-param-reassign
             request.abortSignal = abortSignal;
             try {
                 return await next(request);
@@ -50633,7 +50631,7 @@ function wrapAbortSignalLikePolicy() {
 
 /***/ }),
 
-/***/ 40388:
+/***/ 36155:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -50642,7 +50640,7 @@ function wrapAbortSignalLikePolicy() {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.RestError = void 0;
 exports.isRestError = isRestError;
-const ts_http_runtime_1 = __nccwpck_require__(44758);
+const ts_http_runtime_1 = __nccwpck_require__(60957);
 /**
  * A custom error type for failed pipeline requests.
  */
@@ -50659,7 +50657,7 @@ function isRestError(e) {
 
 /***/ }),
 
-/***/ 43955:
+/***/ 69056:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -50780,19 +50778,27 @@ function createFile(content, name, options = {}) {
             size: content.byteLength,
             name,
             arrayBuffer: async () => content.buffer,
-            stream: () => new Blob([content]).stream(),
+            stream: () => new Blob([toArrayBuffer(content)]).stream(),
             [rawContent]: () => content,
         };
     }
     else {
-        return new File([content], name, options);
+        return new File([toArrayBuffer(content)], name, options);
     }
+}
+function toArrayBuffer(source) {
+    if ("resize" in source.buffer) {
+        // ArrayBuffer
+        return source;
+    }
+    // SharedArrayBuffer
+    return source.map((x) => x);
 }
 //# sourceMappingURL=file.js.map
 
 /***/ }),
 
-/***/ 36068:
+/***/ 31493:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -50965,7 +50971,7 @@ function createTokenCycler(credential, tokenCyclerOptions) {
 
 /***/ }),
 
-/***/ 80633:
+/***/ 57356:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -50974,8 +50980,8 @@ function createTokenCycler(credential, tokenCyclerOptions) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getUserAgentHeaderName = getUserAgentHeaderName;
 exports.getUserAgentValue = getUserAgentValue;
-const userAgentPlatform_js_1 = __nccwpck_require__(3446);
-const constants_js_1 = __nccwpck_require__(97981);
+const userAgentPlatform_js_1 = __nccwpck_require__(82599);
+const constants_js_1 = __nccwpck_require__(4154);
 function getUserAgentString(telemetryInfo) {
     const parts = [];
     for (const [key, value] of telemetryInfo) {
@@ -51005,7 +51011,7 @@ async function getUserAgentValue(prefix) {
 
 /***/ }),
 
-/***/ 3446:
+/***/ 82599:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -51028,24 +51034,24 @@ function getHeaderName() {
  */
 async function setPlatformSpecificData(map) {
     if (node_process_1.default && node_process_1.default.versions) {
+        const osInfo = `${node_os_1.default.type()} ${node_os_1.default.release()}; ${node_os_1.default.arch()}`;
         const versions = node_process_1.default.versions;
         if (versions.bun) {
-            map.set("Bun", versions.bun);
+            map.set("Bun", `${versions.bun} (${osInfo})`);
         }
         else if (versions.deno) {
-            map.set("Deno", versions.deno);
+            map.set("Deno", `${versions.deno} (${osInfo})`);
         }
         else if (versions.node) {
-            map.set("Node", versions.node);
+            map.set("Node", `${versions.node} (${osInfo})`);
         }
     }
-    map.set("OS", `(${node_os_1.default.arch()}-${node_os_1.default.type()}-${node_os_1.default.release()})`);
 }
 //# sourceMappingURL=userAgentPlatform.js.map
 
 /***/ }),
 
-/***/ 74131:
+/***/ 17310:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -51113,7 +51119,7 @@ exports.createDefaultInstrumenter = createDefaultInstrumenter;
 exports.useInstrumenter = useInstrumenter;
 exports.getInstrumenter = getInstrumenter;
 const tracingContext_js_1 = __nccwpck_require__(40156);
-const state_js_1 = __nccwpck_require__(52099);
+const state_js_1 = __nccwpck_require__(74480);
 function createDefaultTracingSpan() {
     return {
         end: () => {
@@ -51176,7 +51182,7 @@ function getInstrumenter() {
 
 /***/ }),
 
-/***/ 52099:
+/***/ 74480:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -51432,7 +51438,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.delay = delay;
 exports.calculateRetryDelay = calculateRetryDelay;
 const createAbortablePromise_js_1 = __nccwpck_require__(61969);
-const util_1 = __nccwpck_require__(49654);
+const util_1 = __nccwpck_require__(38233);
 const StandardAbortMessage = "The delay was aborted.";
 /**
  * A wrapper for setTimeout that resolves a promise after timeInMs milliseconds.
@@ -51479,7 +51485,7 @@ function calculateRetryDelay(retryAttempt, config) {
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getErrorMessage = getErrorMessage;
-const util_1 = __nccwpck_require__(49654);
+const util_1 = __nccwpck_require__(38233);
 /**
  * Given what is thought to be an error object, return the message if possible.
  * If the message is missing, returns a stringified version of the input.
@@ -51528,7 +51534,7 @@ exports.randomUUID = randomUUID;
 exports.uint8ArrayToString = uint8ArrayToString;
 exports.stringToUint8Array = stringToUint8Array;
 const tslib_1 = __nccwpck_require__(67892);
-const tspRuntime = tslib_1.__importStar(__nccwpck_require__(49654));
+const tspRuntime = tslib_1.__importStar(__nccwpck_require__(38233));
 var aborterUtils_js_1 = __nccwpck_require__(35428);
 Object.defineProperty(exports, "cancelablePromiseRace", ({ enumerable: true, get: function () { return aborterUtils_js_1.cancelablePromiseRace; } }));
 var createAbortablePromise_js_1 = __nccwpck_require__(61969);
@@ -51759,7 +51765,7 @@ exports.XML_CHARKEY = "_";
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.stringifyXML = stringifyXML;
 exports.parseXML = parseXML;
-const fast_xml_parser_1 = __nccwpck_require__(65110);
+const fast_xml_parser_1 = __nccwpck_require__(18743);
 const xml_common_js_1 = __nccwpck_require__(3610);
 function getCommonOptions(options) {
     var _a;
@@ -51834,7 +51840,7 @@ exports.AzureLogger = void 0;
 exports.setLogLevel = setLogLevel;
 exports.getLogLevel = getLogLevel;
 exports.createClientLogger = createClientLogger;
-const logger_1 = __nccwpck_require__(23850);
+const logger_1 = __nccwpck_require__(32033);
 const context = (0, logger_1.createLoggerContext)({
     logLevelEnvVarName: "AZURE_LOG_LEVEL",
     namespace: "azure",
@@ -51875,7 +51881,7 @@ function createClientLogger(namespace) {
 
 /***/ }),
 
-/***/ 18618:
+/***/ 4766:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -51886,7 +51892,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 
 /***/ }),
 
-/***/ 71985:
+/***/ 20285:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -51894,11 +51900,11 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.BatchResponseParser = void 0;
-const core_rest_pipeline_1 = __nccwpck_require__(46312);
+const core_rest_pipeline_1 = __nccwpck_require__(81591);
 const core_http_compat_1 = __nccwpck_require__(80976);
-const constants_js_1 = __nccwpck_require__(64710);
-const BatchUtils_js_1 = __nccwpck_require__(81504);
-const log_js_1 = __nccwpck_require__(65175);
+const constants_js_1 = __nccwpck_require__(9386);
+const BatchUtils_js_1 = __nccwpck_require__(66948);
+const log_js_1 = __nccwpck_require__(32763);
 const HTTP_HEADER_DELIMITER = ": ";
 const SPACE_DELIMITER = " ";
 const NOT_FOUND = -1;
@@ -52038,7 +52044,7 @@ exports.BatchResponseParser = BatchResponseParser;
 
 /***/ }),
 
-/***/ 81504:
+/***/ 66948:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -52047,8 +52053,8 @@ exports.BatchResponseParser = BatchResponseParser;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getBodyAsText = getBodyAsText;
 exports.utf8ByteLength = utf8ByteLength;
-const utils_js_1 = __nccwpck_require__(46814);
-const constants_js_1 = __nccwpck_require__(64710);
+const utils_js_1 = __nccwpck_require__(73170);
+const constants_js_1 = __nccwpck_require__(9386);
 async function getBodyAsText(batchResponse) {
     let buffer = Buffer.alloc(constants_js_1.BATCH_MAX_PAYLOAD_IN_BYTES);
     const responseLength = await (0, utils_js_1.streamToBuffer2)(batchResponse.readableStreamBody, buffer);
@@ -52063,7 +52069,7 @@ function utf8ByteLength(str) {
 
 /***/ }),
 
-/***/ 68556:
+/***/ 27776:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -52073,19 +52079,19 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.BlobBatch = void 0;
 const core_util_1 = __nccwpck_require__(33000);
 const core_auth_1 = __nccwpck_require__(38401);
-const core_rest_pipeline_1 = __nccwpck_require__(46312);
+const core_rest_pipeline_1 = __nccwpck_require__(81591);
 const core_util_2 = __nccwpck_require__(33000);
-const AnonymousCredential_js_1 = __nccwpck_require__(66188);
-const Clients_js_1 = __nccwpck_require__(17065);
-const Mutex_js_1 = __nccwpck_require__(35488);
-const Pipeline_js_1 = __nccwpck_require__(77907);
-const utils_common_js_1 = __nccwpck_require__(80023);
+const AnonymousCredential_js_1 = __nccwpck_require__(13360);
+const Clients_js_1 = __nccwpck_require__(59813);
+const Mutex_js_1 = __nccwpck_require__(39948);
+const Pipeline_js_1 = __nccwpck_require__(33543);
+const utils_common_js_1 = __nccwpck_require__(98915);
 const core_xml_1 = __nccwpck_require__(64928);
-const constants_js_1 = __nccwpck_require__(64710);
-const StorageSharedKeyCredential_js_1 = __nccwpck_require__(37016);
-const tracing_js_1 = __nccwpck_require__(78365);
+const constants_js_1 = __nccwpck_require__(9386);
+const StorageSharedKeyCredential_js_1 = __nccwpck_require__(64220);
+const tracing_js_1 = __nccwpck_require__(67985);
 const core_client_1 = __nccwpck_require__(99307);
-const StorageSharedKeyCredentialPolicyV2_js_1 = __nccwpck_require__(5286);
+const StorageSharedKeyCredentialPolicyV2_js_1 = __nccwpck_require__(61154);
 /**
  * A BlobBatch represents an aggregated set of operations on blobs.
  * Currently, only `delete` and `setAccessTier` are supported.
@@ -52349,7 +52355,7 @@ function batchHeaderFilterPolicy() {
 
 /***/ }),
 
-/***/ 98175:
+/***/ 37683:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -52357,14 +52363,14 @@ function batchHeaderFilterPolicy() {
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.BlobBatchClient = void 0;
-const BatchResponseParser_js_1 = __nccwpck_require__(71985);
-const BatchUtils_js_1 = __nccwpck_require__(81504);
-const BlobBatch_js_1 = __nccwpck_require__(68556);
-const tracing_js_1 = __nccwpck_require__(78365);
-const AnonymousCredential_js_1 = __nccwpck_require__(66188);
-const StorageContextClient_js_1 = __nccwpck_require__(77558);
-const Pipeline_js_1 = __nccwpck_require__(77907);
-const utils_common_js_1 = __nccwpck_require__(80023);
+const BatchResponseParser_js_1 = __nccwpck_require__(20285);
+const BatchUtils_js_1 = __nccwpck_require__(66948);
+const BlobBatch_js_1 = __nccwpck_require__(27776);
+const tracing_js_1 = __nccwpck_require__(67985);
+const AnonymousCredential_js_1 = __nccwpck_require__(13360);
+const StorageContextClient_js_1 = __nccwpck_require__(64754);
+const Pipeline_js_1 = __nccwpck_require__(33543);
+const utils_common_js_1 = __nccwpck_require__(98915);
 /**
  * A BlobBatchClient allows you to make batched requests to the Azure Storage Blob service.
  *
@@ -52531,7 +52537,7 @@ exports.BlobBatchClient = BlobBatchClient;
 
 /***/ }),
 
-/***/ 72065:
+/***/ 83341:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -52540,7 +52546,7 @@ exports.BlobDownloadResponse = void 0;
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 const core_util_1 = __nccwpck_require__(33000);
-const RetriableReadableStream_js_1 = __nccwpck_require__(66157);
+const RetriableReadableStream_js_1 = __nccwpck_require__(81473);
 /**
  * ONLY AVAILABLE IN NODE.JS RUNTIME.
  *
@@ -53006,7 +53012,7 @@ exports.BlobDownloadResponse = BlobDownloadResponse;
 
 /***/ }),
 
-/***/ 22321:
+/***/ 51029:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -53015,9 +53021,9 @@ exports.BlobDownloadResponse = BlobDownloadResponse;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.BlobLeaseClient = void 0;
 const core_util_1 = __nccwpck_require__(33000);
-const constants_js_1 = __nccwpck_require__(64710);
-const tracing_js_1 = __nccwpck_require__(78365);
-const utils_common_js_1 = __nccwpck_require__(80023);
+const constants_js_1 = __nccwpck_require__(9386);
+const tracing_js_1 = __nccwpck_require__(67985);
+const utils_common_js_1 = __nccwpck_require__(98915);
 /**
  * A client that manages leases for a {@link ContainerClient} or a {@link BlobClient}.
  */
@@ -53217,7 +53223,7 @@ exports.BlobLeaseClient = BlobLeaseClient;
 
 /***/ }),
 
-/***/ 25883:
+/***/ 54183:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -53226,7 +53232,7 @@ exports.BlobLeaseClient = BlobLeaseClient;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.BlobQueryResponse = void 0;
 const core_util_1 = __nccwpck_require__(33000);
-const BlobQuickQueryStream_js_1 = __nccwpck_require__(58661);
+const BlobQuickQueryStream_js_1 = __nccwpck_require__(17097);
 /**
  * ONLY AVAILABLE IN NODE.JS RUNTIME.
  *
@@ -53596,27 +53602,27 @@ exports.BlobQueryResponse = BlobQueryResponse;
 
 /***/ }),
 
-/***/ 36228:
+/***/ 91352:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.BlobServiceClient = void 0;
 const core_auth_1 = __nccwpck_require__(38401);
-const core_rest_pipeline_1 = __nccwpck_require__(46312);
+const core_rest_pipeline_1 = __nccwpck_require__(81591);
 const core_util_1 = __nccwpck_require__(33000);
-const Pipeline_js_1 = __nccwpck_require__(77907);
-const ContainerClient_js_1 = __nccwpck_require__(31421);
-const utils_common_js_1 = __nccwpck_require__(80023);
-const StorageSharedKeyCredential_js_1 = __nccwpck_require__(37016);
-const AnonymousCredential_js_1 = __nccwpck_require__(66188);
-const utils_common_js_2 = __nccwpck_require__(80023);
-const tracing_js_1 = __nccwpck_require__(78365);
-const BlobBatchClient_js_1 = __nccwpck_require__(98175);
-const StorageClient_js_1 = __nccwpck_require__(57167);
-const AccountSASPermissions_js_1 = __nccwpck_require__(24007);
-const AccountSASSignatureValues_js_1 = __nccwpck_require__(23315);
-const AccountSASServices_js_1 = __nccwpck_require__(39011);
+const Pipeline_js_1 = __nccwpck_require__(33543);
+const ContainerClient_js_1 = __nccwpck_require__(83745);
+const utils_common_js_1 = __nccwpck_require__(98915);
+const StorageSharedKeyCredential_js_1 = __nccwpck_require__(64220);
+const AnonymousCredential_js_1 = __nccwpck_require__(13360);
+const utils_common_js_2 = __nccwpck_require__(98915);
+const tracing_js_1 = __nccwpck_require__(67985);
+const BlobBatchClient_js_1 = __nccwpck_require__(37683);
+const StorageClient_js_1 = __nccwpck_require__(84827);
+const AccountSASPermissions_js_1 = __nccwpck_require__(56139);
+const AccountSASSignatureValues_js_1 = __nccwpck_require__(10319);
+const AccountSASServices_js_1 = __nccwpck_require__(89159);
 /**
  * A BlobServiceClient represents a Client to the Azure Storage Blob service allowing you
  * to manipulate blob containers.
@@ -54309,7 +54315,7 @@ exports.BlobServiceClient = BlobServiceClient;
 
 /***/ }),
 
-/***/ 17065:
+/***/ 59813:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -54317,28 +54323,28 @@ exports.BlobServiceClient = BlobServiceClient;
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PageBlobClient = exports.BlockBlobClient = exports.AppendBlobClient = exports.BlobClient = void 0;
-const core_rest_pipeline_1 = __nccwpck_require__(46312);
+const core_rest_pipeline_1 = __nccwpck_require__(81591);
 const core_auth_1 = __nccwpck_require__(38401);
 const core_util_1 = __nccwpck_require__(33000);
 const core_util_2 = __nccwpck_require__(33000);
-const BlobDownloadResponse_js_1 = __nccwpck_require__(72065);
-const BlobQueryResponse_js_1 = __nccwpck_require__(25883);
-const AnonymousCredential_js_1 = __nccwpck_require__(66188);
-const StorageSharedKeyCredential_js_1 = __nccwpck_require__(37016);
-const models_js_1 = __nccwpck_require__(41107);
-const PageBlobRangeResponse_js_1 = __nccwpck_require__(85703);
-const Pipeline_js_1 = __nccwpck_require__(77907);
-const BlobStartCopyFromUrlPoller_js_1 = __nccwpck_require__(14914);
-const Range_js_1 = __nccwpck_require__(13116);
-const StorageClient_js_1 = __nccwpck_require__(57167);
-const Batch_js_1 = __nccwpck_require__(51975);
-const storage_common_1 = __nccwpck_require__(80135);
-const constants_js_1 = __nccwpck_require__(64710);
-const tracing_js_1 = __nccwpck_require__(78365);
-const utils_common_js_1 = __nccwpck_require__(80023);
-const utils_js_1 = __nccwpck_require__(46814);
-const BlobSASSignatureValues_js_1 = __nccwpck_require__(70895);
-const BlobLeaseClient_js_1 = __nccwpck_require__(22321);
+const BlobDownloadResponse_js_1 = __nccwpck_require__(83341);
+const BlobQueryResponse_js_1 = __nccwpck_require__(54183);
+const AnonymousCredential_js_1 = __nccwpck_require__(13360);
+const StorageSharedKeyCredential_js_1 = __nccwpck_require__(64220);
+const models_js_1 = __nccwpck_require__(37647);
+const PageBlobRangeResponse_js_1 = __nccwpck_require__(50507);
+const Pipeline_js_1 = __nccwpck_require__(33543);
+const BlobStartCopyFromUrlPoller_js_1 = __nccwpck_require__(22958);
+const Range_js_1 = __nccwpck_require__(19456);
+const StorageClient_js_1 = __nccwpck_require__(84827);
+const Batch_js_1 = __nccwpck_require__(14539);
+const storage_common_1 = __nccwpck_require__(13507);
+const constants_js_1 = __nccwpck_require__(9386);
+const tracing_js_1 = __nccwpck_require__(67985);
+const utils_common_js_1 = __nccwpck_require__(98915);
+const utils_js_1 = __nccwpck_require__(73170);
+const BlobSASSignatureValues_js_1 = __nccwpck_require__(38147);
+const BlobLeaseClient_js_1 = __nccwpck_require__(51029);
 /**
  * A BlobClient represents a URL to an Azure Storage blob; the blob may be a block blob,
  * append blob, or page blob.
@@ -57166,25 +57172,25 @@ exports.PageBlobClient = PageBlobClient;
 
 /***/ }),
 
-/***/ 31421:
+/***/ 83745:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ContainerClient = void 0;
-const core_rest_pipeline_1 = __nccwpck_require__(46312);
+const core_rest_pipeline_1 = __nccwpck_require__(81591);
 const core_util_1 = __nccwpck_require__(33000);
 const core_auth_1 = __nccwpck_require__(38401);
-const AnonymousCredential_js_1 = __nccwpck_require__(66188);
-const StorageSharedKeyCredential_js_1 = __nccwpck_require__(37016);
-const Pipeline_js_1 = __nccwpck_require__(77907);
-const StorageClient_js_1 = __nccwpck_require__(57167);
-const tracing_js_1 = __nccwpck_require__(78365);
-const utils_common_js_1 = __nccwpck_require__(80023);
-const BlobSASSignatureValues_js_1 = __nccwpck_require__(70895);
-const BlobLeaseClient_js_1 = __nccwpck_require__(22321);
-const Clients_js_1 = __nccwpck_require__(17065);
-const BlobBatchClient_js_1 = __nccwpck_require__(98175);
+const AnonymousCredential_js_1 = __nccwpck_require__(13360);
+const StorageSharedKeyCredential_js_1 = __nccwpck_require__(64220);
+const Pipeline_js_1 = __nccwpck_require__(33543);
+const StorageClient_js_1 = __nccwpck_require__(84827);
+const tracing_js_1 = __nccwpck_require__(67985);
+const utils_common_js_1 = __nccwpck_require__(98915);
+const BlobSASSignatureValues_js_1 = __nccwpck_require__(38147);
+const BlobLeaseClient_js_1 = __nccwpck_require__(51029);
+const Clients_js_1 = __nccwpck_require__(59813);
+const BlobBatchClient_js_1 = __nccwpck_require__(37683);
 /**
  * A ContainerClient represents a URL to the Azure Storage container allowing you to manipulate its blobs.
  */
@@ -58470,7 +58476,7 @@ exports.ContainerClient = ContainerClient;
 
 /***/ }),
 
-/***/ 85703:
+/***/ 50507:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -58510,7 +58516,7 @@ function rangeResponseFromModel(response) {
 
 /***/ }),
 
-/***/ 77907:
+/***/ 33543:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -58523,22 +58529,22 @@ exports.newPipeline = newPipeline;
 exports.getCoreClientOptions = getCoreClientOptions;
 exports.getCredentialFromPipeline = getCredentialFromPipeline;
 const core_http_compat_1 = __nccwpck_require__(80976);
-const core_rest_pipeline_1 = __nccwpck_require__(46312);
+const core_rest_pipeline_1 = __nccwpck_require__(81591);
 const core_client_1 = __nccwpck_require__(99307);
 const core_xml_1 = __nccwpck_require__(64928);
 const core_auth_1 = __nccwpck_require__(38401);
-const log_js_1 = __nccwpck_require__(65175);
-const StorageRetryPolicyFactory_js_1 = __nccwpck_require__(85706);
-const StorageSharedKeyCredential_js_1 = __nccwpck_require__(37016);
-const AnonymousCredential_js_1 = __nccwpck_require__(66188);
-const constants_js_1 = __nccwpck_require__(64710);
+const log_js_1 = __nccwpck_require__(32763);
+const StorageRetryPolicyFactory_js_1 = __nccwpck_require__(64574);
+const StorageSharedKeyCredential_js_1 = __nccwpck_require__(64220);
+const AnonymousCredential_js_1 = __nccwpck_require__(13360);
+const constants_js_1 = __nccwpck_require__(9386);
 Object.defineProperty(exports, "StorageOAuthScopes", ({ enumerable: true, get: function () { return constants_js_1.StorageOAuthScopes; } }));
-const storage_common_1 = __nccwpck_require__(80135);
-const StorageBrowserPolicyV2_js_1 = __nccwpck_require__(24651);
-const StorageRetryPolicyV2_js_1 = __nccwpck_require__(36393);
-const StorageSharedKeyCredentialPolicyV2_js_1 = __nccwpck_require__(5286);
-const StorageBrowserPolicyFactory_js_1 = __nccwpck_require__(79488);
-const StorageCorrectContentLengthPolicy_js_1 = __nccwpck_require__(76608);
+const storage_common_1 = __nccwpck_require__(13507);
+const StorageBrowserPolicyV2_js_1 = __nccwpck_require__(12391);
+const StorageRetryPolicyV2_js_1 = __nccwpck_require__(46221);
+const StorageSharedKeyCredentialPolicyV2_js_1 = __nccwpck_require__(61154);
+const StorageBrowserPolicyFactory_js_1 = __nccwpck_require__(92156);
+const StorageCorrectContentLengthPolicy_js_1 = __nccwpck_require__(77348);
 /**
  * A helper to decide if a given argument satisfies the Pipeline contract
  * @param pipeline - An argument that may be a Pipeline
@@ -58682,6 +58688,7 @@ function getCoreClientOptions(pipeline) {
         corePipeline.removePolicy({ name: core_rest_pipeline_1.decompressResponsePolicyName });
         corePipeline.addPolicy((0, StorageCorrectContentLengthPolicy_js_1.storageCorrectContentLengthPolicy)());
         corePipeline.addPolicy((0, StorageRetryPolicyV2_js_1.storageRetryPolicy)(restOptions.retryOptions), { phase: "Retry" });
+        corePipeline.addPolicy((0, storage_common_1.storageRequestFailureDetailsParserPolicy)());
         corePipeline.addPolicy((0, StorageBrowserPolicyV2_js_1.storageBrowserPolicy)());
         const downlevelResults = processDownlevelPipeline(pipeline);
         if (downlevelResults) {
@@ -58800,7 +58807,7 @@ function isCoreHttpPolicyFactory(factory) {
 
 /***/ }),
 
-/***/ 13116:
+/***/ 19456:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -58830,7 +58837,7 @@ function rangeToString(iRange) {
 
 /***/ }),
 
-/***/ 79488:
+/***/ 92156:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -58838,7 +58845,7 @@ function rangeToString(iRange) {
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.StorageBrowserPolicyFactory = exports.StorageBrowserPolicy = void 0;
-const StorageBrowserPolicy_js_1 = __nccwpck_require__(9851);
+const StorageBrowserPolicy_js_1 = __nccwpck_require__(66687);
 Object.defineProperty(exports, "StorageBrowserPolicy", ({ enumerable: true, get: function () { return StorageBrowserPolicy_js_1.StorageBrowserPolicy; } }));
 /**
  * StorageBrowserPolicyFactory is a factory class helping generating StorageBrowserPolicy objects.
@@ -58859,7 +58866,7 @@ exports.StorageBrowserPolicyFactory = StorageBrowserPolicyFactory;
 
 /***/ }),
 
-/***/ 57167:
+/***/ 84827:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -58867,9 +58874,9 @@ exports.StorageBrowserPolicyFactory = StorageBrowserPolicyFactory;
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.StorageClient = void 0;
-const StorageContextClient_js_1 = __nccwpck_require__(77558);
-const Pipeline_js_1 = __nccwpck_require__(77907);
-const utils_common_js_1 = __nccwpck_require__(80023);
+const StorageContextClient_js_1 = __nccwpck_require__(64754);
+const Pipeline_js_1 = __nccwpck_require__(33543);
+const utils_common_js_1 = __nccwpck_require__(98915);
 /**
  * A StorageClient represents a based URL class for {@link BlobServiceClient}, {@link ContainerClient}
  * and etc.
@@ -58921,7 +58928,7 @@ exports.StorageClient = StorageClient;
 
 /***/ }),
 
-/***/ 77558:
+/***/ 64754:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -58929,7 +58936,7 @@ exports.StorageClient = StorageClient;
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.StorageContextClient = void 0;
-const index_js_1 = __nccwpck_require__(38982);
+const index_js_1 = __nccwpck_require__(76546);
 /**
  * @internal
  */
@@ -58948,7 +58955,7 @@ exports.StorageContextClient = StorageContextClient;
 
 /***/ }),
 
-/***/ 85706:
+/***/ 64574:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -58956,9 +58963,9 @@ exports.StorageContextClient = StorageContextClient;
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.StorageRetryPolicyFactory = exports.StorageRetryPolicy = exports.StorageRetryPolicyType = void 0;
-const StorageRetryPolicy_js_1 = __nccwpck_require__(93377);
+const StorageRetryPolicy_js_1 = __nccwpck_require__(21613);
 Object.defineProperty(exports, "StorageRetryPolicy", ({ enumerable: true, get: function () { return StorageRetryPolicy_js_1.StorageRetryPolicy; } }));
-const StorageRetryPolicyType_js_1 = __nccwpck_require__(59825);
+const StorageRetryPolicyType_js_1 = __nccwpck_require__(26941);
 Object.defineProperty(exports, "StorageRetryPolicyType", ({ enumerable: true, get: function () { return StorageRetryPolicyType_js_1.StorageRetryPolicyType; } }));
 /**
  * StorageRetryPolicyFactory is a factory class helping generating {@link StorageRetryPolicy} objects.
@@ -58987,7 +58994,7 @@ exports.StorageRetryPolicyFactory = StorageRetryPolicyFactory;
 
 /***/ }),
 
-/***/ 66188:
+/***/ 13360:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -58995,8 +59002,8 @@ exports.StorageRetryPolicyFactory = StorageRetryPolicyFactory;
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AnonymousCredential = void 0;
-const AnonymousCredentialPolicy_js_1 = __nccwpck_require__(96438);
-const Credential_js_1 = __nccwpck_require__(36531);
+const AnonymousCredentialPolicy_js_1 = __nccwpck_require__(74090);
+const Credential_js_1 = __nccwpck_require__(44175);
 /**
  * AnonymousCredential provides a credentialPolicyCreator member used to create
  * AnonymousCredentialPolicy objects. AnonymousCredentialPolicy is used with
@@ -59019,7 +59026,7 @@ exports.AnonymousCredential = AnonymousCredential;
 
 /***/ }),
 
-/***/ 36531:
+/***/ 44175:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -59047,7 +59054,7 @@ exports.Credential = Credential;
 
 /***/ }),
 
-/***/ 37016:
+/***/ 64220:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -59056,8 +59063,8 @@ exports.Credential = Credential;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.StorageSharedKeyCredential = void 0;
 const node_crypto_1 = __nccwpck_require__(77598);
-const StorageSharedKeyCredentialPolicy_js_1 = __nccwpck_require__(33618);
-const Credential_js_1 = __nccwpck_require__(36531);
+const StorageSharedKeyCredentialPolicy_js_1 = __nccwpck_require__(47318);
+const Credential_js_1 = __nccwpck_require__(44175);
 /**
  * ONLY AVAILABLE IN NODE.JS RUNTIME.
  *
@@ -59105,7 +59112,7 @@ exports.StorageSharedKeyCredential = StorageSharedKeyCredential;
 
 /***/ }),
 
-/***/ 85185:
+/***/ 20061:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -59158,7 +59165,7 @@ exports.UserDelegationKeyCredential = UserDelegationKeyCredential;
 
 /***/ }),
 
-/***/ 38982:
+/***/ 76546:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -59172,15 +59179,15 @@ exports.UserDelegationKeyCredential = UserDelegationKeyCredential;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.StorageClient = void 0;
 const tslib_1 = __nccwpck_require__(67892);
-tslib_1.__exportStar(__nccwpck_require__(13365), exports);
-var storageClient_js_1 = __nccwpck_require__(56992);
+tslib_1.__exportStar(__nccwpck_require__(93433), exports);
+var storageClient_js_1 = __nccwpck_require__(36244);
 Object.defineProperty(exports, "StorageClient", ({ enumerable: true, get: function () { return storageClient_js_1.StorageClient; } }));
-tslib_1.__exportStar(__nccwpck_require__(19881), exports);
+tslib_1.__exportStar(__nccwpck_require__(52597), exports);
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 13365:
+/***/ 93433:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -59453,7 +59460,7 @@ var KnownStorageErrorCode;
 
 /***/ }),
 
-/***/ 79987:
+/***/ 41423:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -59755,6 +59762,27 @@ exports.StorageError = {
             message: {
                 serializedName: "Message",
                 xmlName: "Message",
+                type: {
+                    name: "String",
+                },
+            },
+            copySourceStatusCode: {
+                serializedName: "CopySourceStatusCode",
+                xmlName: "CopySourceStatusCode",
+                type: {
+                    name: "Number",
+                },
+            },
+            copySourceErrorCode: {
+                serializedName: "CopySourceErrorCode",
+                xmlName: "CopySourceErrorCode",
+                type: {
+                    name: "String",
+                },
+            },
+            copySourceErrorMessage: {
+                serializedName: "CopySourceErrorMessage",
+                xmlName: "CopySourceErrorMessage",
                 type: {
                     name: "String",
                 },
@@ -65093,6 +65121,20 @@ exports.BlobStartCopyFromURLExceptionHeaders = {
                     name: "String",
                 },
             },
+            copySourceErrorCode: {
+                serializedName: "x-ms-copy-source-error-code",
+                xmlName: "x-ms-copy-source-error-code",
+                type: {
+                    name: "String",
+                },
+            },
+            copySourceStatusCode: {
+                serializedName: "x-ms-copy-source-status-code",
+                xmlName: "x-ms-copy-source-status-code",
+                type: {
+                    name: "Number",
+                },
+            },
         },
     },
 };
@@ -65208,6 +65250,20 @@ exports.BlobCopyFromURLExceptionHeaders = {
                 xmlName: "x-ms-error-code",
                 type: {
                     name: "String",
+                },
+            },
+            copySourceErrorCode: {
+                serializedName: "x-ms-copy-source-error-code",
+                xmlName: "x-ms-copy-source-error-code",
+                type: {
+                    name: "String",
+                },
+            },
+            copySourceStatusCode: {
+                serializedName: "x-ms-copy-source-status-code",
+                xmlName: "x-ms-copy-source-status-code",
+                type: {
+                    name: "Number",
                 },
             },
         },
@@ -66236,6 +66292,20 @@ exports.PageBlobUploadPagesFromURLExceptionHeaders = {
                     name: "String",
                 },
             },
+            copySourceErrorCode: {
+                serializedName: "x-ms-copy-source-error-code",
+                xmlName: "x-ms-copy-source-error-code",
+                type: {
+                    name: "String",
+                },
+            },
+            copySourceStatusCode: {
+                serializedName: "x-ms-copy-source-status-code",
+                xmlName: "x-ms-copy-source-status-code",
+                type: {
+                    name: "Number",
+                },
+            },
         },
     },
 };
@@ -66997,6 +67067,20 @@ exports.AppendBlobAppendBlockFromUrlExceptionHeaders = {
                     name: "String",
                 },
             },
+            copySourceErrorCode: {
+                serializedName: "x-ms-copy-source-error-code",
+                xmlName: "x-ms-copy-source-error-code",
+                type: {
+                    name: "String",
+                },
+            },
+            copySourceStatusCode: {
+                serializedName: "x-ms-copy-source-status-code",
+                xmlName: "x-ms-copy-source-status-code",
+                type: {
+                    name: "Number",
+                },
+            },
         },
     },
 };
@@ -67289,6 +67373,20 @@ exports.BlockBlobPutBlobFromUrlExceptionHeaders = {
                     name: "String",
                 },
             },
+            copySourceErrorCode: {
+                serializedName: "x-ms-copy-source-error-code",
+                xmlName: "x-ms-copy-source-error-code",
+                type: {
+                    name: "String",
+                },
+            },
+            copySourceStatusCode: {
+                serializedName: "x-ms-copy-source-status-code",
+                xmlName: "x-ms-copy-source-status-code",
+                type: {
+                    name: "Number",
+                },
+            },
         },
     },
 };
@@ -67477,6 +67575,20 @@ exports.BlockBlobStageBlockFromURLExceptionHeaders = {
                 xmlName: "x-ms-error-code",
                 type: {
                     name: "String",
+                },
+            },
+            copySourceErrorCode: {
+                serializedName: "x-ms-copy-source-error-code",
+                xmlName: "x-ms-copy-source-error-code",
+                type: {
+                    name: "String",
+                },
+            },
+            copySourceStatusCode: {
+                serializedName: "x-ms-copy-source-status-code",
+                xmlName: "x-ms-copy-source-status-code",
+                type: {
+                    name: "Number",
                 },
             },
         },
@@ -67690,7 +67802,7 @@ exports.BlockBlobGetBlockListExceptionHeaders = {
 
 /***/ }),
 
-/***/ 37977:
+/***/ 23469:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -67705,7 +67817,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.action3 = exports.action2 = exports.leaseId1 = exports.action1 = exports.proposedLeaseId = exports.duration = exports.action = exports.comp10 = exports.sourceLeaseId = exports.sourceContainerName = exports.comp9 = exports.deletedContainerVersion = exports.deletedContainerName = exports.comp8 = exports.containerAcl = exports.comp7 = exports.comp6 = exports.ifUnmodifiedSince = exports.ifModifiedSince = exports.leaseId = exports.preventEncryptionScopeOverride = exports.defaultEncryptionScope = exports.access = exports.metadata = exports.restype2 = exports.where = exports.comp5 = exports.multipartContentType = exports.contentLength = exports.comp4 = exports.body = exports.restype1 = exports.comp3 = exports.keyInfo = exports.include = exports.maxPageSize = exports.marker = exports.prefix = exports.comp2 = exports.comp1 = exports.accept1 = exports.requestId = exports.version = exports.timeoutInSeconds = exports.comp = exports.restype = exports.url = exports.accept = exports.blobServiceProperties = exports.contentType = void 0;
 exports.fileRequestIntent = exports.copySourceTags = exports.copySourceAuthorization = exports.sourceContentMD5 = exports.xMsRequiresSync = exports.legalHold1 = exports.sealBlob = exports.blobTagsString = exports.copySource = exports.sourceIfTags = exports.sourceIfNoneMatch = exports.sourceIfMatch = exports.sourceIfUnmodifiedSince = exports.sourceIfModifiedSince = exports.rehydratePriority = exports.tier = exports.comp14 = exports.encryptionScope = exports.legalHold = exports.comp13 = exports.immutabilityPolicyMode = exports.immutabilityPolicyExpiry = exports.comp12 = exports.blobContentDisposition = exports.blobContentLanguage = exports.blobContentEncoding = exports.blobContentMD5 = exports.blobContentType = exports.blobCacheControl = exports.expiresOn = exports.expiryOptions = exports.comp11 = exports.blobDeleteType = exports.deleteSnapshots = exports.ifTags = exports.ifNoneMatch = exports.ifMatch = exports.encryptionAlgorithm = exports.encryptionKeySha256 = exports.encryptionKey = exports.rangeGetContentCRC64 = exports.rangeGetContentMD5 = exports.range = exports.versionId = exports.snapshot = exports.delimiter = exports.include1 = exports.proposedLeaseId1 = exports.action4 = exports.breakPeriod = void 0;
 exports.listType = exports.comp25 = exports.blocks = exports.blockId = exports.comp24 = exports.copySourceBlobProperties = exports.blobType2 = exports.comp23 = exports.sourceRange1 = exports.appendPosition = exports.maxSize = exports.comp22 = exports.blobType1 = exports.comp21 = exports.sequenceNumberAction = exports.prevSnapshotUrl = exports.prevsnapshot = exports.comp20 = exports.range1 = exports.sourceContentCrc64 = exports.sourceRange = exports.sourceUrl = exports.pageWrite1 = exports.ifSequenceNumberEqualTo = exports.ifSequenceNumberLessThan = exports.ifSequenceNumberLessThanOrEqualTo = exports.pageWrite = exports.comp19 = exports.accept2 = exports.body1 = exports.contentType1 = exports.blobSequenceNumber = exports.blobContentLength = exports.blobType = exports.transactionalContentCrc64 = exports.transactionalContentMD5 = exports.tags = exports.comp18 = exports.comp17 = exports.queryRequest = exports.tier1 = exports.comp16 = exports.copyId = exports.copyActionAbortConstant = exports.comp15 = void 0;
-const mappers_js_1 = __nccwpck_require__(79987);
+const mappers_js_1 = __nccwpck_require__(41423);
 exports.contentType = {
     parameterPath: ["options", "contentType"],
     mapper: {
@@ -67782,7 +67894,7 @@ exports.timeoutInSeconds = {
 exports.version = {
     parameterPath: "version",
     mapper: {
-        defaultValue: "2025-07-05",
+        defaultValue: "2025-11-05",
         isConstant: true,
         serializedName: "x-ms-version",
         type: {
@@ -69321,7 +69433,7 @@ exports.listType = {
 
 /***/ }),
 
-/***/ 92098:
+/***/ 74910:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -69336,8 +69448,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AppendBlobImpl = void 0;
 const tslib_1 = __nccwpck_require__(67892);
 const coreClient = tslib_1.__importStar(__nccwpck_require__(99307));
-const Mappers = tslib_1.__importStar(__nccwpck_require__(79987));
-const Parameters = tslib_1.__importStar(__nccwpck_require__(37977));
+const Mappers = tslib_1.__importStar(__nccwpck_require__(41423));
+const Parameters = tslib_1.__importStar(__nccwpck_require__(23469));
 /** Class containing AppendBlob operations. */
 class AppendBlobImpl {
     client;
@@ -69555,7 +69667,7 @@ const sealOperationSpec = {
 
 /***/ }),
 
-/***/ 63590:
+/***/ 83354:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -69570,8 +69682,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.BlobImpl = void 0;
 const tslib_1 = __nccwpck_require__(67892);
 const coreClient = tslib_1.__importStar(__nccwpck_require__(99307));
-const Mappers = tslib_1.__importStar(__nccwpck_require__(79987));
-const Parameters = tslib_1.__importStar(__nccwpck_require__(37977));
+const Mappers = tslib_1.__importStar(__nccwpck_require__(41423));
+const Parameters = tslib_1.__importStar(__nccwpck_require__(23469));
 /** Class containing Blob operations. */
 class BlobImpl {
     client;
@@ -70588,7 +70700,7 @@ const setTagsOperationSpec = {
 
 /***/ }),
 
-/***/ 84643:
+/***/ 99231:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -70603,8 +70715,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.BlockBlobImpl = void 0;
 const tslib_1 = __nccwpck_require__(67892);
 const coreClient = tslib_1.__importStar(__nccwpck_require__(99307));
-const Mappers = tslib_1.__importStar(__nccwpck_require__(79987));
-const Parameters = tslib_1.__importStar(__nccwpck_require__(37977));
+const Mappers = tslib_1.__importStar(__nccwpck_require__(41423));
+const Parameters = tslib_1.__importStar(__nccwpck_require__(23469));
 /** Class containing BlockBlob operations. */
 class BlockBlobImpl {
     client;
@@ -70967,7 +71079,7 @@ const getBlockListOperationSpec = {
 
 /***/ }),
 
-/***/ 63950:
+/***/ 80402:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -70982,8 +71094,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ContainerImpl = void 0;
 const tslib_1 = __nccwpck_require__(67892);
 const coreClient = tslib_1.__importStar(__nccwpck_require__(99307));
-const Mappers = tslib_1.__importStar(__nccwpck_require__(79987));
-const Parameters = tslib_1.__importStar(__nccwpck_require__(37977));
+const Mappers = tslib_1.__importStar(__nccwpck_require__(41423));
+const Parameters = tslib_1.__importStar(__nccwpck_require__(23469));
 /** Class containing Container operations. */
 class ContainerImpl {
     client;
@@ -71692,7 +71804,7 @@ const getAccountInfoOperationSpec = {
 
 /***/ }),
 
-/***/ 54277:
+/***/ 21305:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -71705,17 +71817,17 @@ const getAccountInfoOperationSpec = {
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const tslib_1 = __nccwpck_require__(67892);
-tslib_1.__exportStar(__nccwpck_require__(70182), exports);
-tslib_1.__exportStar(__nccwpck_require__(63950), exports);
-tslib_1.__exportStar(__nccwpck_require__(63590), exports);
-tslib_1.__exportStar(__nccwpck_require__(25021), exports);
-tslib_1.__exportStar(__nccwpck_require__(92098), exports);
-tslib_1.__exportStar(__nccwpck_require__(84643), exports);
+tslib_1.__exportStar(__nccwpck_require__(94570), exports);
+tslib_1.__exportStar(__nccwpck_require__(80402), exports);
+tslib_1.__exportStar(__nccwpck_require__(83354), exports);
+tslib_1.__exportStar(__nccwpck_require__(2721), exports);
+tslib_1.__exportStar(__nccwpck_require__(74910), exports);
+tslib_1.__exportStar(__nccwpck_require__(99231), exports);
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 25021:
+/***/ 2721:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -71730,8 +71842,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PageBlobImpl = void 0;
 const tslib_1 = __nccwpck_require__(67892);
 const coreClient = tslib_1.__importStar(__nccwpck_require__(99307));
-const Mappers = tslib_1.__importStar(__nccwpck_require__(79987));
-const Parameters = tslib_1.__importStar(__nccwpck_require__(37977));
+const Mappers = tslib_1.__importStar(__nccwpck_require__(41423));
+const Parameters = tslib_1.__importStar(__nccwpck_require__(23469));
 /** Class containing PageBlob operations. */
 class PageBlobImpl {
     client;
@@ -72184,7 +72296,7 @@ const copyIncrementalOperationSpec = {
 
 /***/ }),
 
-/***/ 70182:
+/***/ 94570:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -72199,8 +72311,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ServiceImpl = void 0;
 const tslib_1 = __nccwpck_require__(67892);
 const coreClient = tslib_1.__importStar(__nccwpck_require__(99307));
-const Mappers = tslib_1.__importStar(__nccwpck_require__(79987));
-const Parameters = tslib_1.__importStar(__nccwpck_require__(37977));
+const Mappers = tslib_1.__importStar(__nccwpck_require__(41423));
+const Parameters = tslib_1.__importStar(__nccwpck_require__(23469));
 /** Class containing Service operations. */
 class ServiceImpl {
     client;
@@ -72519,7 +72631,7 @@ const filterBlobsOperationSpec = {
 
 /***/ }),
 
-/***/ 55118:
+/***/ 36242:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -72535,7 +72647,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 
 /***/ }),
 
-/***/ 43626:
+/***/ 42294:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -72551,7 +72663,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 
 /***/ }),
 
-/***/ 3375:
+/***/ 26003:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -72567,7 +72679,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 
 /***/ }),
 
-/***/ 77794:
+/***/ 2718:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -72583,7 +72695,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 
 /***/ }),
 
-/***/ 19881:
+/***/ 52597:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -72596,17 +72708,17 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
  */
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const tslib_1 = __nccwpck_require__(67892);
-tslib_1.__exportStar(__nccwpck_require__(33370), exports);
-tslib_1.__exportStar(__nccwpck_require__(77794), exports);
-tslib_1.__exportStar(__nccwpck_require__(43626), exports);
-tslib_1.__exportStar(__nccwpck_require__(77937), exports);
-tslib_1.__exportStar(__nccwpck_require__(55118), exports);
-tslib_1.__exportStar(__nccwpck_require__(3375), exports);
+tslib_1.__exportStar(__nccwpck_require__(87126), exports);
+tslib_1.__exportStar(__nccwpck_require__(2718), exports);
+tslib_1.__exportStar(__nccwpck_require__(42294), exports);
+tslib_1.__exportStar(__nccwpck_require__(85517), exports);
+tslib_1.__exportStar(__nccwpck_require__(36242), exports);
+tslib_1.__exportStar(__nccwpck_require__(26003), exports);
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 77937:
+/***/ 85517:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -72622,7 +72734,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 
 /***/ }),
 
-/***/ 33370:
+/***/ 87126:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -72638,7 +72750,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 
 /***/ }),
 
-/***/ 56992:
+/***/ 36244:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -72653,7 +72765,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.StorageClient = void 0;
 const tslib_1 = __nccwpck_require__(67892);
 const coreHttpCompat = tslib_1.__importStar(__nccwpck_require__(80976));
-const index_js_1 = __nccwpck_require__(54277);
+const index_js_1 = __nccwpck_require__(21305);
 class StorageClient extends coreHttpCompat.ExtendedServiceClient {
     url;
     version;
@@ -72674,7 +72786,7 @@ class StorageClient extends coreHttpCompat.ExtendedServiceClient {
         const defaults = {
             requestContentType: "application/json; charset=utf-8",
         };
-        const packageDetails = `azsdk-js-azure-storage-blob/12.28.0`;
+        const packageDetails = `azsdk-js-azure-storage-blob/12.29.1`;
         const userAgentPrefix = options.userAgentOptions && options.userAgentOptions.userAgentPrefix
             ? `${options.userAgentOptions.userAgentPrefix} ${packageDetails}`
             : `${packageDetails}`;
@@ -72690,7 +72802,7 @@ class StorageClient extends coreHttpCompat.ExtendedServiceClient {
         // Parameter assignments
         this.url = url;
         // Assigning values to Constant parameters
-        this.version = options.version || "2025-07-05";
+        this.version = options.version || "2025-11-05";
         this.service = new index_js_1.ServiceImpl(this);
         this.container = new index_js_1.ContainerImpl(this);
         this.blob = new index_js_1.BlobImpl(this);
@@ -72710,7 +72822,7 @@ exports.StorageClient = StorageClient;
 
 /***/ }),
 
-/***/ 35514:
+/***/ 13430:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -72727,7 +72839,7 @@ var KnownEncryptionAlgorithmType;
 
 /***/ }),
 
-/***/ 46465:
+/***/ 32917:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -72736,54 +72848,54 @@ var KnownEncryptionAlgorithmType;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.logger = exports.RestError = exports.BaseRequestPolicy = exports.StorageOAuthScopes = exports.newPipeline = exports.isPipelineLike = exports.Pipeline = exports.getBlobServiceAccountAudience = exports.StorageBlobAudience = exports.PremiumPageBlobTier = exports.BlockBlobTier = exports.generateBlobSASQueryParameters = exports.generateAccountSASQueryParameters = void 0;
 const tslib_1 = __nccwpck_require__(67892);
-const core_rest_pipeline_1 = __nccwpck_require__(46312);
+const core_rest_pipeline_1 = __nccwpck_require__(81591);
 Object.defineProperty(exports, "RestError", ({ enumerable: true, get: function () { return core_rest_pipeline_1.RestError; } }));
-tslib_1.__exportStar(__nccwpck_require__(36228), exports);
-tslib_1.__exportStar(__nccwpck_require__(17065), exports);
-tslib_1.__exportStar(__nccwpck_require__(31421), exports);
-tslib_1.__exportStar(__nccwpck_require__(22321), exports);
-tslib_1.__exportStar(__nccwpck_require__(24007), exports);
-tslib_1.__exportStar(__nccwpck_require__(67250), exports);
-tslib_1.__exportStar(__nccwpck_require__(39011), exports);
-var AccountSASSignatureValues_js_1 = __nccwpck_require__(23315);
+tslib_1.__exportStar(__nccwpck_require__(91352), exports);
+tslib_1.__exportStar(__nccwpck_require__(59813), exports);
+tslib_1.__exportStar(__nccwpck_require__(83745), exports);
+tslib_1.__exportStar(__nccwpck_require__(51029), exports);
+tslib_1.__exportStar(__nccwpck_require__(56139), exports);
+tslib_1.__exportStar(__nccwpck_require__(49286), exports);
+tslib_1.__exportStar(__nccwpck_require__(89159), exports);
+var AccountSASSignatureValues_js_1 = __nccwpck_require__(10319);
 Object.defineProperty(exports, "generateAccountSASQueryParameters", ({ enumerable: true, get: function () { return AccountSASSignatureValues_js_1.generateAccountSASQueryParameters; } }));
-tslib_1.__exportStar(__nccwpck_require__(68556), exports);
-tslib_1.__exportStar(__nccwpck_require__(98175), exports);
-tslib_1.__exportStar(__nccwpck_require__(18618), exports);
-tslib_1.__exportStar(__nccwpck_require__(8907), exports);
-var BlobSASSignatureValues_js_1 = __nccwpck_require__(70895);
+tslib_1.__exportStar(__nccwpck_require__(27776), exports);
+tslib_1.__exportStar(__nccwpck_require__(37683), exports);
+tslib_1.__exportStar(__nccwpck_require__(4766), exports);
+tslib_1.__exportStar(__nccwpck_require__(7831), exports);
+var BlobSASSignatureValues_js_1 = __nccwpck_require__(38147);
 Object.defineProperty(exports, "generateBlobSASQueryParameters", ({ enumerable: true, get: function () { return BlobSASSignatureValues_js_1.generateBlobSASQueryParameters; } }));
-tslib_1.__exportStar(__nccwpck_require__(79488), exports);
-tslib_1.__exportStar(__nccwpck_require__(12263), exports);
-tslib_1.__exportStar(__nccwpck_require__(66188), exports);
-tslib_1.__exportStar(__nccwpck_require__(36531), exports);
-tslib_1.__exportStar(__nccwpck_require__(37016), exports);
-var models_js_1 = __nccwpck_require__(41107);
+tslib_1.__exportStar(__nccwpck_require__(92156), exports);
+tslib_1.__exportStar(__nccwpck_require__(32739), exports);
+tslib_1.__exportStar(__nccwpck_require__(13360), exports);
+tslib_1.__exportStar(__nccwpck_require__(44175), exports);
+tslib_1.__exportStar(__nccwpck_require__(64220), exports);
+var models_js_1 = __nccwpck_require__(37647);
 Object.defineProperty(exports, "BlockBlobTier", ({ enumerable: true, get: function () { return models_js_1.BlockBlobTier; } }));
 Object.defineProperty(exports, "PremiumPageBlobTier", ({ enumerable: true, get: function () { return models_js_1.PremiumPageBlobTier; } }));
 Object.defineProperty(exports, "StorageBlobAudience", ({ enumerable: true, get: function () { return models_js_1.StorageBlobAudience; } }));
 Object.defineProperty(exports, "getBlobServiceAccountAudience", ({ enumerable: true, get: function () { return models_js_1.getBlobServiceAccountAudience; } }));
-var Pipeline_js_1 = __nccwpck_require__(77907);
+var Pipeline_js_1 = __nccwpck_require__(33543);
 Object.defineProperty(exports, "Pipeline", ({ enumerable: true, get: function () { return Pipeline_js_1.Pipeline; } }));
 Object.defineProperty(exports, "isPipelineLike", ({ enumerable: true, get: function () { return Pipeline_js_1.isPipelineLike; } }));
 Object.defineProperty(exports, "newPipeline", ({ enumerable: true, get: function () { return Pipeline_js_1.newPipeline; } }));
 Object.defineProperty(exports, "StorageOAuthScopes", ({ enumerable: true, get: function () { return Pipeline_js_1.StorageOAuthScopes; } }));
-tslib_1.__exportStar(__nccwpck_require__(85706), exports);
-var RequestPolicy_js_1 = __nccwpck_require__(98723);
+tslib_1.__exportStar(__nccwpck_require__(64574), exports);
+var RequestPolicy_js_1 = __nccwpck_require__(30679);
 Object.defineProperty(exports, "BaseRequestPolicy", ({ enumerable: true, get: function () { return RequestPolicy_js_1.BaseRequestPolicy; } }));
-tslib_1.__exportStar(__nccwpck_require__(96438), exports);
-tslib_1.__exportStar(__nccwpck_require__(46741), exports);
-tslib_1.__exportStar(__nccwpck_require__(85706), exports);
-tslib_1.__exportStar(__nccwpck_require__(33618), exports);
-tslib_1.__exportStar(__nccwpck_require__(92532), exports);
-tslib_1.__exportStar(__nccwpck_require__(35514), exports);
-var log_js_1 = __nccwpck_require__(65175);
+tslib_1.__exportStar(__nccwpck_require__(74090), exports);
+tslib_1.__exportStar(__nccwpck_require__(39809), exports);
+tslib_1.__exportStar(__nccwpck_require__(64574), exports);
+tslib_1.__exportStar(__nccwpck_require__(47318), exports);
+tslib_1.__exportStar(__nccwpck_require__(65424), exports);
+tslib_1.__exportStar(__nccwpck_require__(13430), exports);
+var log_js_1 = __nccwpck_require__(32763);
 Object.defineProperty(exports, "logger", ({ enumerable: true, get: function () { return log_js_1.logger; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 44871:
+/***/ 58691:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -72799,7 +72911,7 @@ exports.AVRO_SCHEMA_KEY = "avro.schema";
 
 /***/ }),
 
-/***/ 25143:
+/***/ 53355:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -73133,7 +73245,7 @@ class AvroRecordType extends AvroType {
 
 /***/ }),
 
-/***/ 60572:
+/***/ 92616:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -73148,7 +73260,7 @@ exports.AvroReadable = AvroReadable;
 
 /***/ }),
 
-/***/ 40432:
+/***/ 40092:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -73156,7 +73268,7 @@ exports.AvroReadable = AvroReadable;
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AvroReadableFromStream = void 0;
-const AvroReadable_js_1 = __nccwpck_require__(60572);
+const AvroReadable_js_1 = __nccwpck_require__(92616);
 const abort_controller_1 = __nccwpck_require__(49797);
 const buffer_1 = __nccwpck_require__(20181);
 const ABORT_ERROR = new abort_controller_1.AbortError("Reading from the avro stream was aborted.");
@@ -73244,7 +73356,7 @@ exports.AvroReadableFromStream = AvroReadableFromStream;
 
 /***/ }),
 
-/***/ 12599:
+/***/ 94875:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -73254,9 +73366,9 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AvroReader = void 0;
 // TODO: Do a review of non-interfaces
 /* eslint-disable @azure/azure-sdk/ts-use-interface-parameters */
-const AvroConstants_js_1 = __nccwpck_require__(44871);
-const AvroParser_js_1 = __nccwpck_require__(25143);
-const utils_common_js_1 = __nccwpck_require__(35154);
+const AvroConstants_js_1 = __nccwpck_require__(58691);
+const AvroParser_js_1 = __nccwpck_require__(53355);
+const utils_common_js_1 = __nccwpck_require__(1142);
 class AvroReader {
     _dataStream;
     _headerStream;
@@ -73370,7 +73482,7 @@ exports.AvroReader = AvroReader;
 
 /***/ }),
 
-/***/ 66126:
+/***/ 71338:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -73378,17 +73490,17 @@ exports.AvroReader = AvroReader;
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AvroReadableFromStream = exports.AvroReadable = exports.AvroReader = void 0;
-var AvroReader_js_1 = __nccwpck_require__(12599);
+var AvroReader_js_1 = __nccwpck_require__(94875);
 Object.defineProperty(exports, "AvroReader", ({ enumerable: true, get: function () { return AvroReader_js_1.AvroReader; } }));
-var AvroReadable_js_1 = __nccwpck_require__(60572);
+var AvroReadable_js_1 = __nccwpck_require__(92616);
 Object.defineProperty(exports, "AvroReadable", ({ enumerable: true, get: function () { return AvroReadable_js_1.AvroReadable; } }));
-var AvroReadableFromStream_js_1 = __nccwpck_require__(40432);
+var AvroReadableFromStream_js_1 = __nccwpck_require__(40092);
 Object.defineProperty(exports, "AvroReadableFromStream", ({ enumerable: true, get: function () { return AvroReadableFromStream_js_1.AvroReadableFromStream; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 35154:
+/***/ 1142:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -73413,7 +73525,7 @@ function arraysEqual(a, b) {
 
 /***/ }),
 
-/***/ 65175:
+/***/ 32763:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -73430,7 +73542,7 @@ exports.logger = (0, logger_1.createClientLogger)("storage-blob");
 
 /***/ }),
 
-/***/ 41107:
+/***/ 37647:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -73441,7 +73553,7 @@ exports.StorageBlobAudience = exports.PremiumPageBlobTier = exports.BlockBlobTie
 exports.toAccessTier = toAccessTier;
 exports.ensureCpkIfSpecified = ensureCpkIfSpecified;
 exports.getBlobServiceAccountAudience = getBlobServiceAccountAudience;
-const constants_js_1 = __nccwpck_require__(64710);
+const constants_js_1 = __nccwpck_require__(9386);
 /**
  * Represents the access tier on a blob.
  * For detailed information about block blob level tiering see {@link https://learn.microsoft.com/azure/storage/blobs/storage-blob-storage-tiers|Hot, cool and archive storage tiers.}
@@ -73557,7 +73669,7 @@ function getBlobServiceAccountAudience(storageAccountName) {
 
 /***/ }),
 
-/***/ 96438:
+/***/ 74090:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -73565,7 +73677,7 @@ function getBlobServiceAccountAudience(storageAccountName) {
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AnonymousCredentialPolicy = void 0;
-const CredentialPolicy_js_1 = __nccwpck_require__(46741);
+const CredentialPolicy_js_1 = __nccwpck_require__(39809);
 /**
  * AnonymousCredentialPolicy is used with HTTP(S) requests that read public resources
  * or for use with Shared Access Signatures (SAS).
@@ -73587,7 +73699,7 @@ exports.AnonymousCredentialPolicy = AnonymousCredentialPolicy;
 
 /***/ }),
 
-/***/ 46741:
+/***/ 39809:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -73595,7 +73707,7 @@ exports.AnonymousCredentialPolicy = AnonymousCredentialPolicy;
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.CredentialPolicy = void 0;
-const RequestPolicy_js_1 = __nccwpck_require__(98723);
+const RequestPolicy_js_1 = __nccwpck_require__(30679);
 /**
  * Credential policy used to sign HTTP(S) requests before sending. This is an
  * abstract class.
@@ -73626,7 +73738,7 @@ exports.CredentialPolicy = CredentialPolicy;
 
 /***/ }),
 
-/***/ 98723:
+/***/ 30679:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -73678,7 +73790,7 @@ exports.BaseRequestPolicy = BaseRequestPolicy;
 
 /***/ }),
 
-/***/ 9851:
+/***/ 66687:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -73686,10 +73798,10 @@ exports.BaseRequestPolicy = BaseRequestPolicy;
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.StorageBrowserPolicy = void 0;
-const RequestPolicy_js_1 = __nccwpck_require__(98723);
+const RequestPolicy_js_1 = __nccwpck_require__(30679);
 const core_util_1 = __nccwpck_require__(33000);
-const constants_js_1 = __nccwpck_require__(64710);
-const utils_common_js_1 = __nccwpck_require__(80023);
+const constants_js_1 = __nccwpck_require__(9386);
+const utils_common_js_1 = __nccwpck_require__(98915);
 /**
  * StorageBrowserPolicy will handle differences between Node.js and browser runtime, including:
  *
@@ -73735,7 +73847,7 @@ exports.StorageBrowserPolicy = StorageBrowserPolicy;
 
 /***/ }),
 
-/***/ 24651:
+/***/ 12391:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -73745,8 +73857,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.storageBrowserPolicyName = void 0;
 exports.storageBrowserPolicy = storageBrowserPolicy;
 const core_util_1 = __nccwpck_require__(33000);
-const constants_js_1 = __nccwpck_require__(64710);
-const utils_common_js_1 = __nccwpck_require__(80023);
+const constants_js_1 = __nccwpck_require__(9386);
+const utils_common_js_1 = __nccwpck_require__(98915);
 /**
  * The programmatic identifier of the StorageBrowserPolicy.
  */
@@ -73776,7 +73888,7 @@ function storageBrowserPolicy() {
 
 /***/ }),
 
-/***/ 76608:
+/***/ 77348:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -73785,7 +73897,7 @@ function storageBrowserPolicy() {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.storageCorrectContentLengthPolicyName = void 0;
 exports.storageCorrectContentLengthPolicy = storageCorrectContentLengthPolicy;
-const constants_js_1 = __nccwpck_require__(64710);
+const constants_js_1 = __nccwpck_require__(9386);
 /**
  * The programmatic identifier of the storageCorrectContentLengthPolicy.
  */
@@ -73813,7 +73925,7 @@ function storageCorrectContentLengthPolicy() {
 
 /***/ }),
 
-/***/ 93377:
+/***/ 21613:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -73823,11 +73935,11 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.StorageRetryPolicy = void 0;
 exports.NewRetryPolicyFactory = NewRetryPolicyFactory;
 const abort_controller_1 = __nccwpck_require__(49797);
-const RequestPolicy_js_1 = __nccwpck_require__(98723);
-const constants_js_1 = __nccwpck_require__(64710);
-const utils_common_js_1 = __nccwpck_require__(80023);
-const log_js_1 = __nccwpck_require__(65175);
-const StorageRetryPolicyType_js_1 = __nccwpck_require__(59825);
+const RequestPolicy_js_1 = __nccwpck_require__(30679);
+const constants_js_1 = __nccwpck_require__(9386);
+const utils_common_js_1 = __nccwpck_require__(98915);
+const log_js_1 = __nccwpck_require__(32763);
+const StorageRetryPolicyType_js_1 = __nccwpck_require__(26941);
 /**
  * A factory method used to generated a RetryPolicy factory.
  *
@@ -73992,21 +74104,20 @@ class StorageRetryPolicy extends RequestPolicy_js_1.BaseRequestPolicy {
                 return true;
             }
         }
-        // [Copy source error code] Feature is pending on service side, skip retry on copy source error for now.
-        // if (response) {
-        //   // Retry select Copy Source Error Codes.
-        //   if (response?.status >= 400) {
-        //     const copySourceError = response.headers.get(HeaderConstants.X_MS_CopySourceErrorCode);
-        //     if (copySourceError !== undefined) {
-        //       switch (copySourceError) {
-        //         case "InternalError":
-        //         case "OperationTimedOut":
-        //         case "ServerBusy":
-        //           return true;
-        //       }
-        //     }
-        //   }
-        // }
+        if (response) {
+            // Retry select Copy Source Error Codes.
+            if (response?.status >= 400) {
+                const copySourceError = response.headers.get(constants_js_1.HeaderConstants.X_MS_CopySourceErrorCode);
+                if (copySourceError !== undefined) {
+                    switch (copySourceError) {
+                        case "InternalError":
+                        case "OperationTimedOut":
+                        case "ServerBusy":
+                            return true;
+                    }
+                }
+            }
+        }
         if (err?.code === "PARSE_ERROR" && err?.message.startsWith(`Error "Error: Unclosed root tag`)) {
             log_js_1.logger.info("RetryPolicy: Incomplete XML response likely due to service timeout, will retry.");
             return true;
@@ -74044,7 +74155,7 @@ exports.StorageRetryPolicy = StorageRetryPolicy;
 
 /***/ }),
 
-/***/ 59825:
+/***/ 26941:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -74070,7 +74181,7 @@ var StorageRetryPolicyType;
 
 /***/ }),
 
-/***/ 36393:
+/***/ 46221:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -74080,12 +74191,12 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.storageRetryPolicyName = void 0;
 exports.storageRetryPolicy = storageRetryPolicy;
 const abort_controller_1 = __nccwpck_require__(49797);
-const core_rest_pipeline_1 = __nccwpck_require__(46312);
+const core_rest_pipeline_1 = __nccwpck_require__(81591);
 const core_util_1 = __nccwpck_require__(33000);
-const StorageRetryPolicyFactory_js_1 = __nccwpck_require__(85706);
-const constants_js_1 = __nccwpck_require__(64710);
-const utils_common_js_1 = __nccwpck_require__(80023);
-const log_js_1 = __nccwpck_require__(65175);
+const StorageRetryPolicyFactory_js_1 = __nccwpck_require__(64574);
+const constants_js_1 = __nccwpck_require__(9386);
+const utils_common_js_1 = __nccwpck_require__(98915);
+const log_js_1 = __nccwpck_require__(32763);
 /**
  * Name of the {@link storageRetryPolicy}
  */
@@ -74156,21 +74267,20 @@ function storageRetryPolicy(options = {}) {
                 return true;
             }
         }
-        // [Copy source error code] Feature is pending on service side, skip retry on copy source error for now.
-        // if (response) {
-        //   // Retry select Copy Source Error Codes.
-        //   if (response?.status >= 400) {
-        //     const copySourceError = response.headers.get(HeaderConstants.X_MS_CopySourceErrorCode);
-        //     if (copySourceError !== undefined) {
-        //       switch (copySourceError) {
-        //         case "InternalError":
-        //         case "OperationTimedOut":
-        //         case "ServerBusy":
-        //           return true;
-        //       }
-        //     }
-        //   }
-        // }
+        if (response) {
+            // Retry select Copy Source Error Codes.
+            if (response?.status >= 400) {
+                const copySourceError = response.headers.get(constants_js_1.HeaderConstants.X_MS_CopySourceErrorCode);
+                if (copySourceError !== undefined) {
+                    switch (copySourceError) {
+                        case "InternalError":
+                        case "OperationTimedOut":
+                        case "ServerBusy":
+                            return true;
+                    }
+                }
+            }
+        }
         return false;
     }
     function calculateDelay(isPrimaryRetry, attempt) {
@@ -74245,7 +74355,7 @@ function storageRetryPolicy(options = {}) {
 
 /***/ }),
 
-/***/ 33618:
+/***/ 47318:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -74253,10 +74363,10 @@ function storageRetryPolicy(options = {}) {
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.StorageSharedKeyCredentialPolicy = void 0;
-const constants_js_1 = __nccwpck_require__(64710);
-const utils_common_js_1 = __nccwpck_require__(80023);
-const CredentialPolicy_js_1 = __nccwpck_require__(46741);
-const SharedKeyComparator_js_1 = __nccwpck_require__(87127);
+const constants_js_1 = __nccwpck_require__(9386);
+const utils_common_js_1 = __nccwpck_require__(98915);
+const CredentialPolicy_js_1 = __nccwpck_require__(39809);
+const SharedKeyComparator_js_1 = __nccwpck_require__(81179);
 /**
  * StorageSharedKeyCredentialPolicy is a policy used to sign HTTP request with a shared key.
  */
@@ -74400,7 +74510,7 @@ exports.StorageSharedKeyCredentialPolicy = StorageSharedKeyCredentialPolicy;
 
 /***/ }),
 
-/***/ 5286:
+/***/ 61154:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -74410,9 +74520,9 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.storageSharedKeyCredentialPolicyName = void 0;
 exports.storageSharedKeyCredentialPolicy = storageSharedKeyCredentialPolicy;
 const node_crypto_1 = __nccwpck_require__(77598);
-const constants_js_1 = __nccwpck_require__(64710);
-const utils_common_js_1 = __nccwpck_require__(80023);
-const SharedKeyComparator_js_1 = __nccwpck_require__(87127);
+const constants_js_1 = __nccwpck_require__(9386);
+const utils_common_js_1 = __nccwpck_require__(98915);
+const SharedKeyComparator_js_1 = __nccwpck_require__(81179);
 /**
  * The programmatic identifier of the storageSharedKeyCredentialPolicy.
  */
@@ -74542,7 +74652,7 @@ function storageSharedKeyCredentialPolicy(options) {
 
 /***/ }),
 
-/***/ 14914:
+/***/ 22958:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -74686,7 +74796,7 @@ function makeBlobBeginCopyFromURLPollOperation(state) {
 
 /***/ }),
 
-/***/ 24007:
+/***/ 56139:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -74921,7 +75031,7 @@ exports.AccountSASPermissions = AccountSASPermissions;
 
 /***/ }),
 
-/***/ 67250:
+/***/ 49286:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -75001,7 +75111,7 @@ exports.AccountSASResourceTypes = AccountSASResourceTypes;
 
 /***/ }),
 
-/***/ 39011:
+/***/ 89159:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -75089,7 +75199,7 @@ exports.AccountSASServices = AccountSASServices;
 
 /***/ }),
 
-/***/ 23315:
+/***/ 10319:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -75098,13 +75208,13 @@ exports.AccountSASServices = AccountSASServices;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.generateAccountSASQueryParameters = generateAccountSASQueryParameters;
 exports.generateAccountSASQueryParametersInternal = generateAccountSASQueryParametersInternal;
-const AccountSASPermissions_js_1 = __nccwpck_require__(24007);
-const AccountSASResourceTypes_js_1 = __nccwpck_require__(67250);
-const AccountSASServices_js_1 = __nccwpck_require__(39011);
-const SasIPRange_js_1 = __nccwpck_require__(28926);
-const SASQueryParameters_js_1 = __nccwpck_require__(92532);
-const constants_js_1 = __nccwpck_require__(64710);
-const utils_common_js_1 = __nccwpck_require__(80023);
+const AccountSASPermissions_js_1 = __nccwpck_require__(56139);
+const AccountSASResourceTypes_js_1 = __nccwpck_require__(49286);
+const AccountSASServices_js_1 = __nccwpck_require__(89159);
+const SasIPRange_js_1 = __nccwpck_require__(98562);
+const SASQueryParameters_js_1 = __nccwpck_require__(65424);
+const constants_js_1 = __nccwpck_require__(9386);
+const utils_common_js_1 = __nccwpck_require__(98915);
 /**
  * ONLY AVAILABLE IN NODE.JS RUNTIME.
  *
@@ -75199,7 +75309,7 @@ function generateAccountSASQueryParametersInternal(accountSASSignatureValues, sh
 
 /***/ }),
 
-/***/ 8907:
+/***/ 7831:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -75402,7 +75512,7 @@ exports.BlobSASPermissions = BlobSASPermissions;
 
 /***/ }),
 
-/***/ 70895:
+/***/ 38147:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -75411,14 +75521,14 @@ exports.generateBlobSASQueryParameters = generateBlobSASQueryParameters;
 exports.generateBlobSASQueryParametersInternal = generateBlobSASQueryParametersInternal;
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
-const BlobSASPermissions_js_1 = __nccwpck_require__(8907);
-const ContainerSASPermissions_js_1 = __nccwpck_require__(12263);
-const StorageSharedKeyCredential_js_1 = __nccwpck_require__(37016);
-const UserDelegationKeyCredential_js_1 = __nccwpck_require__(85185);
-const SasIPRange_js_1 = __nccwpck_require__(28926);
-const SASQueryParameters_js_1 = __nccwpck_require__(92532);
-const constants_js_1 = __nccwpck_require__(64710);
-const utils_common_js_1 = __nccwpck_require__(80023);
+const BlobSASPermissions_js_1 = __nccwpck_require__(7831);
+const ContainerSASPermissions_js_1 = __nccwpck_require__(32739);
+const StorageSharedKeyCredential_js_1 = __nccwpck_require__(64220);
+const UserDelegationKeyCredential_js_1 = __nccwpck_require__(20061);
+const SasIPRange_js_1 = __nccwpck_require__(98562);
+const SASQueryParameters_js_1 = __nccwpck_require__(65424);
+const constants_js_1 = __nccwpck_require__(9386);
+const utils_common_js_1 = __nccwpck_require__(98915);
 function generateBlobSASQueryParameters(blobSASSignatureValues, sharedKeyCredentialOrUserDelegationKey, accountName) {
     return generateBlobSASQueryParametersInternal(blobSASSignatureValues, sharedKeyCredentialOrUserDelegationKey, accountName).sasQueryParameters;
 }
@@ -76078,7 +76188,7 @@ function SASSignatureValuesSanityCheckAndAutofill(blobSASSignatureValues) {
 
 /***/ }),
 
-/***/ 12263:
+/***/ 32739:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -76307,7 +76417,7 @@ exports.ContainerSASPermissions = ContainerSASPermissions;
 
 /***/ }),
 
-/***/ 92532:
+/***/ 65424:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -76315,8 +76425,8 @@ exports.ContainerSASPermissions = ContainerSASPermissions;
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.SASQueryParameters = exports.SASProtocol = void 0;
-const SasIPRange_js_1 = __nccwpck_require__(28926);
-const utils_common_js_1 = __nccwpck_require__(80023);
+const SasIPRange_js_1 = __nccwpck_require__(98562);
+const utils_common_js_1 = __nccwpck_require__(98915);
 /**
  * Protocols for generated SAS.
  */
@@ -76668,7 +76778,7 @@ exports.SASQueryParameters = SASQueryParameters;
 
 /***/ }),
 
-/***/ 28926:
+/***/ 98562:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -76690,7 +76800,7 @@ function ipRangeToString(ipRange) {
 
 /***/ }),
 
-/***/ 51975:
+/***/ 14539:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -76830,7 +76940,7 @@ exports.Batch = Batch;
 
 /***/ }),
 
-/***/ 58661:
+/***/ 17097:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -76839,7 +76949,7 @@ exports.Batch = Batch;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.BlobQuickQueryStream = void 0;
 const node_stream_1 = __nccwpck_require__(57075);
-const index_js_1 = __nccwpck_require__(66126);
+const index_js_1 = __nccwpck_require__(71338);
 /**
  * ONLY AVAILABLE IN NODE.JS RUNTIME.
  *
@@ -76956,7 +77066,7 @@ exports.BlobQuickQueryStream = BlobQuickQueryStream;
 
 /***/ }),
 
-/***/ 35488:
+/***/ 39948:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -77031,7 +77141,7 @@ exports.Mutex = Mutex;
 
 /***/ }),
 
-/***/ 66157:
+/***/ 81473:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -77168,7 +77278,7 @@ exports.RetriableReadableStream = RetriableReadableStream;
 
 /***/ }),
 
-/***/ 87127:
+/***/ 81179:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -77250,7 +77360,7 @@ function isLessThan(lhs, rhs) {
 
 /***/ }),
 
-/***/ 64710:
+/***/ 9386:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -77258,8 +77368,8 @@ function isLessThan(lhs, rhs) {
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PathStylePorts = exports.BlobDoesNotUseCustomerSpecifiedEncryption = exports.BlobUsesCustomerSpecifiedEncryptionMsg = exports.StorageBlobLoggingAllowedQueryParameters = exports.StorageBlobLoggingAllowedHeaderNames = exports.DevelopmentConnectionString = exports.EncryptionAlgorithmAES25 = exports.HTTP_VERSION_1_1 = exports.HTTP_LINE_ENDING = exports.BATCH_MAX_PAYLOAD_IN_BYTES = exports.BATCH_MAX_REQUEST = exports.SIZE_1_MB = exports.ETagAny = exports.ETagNone = exports.HeaderConstants = exports.HTTPURLConnection = exports.URLConstants = exports.StorageOAuthScopes = exports.REQUEST_TIMEOUT = exports.DEFAULT_MAX_DOWNLOAD_RETRY_REQUESTS = exports.DEFAULT_BLOB_DOWNLOAD_BLOCK_BYTES = exports.DEFAULT_BLOCK_BUFFER_SIZE_BYTES = exports.BLOCK_BLOB_MAX_BLOCKS = exports.BLOCK_BLOB_MAX_STAGE_BLOCK_BYTES = exports.BLOCK_BLOB_MAX_UPLOAD_BLOB_BYTES = exports.SERVICE_VERSION = exports.SDK_VERSION = void 0;
-exports.SDK_VERSION = "12.28.0";
-exports.SERVICE_VERSION = "2025-07-05";
+exports.SDK_VERSION = "12.29.1";
+exports.SERVICE_VERSION = "2025-11-05";
 exports.BLOCK_BLOB_MAX_UPLOAD_BLOB_BYTES = 256 * 1024 * 1024; // 256MB
 exports.BLOCK_BLOB_MAX_STAGE_BLOCK_BYTES = 4000 * 1024 * 1024; // 4000MB
 exports.BLOCK_BLOB_MAX_BLOCKS = 50000;
@@ -77485,7 +77595,7 @@ exports.PathStylePorts = [
 
 /***/ }),
 
-/***/ 78365:
+/***/ 67985:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -77494,7 +77604,7 @@ exports.PathStylePorts = [
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.tracingClient = void 0;
 const core_tracing_1 = __nccwpck_require__(26637);
-const constants_js_1 = __nccwpck_require__(64710);
+const constants_js_1 = __nccwpck_require__(9386);
 /**
  * Creates a span using the global tracer.
  * @internal
@@ -77508,7 +77618,7 @@ exports.tracingClient = (0, core_tracing_1.createTracingClient)({
 
 /***/ }),
 
-/***/ 80023:
+/***/ 98915:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -77551,9 +77661,9 @@ exports.ConvertInternalResponseOfListBlobHierarchy = ConvertInternalResponseOfLi
 exports.ExtractPageRangeInfoItems = ExtractPageRangeInfoItems;
 exports.EscapePath = EscapePath;
 exports.assertResponse = assertResponse;
-const core_rest_pipeline_1 = __nccwpck_require__(46312);
+const core_rest_pipeline_1 = __nccwpck_require__(81591);
 const core_util_1 = __nccwpck_require__(33000);
-const constants_js_1 = __nccwpck_require__(64710);
+const constants_js_1 = __nccwpck_require__(9386);
 /**
  * Reserved URL characters must be properly escaped for Storage services like Blob or File.
  *
@@ -78321,7 +78431,7 @@ function assertResponse(response) {
 
 /***/ }),
 
-/***/ 46814:
+/***/ 73170:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -78336,7 +78446,7 @@ exports.readStreamToLocalFile = readStreamToLocalFile;
 const tslib_1 = __nccwpck_require__(67892);
 const node_fs_1 = tslib_1.__importDefault(__nccwpck_require__(73024));
 const node_util_1 = tslib_1.__importDefault(__nccwpck_require__(57975));
-const constants_js_1 = __nccwpck_require__(64710);
+const constants_js_1 = __nccwpck_require__(9386);
 /**
  * Reads a readable stream into buffer. Fill the buffer from offset to end.
  *
@@ -78467,7 +78577,7 @@ exports.fsCreateReadStream = node_fs_1.default.createReadStream;
 
 /***/ }),
 
-/***/ 80840:
+/***/ 3092:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -78476,7 +78586,7 @@ exports.fsCreateReadStream = node_fs_1.default.createReadStream;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.BufferScheduler = void 0;
 const events_1 = __nccwpck_require__(24434);
-const PooledBuffer_js_1 = __nccwpck_require__(1098);
+const PooledBuffer_js_1 = __nccwpck_require__(88126);
 /**
  * This class accepts a Node.js Readable stream as input, and keeps reading data
  * from the stream into the internal buffer structure, until it reaches maxBuffers.
@@ -78755,7 +78865,7 @@ exports.BufferScheduler = BufferScheduler;
 
 /***/ }),
 
-/***/ 41340:
+/***/ 14712:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -78862,7 +78972,7 @@ exports.BuffersStream = BuffersStream;
 
 /***/ }),
 
-/***/ 1098:
+/***/ 88126:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -78871,7 +78981,7 @@ exports.BuffersStream = BuffersStream;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PooledBuffer = void 0;
 const tslib_1 = __nccwpck_require__(67892);
-const BuffersStream_js_1 = __nccwpck_require__(41340);
+const BuffersStream_js_1 = __nccwpck_require__(14712);
 const node_buffer_1 = tslib_1.__importDefault(__nccwpck_require__(4573));
 /**
  * maxBufferLength is max size of each buffer in the pooled buffers.
@@ -78968,7 +79078,7 @@ exports.PooledBuffer = PooledBuffer;
 
 /***/ }),
 
-/***/ 99018:
+/***/ 30782:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -78976,7 +79086,7 @@ exports.PooledBuffer = PooledBuffer;
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.StorageBrowserPolicyFactory = exports.StorageBrowserPolicy = void 0;
-const StorageBrowserPolicy_js_1 = __nccwpck_require__(61397);
+const StorageBrowserPolicy_js_1 = __nccwpck_require__(65473);
 Object.defineProperty(exports, "StorageBrowserPolicy", ({ enumerable: true, get: function () { return StorageBrowserPolicy_js_1.StorageBrowserPolicy; } }));
 /**
  * StorageBrowserPolicyFactory is a factory class helping generating StorageBrowserPolicy objects.
@@ -78997,7 +79107,7 @@ exports.StorageBrowserPolicyFactory = StorageBrowserPolicyFactory;
 
 /***/ }),
 
-/***/ 24748:
+/***/ 87848:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -79005,9 +79115,9 @@ exports.StorageBrowserPolicyFactory = StorageBrowserPolicyFactory;
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.StorageRetryPolicyFactory = exports.StorageRetryPolicy = exports.StorageRetryPolicyType = void 0;
-const StorageRetryPolicy_js_1 = __nccwpck_require__(5571);
+const StorageRetryPolicy_js_1 = __nccwpck_require__(65975);
 Object.defineProperty(exports, "StorageRetryPolicy", ({ enumerable: true, get: function () { return StorageRetryPolicy_js_1.StorageRetryPolicy; } }));
-const StorageRetryPolicyType_js_1 = __nccwpck_require__(94171);
+const StorageRetryPolicyType_js_1 = __nccwpck_require__(73087);
 Object.defineProperty(exports, "StorageRetryPolicyType", ({ enumerable: true, get: function () { return StorageRetryPolicyType_js_1.StorageRetryPolicyType; } }));
 /**
  * StorageRetryPolicyFactory is a factory class helping generating {@link StorageRetryPolicy} objects.
@@ -79036,7 +79146,7 @@ exports.StorageRetryPolicyFactory = StorageRetryPolicyFactory;
 
 /***/ }),
 
-/***/ 54593:
+/***/ 16125:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -79044,7 +79154,7 @@ exports.StorageRetryPolicyFactory = StorageRetryPolicyFactory;
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getCachedDefaultHttpClient = getCachedDefaultHttpClient;
-const core_rest_pipeline_1 = __nccwpck_require__(46312);
+const core_rest_pipeline_1 = __nccwpck_require__(81591);
 let _defaultHttpClient;
 function getCachedDefaultHttpClient() {
     if (!_defaultHttpClient) {
@@ -79056,7 +79166,7 @@ function getCachedDefaultHttpClient() {
 
 /***/ }),
 
-/***/ 34946:
+/***/ 3422:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -79064,8 +79174,8 @@ function getCachedDefaultHttpClient() {
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AnonymousCredential = void 0;
-const AnonymousCredentialPolicy_js_1 = __nccwpck_require__(67212);
-const Credential_js_1 = __nccwpck_require__(34665);
+const AnonymousCredentialPolicy_js_1 = __nccwpck_require__(36936);
+const Credential_js_1 = __nccwpck_require__(7069);
 /**
  * AnonymousCredential provides a credentialPolicyCreator member used to create
  * AnonymousCredentialPolicy objects. AnonymousCredentialPolicy is used with
@@ -79088,7 +79198,7 @@ exports.AnonymousCredential = AnonymousCredential;
 
 /***/ }),
 
-/***/ 34665:
+/***/ 7069:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -79116,7 +79226,7 @@ exports.Credential = Credential;
 
 /***/ }),
 
-/***/ 47202:
+/***/ 76590:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -79125,8 +79235,8 @@ exports.Credential = Credential;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.StorageSharedKeyCredential = void 0;
 const node_crypto_1 = __nccwpck_require__(77598);
-const StorageSharedKeyCredentialPolicy_js_1 = __nccwpck_require__(76300);
-const Credential_js_1 = __nccwpck_require__(34665);
+const StorageSharedKeyCredentialPolicy_js_1 = __nccwpck_require__(9640);
+const Credential_js_1 = __nccwpck_require__(7069);
 /**
  * ONLY AVAILABLE IN NODE.JS RUNTIME.
  *
@@ -79174,7 +79284,7 @@ exports.StorageSharedKeyCredential = StorageSharedKeyCredential;
 
 /***/ }),
 
-/***/ 80135:
+/***/ 13507:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -79183,32 +79293,33 @@ exports.StorageSharedKeyCredential = StorageSharedKeyCredential;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.BaseRequestPolicy = exports.getCachedDefaultHttpClient = void 0;
 const tslib_1 = __nccwpck_require__(67892);
-tslib_1.__exportStar(__nccwpck_require__(80840), exports);
-var cache_js_1 = __nccwpck_require__(54593);
+tslib_1.__exportStar(__nccwpck_require__(3092), exports);
+var cache_js_1 = __nccwpck_require__(16125);
 Object.defineProperty(exports, "getCachedDefaultHttpClient", ({ enumerable: true, get: function () { return cache_js_1.getCachedDefaultHttpClient; } }));
-tslib_1.__exportStar(__nccwpck_require__(99018), exports);
-tslib_1.__exportStar(__nccwpck_require__(34946), exports);
-tslib_1.__exportStar(__nccwpck_require__(34665), exports);
-tslib_1.__exportStar(__nccwpck_require__(47202), exports);
-tslib_1.__exportStar(__nccwpck_require__(24748), exports);
-var RequestPolicy_js_1 = __nccwpck_require__(89937);
+tslib_1.__exportStar(__nccwpck_require__(30782), exports);
+tslib_1.__exportStar(__nccwpck_require__(3422), exports);
+tslib_1.__exportStar(__nccwpck_require__(7069), exports);
+tslib_1.__exportStar(__nccwpck_require__(76590), exports);
+tslib_1.__exportStar(__nccwpck_require__(87848), exports);
+var RequestPolicy_js_1 = __nccwpck_require__(3165);
 Object.defineProperty(exports, "BaseRequestPolicy", ({ enumerable: true, get: function () { return RequestPolicy_js_1.BaseRequestPolicy; } }));
-tslib_1.__exportStar(__nccwpck_require__(67212), exports);
-tslib_1.__exportStar(__nccwpck_require__(10923), exports);
-tslib_1.__exportStar(__nccwpck_require__(61397), exports);
-tslib_1.__exportStar(__nccwpck_require__(68469), exports);
-tslib_1.__exportStar(__nccwpck_require__(90), exports);
-tslib_1.__exportStar(__nccwpck_require__(94171), exports);
-tslib_1.__exportStar(__nccwpck_require__(5571), exports);
-tslib_1.__exportStar(__nccwpck_require__(92531), exports);
-tslib_1.__exportStar(__nccwpck_require__(76300), exports);
-tslib_1.__exportStar(__nccwpck_require__(1048), exports);
-tslib_1.__exportStar(__nccwpck_require__(24748), exports);
+tslib_1.__exportStar(__nccwpck_require__(36936), exports);
+tslib_1.__exportStar(__nccwpck_require__(21503), exports);
+tslib_1.__exportStar(__nccwpck_require__(65473), exports);
+tslib_1.__exportStar(__nccwpck_require__(57641), exports);
+tslib_1.__exportStar(__nccwpck_require__(30134), exports);
+tslib_1.__exportStar(__nccwpck_require__(73087), exports);
+tslib_1.__exportStar(__nccwpck_require__(65975), exports);
+tslib_1.__exportStar(__nccwpck_require__(67135), exports);
+tslib_1.__exportStar(__nccwpck_require__(9640), exports);
+tslib_1.__exportStar(__nccwpck_require__(30332), exports);
+tslib_1.__exportStar(__nccwpck_require__(87848), exports);
+tslib_1.__exportStar(__nccwpck_require__(14047), exports);
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 78393:
+/***/ 85541:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -79225,7 +79336,7 @@ exports.logger = (0, logger_1.createClientLogger)("storage-common");
 
 /***/ }),
 
-/***/ 67212:
+/***/ 36936:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -79233,7 +79344,7 @@ exports.logger = (0, logger_1.createClientLogger)("storage-common");
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AnonymousCredentialPolicy = void 0;
-const CredentialPolicy_js_1 = __nccwpck_require__(10923);
+const CredentialPolicy_js_1 = __nccwpck_require__(21503);
 /**
  * AnonymousCredentialPolicy is used with HTTP(S) requests that read public resources
  * or for use with Shared Access Signatures (SAS).
@@ -79255,7 +79366,7 @@ exports.AnonymousCredentialPolicy = AnonymousCredentialPolicy;
 
 /***/ }),
 
-/***/ 10923:
+/***/ 21503:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -79263,7 +79374,7 @@ exports.AnonymousCredentialPolicy = AnonymousCredentialPolicy;
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.CredentialPolicy = void 0;
-const RequestPolicy_js_1 = __nccwpck_require__(89937);
+const RequestPolicy_js_1 = __nccwpck_require__(3165);
 /**
  * Credential policy used to sign HTTP(S) requests before sending. This is an
  * abstract class.
@@ -79294,7 +79405,7 @@ exports.CredentialPolicy = CredentialPolicy;
 
 /***/ }),
 
-/***/ 89937:
+/***/ 3165:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -79346,7 +79457,7 @@ exports.BaseRequestPolicy = BaseRequestPolicy;
 
 /***/ }),
 
-/***/ 61397:
+/***/ 65473:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -79354,10 +79465,10 @@ exports.BaseRequestPolicy = BaseRequestPolicy;
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.StorageBrowserPolicy = void 0;
-const RequestPolicy_js_1 = __nccwpck_require__(89937);
+const RequestPolicy_js_1 = __nccwpck_require__(3165);
 const core_util_1 = __nccwpck_require__(33000);
-const constants_js_1 = __nccwpck_require__(41912);
-const utils_common_js_1 = __nccwpck_require__(63789);
+const constants_js_1 = __nccwpck_require__(8484);
+const utils_common_js_1 = __nccwpck_require__(60481);
 /**
  * StorageBrowserPolicy will handle differences between Node.js and browser runtime, including:
  *
@@ -79403,7 +79514,7 @@ exports.StorageBrowserPolicy = StorageBrowserPolicy;
 
 /***/ }),
 
-/***/ 68469:
+/***/ 57641:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -79413,8 +79524,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.storageBrowserPolicyName = void 0;
 exports.storageBrowserPolicy = storageBrowserPolicy;
 const core_util_1 = __nccwpck_require__(33000);
-const constants_js_1 = __nccwpck_require__(41912);
-const utils_common_js_1 = __nccwpck_require__(63789);
+const constants_js_1 = __nccwpck_require__(8484);
+const utils_common_js_1 = __nccwpck_require__(60481);
 /**
  * The programmatic identifier of the StorageBrowserPolicy.
  */
@@ -79444,7 +79555,7 @@ function storageBrowserPolicy() {
 
 /***/ }),
 
-/***/ 90:
+/***/ 30134:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -79453,7 +79564,7 @@ function storageBrowserPolicy() {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.storageCorrectContentLengthPolicyName = void 0;
 exports.storageCorrectContentLengthPolicy = storageCorrectContentLengthPolicy;
-const constants_js_1 = __nccwpck_require__(41912);
+const constants_js_1 = __nccwpck_require__(8484);
 /**
  * The programmatic identifier of the storageCorrectContentLengthPolicy.
  */
@@ -79481,7 +79592,51 @@ function storageCorrectContentLengthPolicy() {
 
 /***/ }),
 
-/***/ 5571:
+/***/ 14047:
+/***/ ((__unused_webpack_module, exports) => {
+
+
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.storageRequestFailureDetailsParserPolicyName = void 0;
+exports.storageRequestFailureDetailsParserPolicy = storageRequestFailureDetailsParserPolicy;
+/**
+ * The programmatic identifier of the StorageRequestFailureDetailsParserPolicy.
+ */
+exports.storageRequestFailureDetailsParserPolicyName = "storageRequestFailureDetailsParserPolicy";
+/**
+ * StorageRequestFailureDetailsParserPolicy
+ */
+function storageRequestFailureDetailsParserPolicy() {
+    return {
+        name: exports.storageRequestFailureDetailsParserPolicyName,
+        async sendRequest(request, next) {
+            try {
+                const response = await next(request);
+                return response;
+            }
+            catch (err) {
+                if (typeof err === "object" &&
+                    err !== null &&
+                    err.response &&
+                    err.response.parsedBody) {
+                    if (err.response.parsedBody.code === "InvalidHeaderValue" &&
+                        err.response.parsedBody.HeaderName === "x-ms-version") {
+                        err.message =
+                            "The provided service version is not enabled on this storage account. Please see https://learn.microsoft.com/rest/api/storageservices/versioning-for-the-azure-storage-services for additional information.\n";
+                    }
+                }
+                throw err;
+            }
+        },
+    };
+}
+//# sourceMappingURL=StorageRequestFailureDetailsParserPolicy.js.map
+
+/***/ }),
+
+/***/ 65975:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -79491,11 +79646,11 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.StorageRetryPolicy = void 0;
 exports.NewRetryPolicyFactory = NewRetryPolicyFactory;
 const abort_controller_1 = __nccwpck_require__(49797);
-const RequestPolicy_js_1 = __nccwpck_require__(89937);
-const constants_js_1 = __nccwpck_require__(41912);
-const utils_common_js_1 = __nccwpck_require__(63789);
-const log_js_1 = __nccwpck_require__(78393);
-const StorageRetryPolicyType_js_1 = __nccwpck_require__(94171);
+const RequestPolicy_js_1 = __nccwpck_require__(3165);
+const constants_js_1 = __nccwpck_require__(8484);
+const utils_common_js_1 = __nccwpck_require__(60481);
+const log_js_1 = __nccwpck_require__(85541);
+const StorageRetryPolicyType_js_1 = __nccwpck_require__(73087);
 /**
  * A factory method used to generated a RetryPolicy factory.
  *
@@ -79660,21 +79815,20 @@ class StorageRetryPolicy extends RequestPolicy_js_1.BaseRequestPolicy {
                 return true;
             }
         }
-        // [Copy source error code] Feature is pending on service side, skip retry on copy source error for now.
-        // if (response) {
-        //   // Retry select Copy Source Error Codes.
-        //   if (response?.status >= 400) {
-        //     const copySourceError = response.headers.get(HeaderConstants.X_MS_CopySourceErrorCode);
-        //     if (copySourceError !== undefined) {
-        //       switch (copySourceError) {
-        //         case "InternalError":
-        //         case "OperationTimedOut":
-        //         case "ServerBusy":
-        //           return true;
-        //       }
-        //     }
-        //   }
-        // }
+        if (response) {
+            // Retry select Copy Source Error Codes.
+            if (response?.status >= 400) {
+                const copySourceError = response.headers.get(constants_js_1.HeaderConstants.X_MS_CopySourceErrorCode);
+                if (copySourceError !== undefined) {
+                    switch (copySourceError) {
+                        case "InternalError":
+                        case "OperationTimedOut":
+                        case "ServerBusy":
+                            return true;
+                    }
+                }
+            }
+        }
         if (err?.code === "PARSE_ERROR" && err?.message.startsWith(`Error "Error: Unclosed root tag`)) {
             log_js_1.logger.info("RetryPolicy: Incomplete XML response likely due to service timeout, will retry.");
             return true;
@@ -79712,7 +79866,7 @@ exports.StorageRetryPolicy = StorageRetryPolicy;
 
 /***/ }),
 
-/***/ 94171:
+/***/ 73087:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -79738,7 +79892,7 @@ var StorageRetryPolicyType;
 
 /***/ }),
 
-/***/ 92531:
+/***/ 67135:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -79748,12 +79902,12 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.storageRetryPolicyName = void 0;
 exports.storageRetryPolicy = storageRetryPolicy;
 const abort_controller_1 = __nccwpck_require__(49797);
-const core_rest_pipeline_1 = __nccwpck_require__(46312);
+const core_rest_pipeline_1 = __nccwpck_require__(81591);
 const core_util_1 = __nccwpck_require__(33000);
-const StorageRetryPolicyFactory_js_1 = __nccwpck_require__(24748);
-const constants_js_1 = __nccwpck_require__(41912);
-const utils_common_js_1 = __nccwpck_require__(63789);
-const log_js_1 = __nccwpck_require__(78393);
+const StorageRetryPolicyFactory_js_1 = __nccwpck_require__(87848);
+const constants_js_1 = __nccwpck_require__(8484);
+const utils_common_js_1 = __nccwpck_require__(60481);
+const log_js_1 = __nccwpck_require__(85541);
 /**
  * Name of the {@link storageRetryPolicy}
  */
@@ -79824,21 +79978,20 @@ function storageRetryPolicy(options = {}) {
                 return true;
             }
         }
-        // [Copy source error code] Feature is pending on service side, skip retry on copy source error for now.
-        // if (response) {
-        //   // Retry select Copy Source Error Codes.
-        //   if (response?.status >= 400) {
-        //     const copySourceError = response.headers.get(HeaderConstants.X_MS_CopySourceErrorCode);
-        //     if (copySourceError !== undefined) {
-        //       switch (copySourceError) {
-        //         case "InternalError":
-        //         case "OperationTimedOut":
-        //         case "ServerBusy":
-        //           return true;
-        //       }
-        //     }
-        //   }
-        // }
+        if (response) {
+            // Retry select Copy Source Error Codes.
+            if (response?.status >= 400) {
+                const copySourceError = response.headers.get(constants_js_1.HeaderConstants.X_MS_CopySourceErrorCode);
+                if (copySourceError !== undefined) {
+                    switch (copySourceError) {
+                        case "InternalError":
+                        case "OperationTimedOut":
+                        case "ServerBusy":
+                            return true;
+                    }
+                }
+            }
+        }
         return false;
     }
     function calculateDelay(isPrimaryRetry, attempt) {
@@ -79913,7 +80066,7 @@ function storageRetryPolicy(options = {}) {
 
 /***/ }),
 
-/***/ 76300:
+/***/ 9640:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -79921,10 +80074,10 @@ function storageRetryPolicy(options = {}) {
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.StorageSharedKeyCredentialPolicy = void 0;
-const constants_js_1 = __nccwpck_require__(41912);
-const utils_common_js_1 = __nccwpck_require__(63789);
-const CredentialPolicy_js_1 = __nccwpck_require__(10923);
-const SharedKeyComparator_js_1 = __nccwpck_require__(43977);
+const constants_js_1 = __nccwpck_require__(8484);
+const utils_common_js_1 = __nccwpck_require__(60481);
+const CredentialPolicy_js_1 = __nccwpck_require__(21503);
+const SharedKeyComparator_js_1 = __nccwpck_require__(41349);
 /**
  * StorageSharedKeyCredentialPolicy is a policy used to sign HTTP request with a shared key.
  */
@@ -80068,7 +80221,7 @@ exports.StorageSharedKeyCredentialPolicy = StorageSharedKeyCredentialPolicy;
 
 /***/ }),
 
-/***/ 1048:
+/***/ 30332:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -80078,9 +80231,9 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.storageSharedKeyCredentialPolicyName = void 0;
 exports.storageSharedKeyCredentialPolicy = storageSharedKeyCredentialPolicy;
 const node_crypto_1 = __nccwpck_require__(77598);
-const constants_js_1 = __nccwpck_require__(41912);
-const utils_common_js_1 = __nccwpck_require__(63789);
-const SharedKeyComparator_js_1 = __nccwpck_require__(43977);
+const constants_js_1 = __nccwpck_require__(8484);
+const utils_common_js_1 = __nccwpck_require__(60481);
+const SharedKeyComparator_js_1 = __nccwpck_require__(41349);
 /**
  * The programmatic identifier of the storageSharedKeyCredentialPolicy.
  */
@@ -80210,7 +80363,7 @@ function storageSharedKeyCredentialPolicy(options) {
 
 /***/ }),
 
-/***/ 43977:
+/***/ 41349:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -80292,7 +80445,7 @@ function isLessThan(lhs, rhs) {
 
 /***/ }),
 
-/***/ 41912:
+/***/ 8484:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -80365,7 +80518,7 @@ exports.PathStylePorts = [
 
 /***/ }),
 
-/***/ 63789:
+/***/ 60481:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -80399,9 +80552,9 @@ exports.attachCredential = attachCredential;
 exports.httpAuthorizationToString = httpAuthorizationToString;
 exports.EscapePath = EscapePath;
 exports.assertResponse = assertResponse;
-const core_rest_pipeline_1 = __nccwpck_require__(46312);
+const core_rest_pipeline_1 = __nccwpck_require__(81591);
 const core_util_1 = __nccwpck_require__(33000);
-const constants_js_1 = __nccwpck_require__(41912);
+const constants_js_1 = __nccwpck_require__(8484);
 /**
  * Reserved URL characters must be properly escaped for Storage services like Blob or File.
  *
@@ -82557,7 +82710,7 @@ module.exports = parseParams
 
 /***/ }),
 
-/***/ 99016:
+/***/ 37455:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -82605,7 +82758,7 @@ exports.AbortError = AbortError;
 
 /***/ }),
 
-/***/ 47891:
+/***/ 48006:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -82644,7 +82797,7 @@ function isApiKeyCredential(credential) {
 
 /***/ }),
 
-/***/ 31433:
+/***/ 37248:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -82655,7 +82808,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 
 /***/ }),
 
-/***/ 1553:
+/***/ 30196:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -82666,7 +82819,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 
 /***/ }),
 
-/***/ 25440:
+/***/ 86247:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -82699,7 +82852,7 @@ function apiVersionPolicy(options) {
 
 /***/ }),
 
-/***/ 28936:
+/***/ 78005:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -82708,14 +82861,14 @@ function apiVersionPolicy(options) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.createDefaultPipeline = createDefaultPipeline;
 exports.getCachedDefaultHttpsClient = getCachedDefaultHttpsClient;
-const defaultHttpClient_js_1 = __nccwpck_require__(10700);
-const createPipelineFromOptions_js_1 = __nccwpck_require__(21202);
-const apiVersionPolicy_js_1 = __nccwpck_require__(25440);
-const credentials_js_1 = __nccwpck_require__(47891);
-const apiKeyAuthenticationPolicy_js_1 = __nccwpck_require__(607);
-const basicAuthenticationPolicy_js_1 = __nccwpck_require__(33500);
-const bearerAuthenticationPolicy_js_1 = __nccwpck_require__(27357);
-const oauth2AuthenticationPolicy_js_1 = __nccwpck_require__(1771);
+const defaultHttpClient_js_1 = __nccwpck_require__(80475);
+const createPipelineFromOptions_js_1 = __nccwpck_require__(97589);
+const apiVersionPolicy_js_1 = __nccwpck_require__(86247);
+const credentials_js_1 = __nccwpck_require__(48006);
+const apiKeyAuthenticationPolicy_js_1 = __nccwpck_require__(97274);
+const basicAuthenticationPolicy_js_1 = __nccwpck_require__(22535);
+const bearerAuthenticationPolicy_js_1 = __nccwpck_require__(82368);
+const oauth2AuthenticationPolicy_js_1 = __nccwpck_require__(50842);
 let cachedHttpClient;
 /**
  * Creates a default rest pipeline to re-use accross Rest Level Clients
@@ -82750,7 +82903,7 @@ function getCachedDefaultHttpsClient() {
 
 /***/ }),
 
-/***/ 54431:
+/***/ 2338:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -82758,10 +82911,10 @@ function getCachedDefaultHttpsClient() {
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getClient = getClient;
-const clientHelpers_js_1 = __nccwpck_require__(28936);
-const sendRequest_js_1 = __nccwpck_require__(1639);
-const urlHelpers_js_1 = __nccwpck_require__(19792);
-const checkEnvironment_js_1 = __nccwpck_require__(22670);
+const clientHelpers_js_1 = __nccwpck_require__(78005);
+const sendRequest_js_1 = __nccwpck_require__(42526);
+const urlHelpers_js_1 = __nccwpck_require__(45263);
+const checkEnvironment_js_1 = __nccwpck_require__(15777);
 /**
  * Creates a client with a default pipeline
  * @param endpoint - Base endpoint for the client
@@ -82845,7 +82998,7 @@ function buildOperation(method, url, pipeline, options, allowInsecureConnection,
 
 /***/ }),
 
-/***/ 74480:
+/***/ 44093:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -82854,10 +83007,10 @@ function buildOperation(method, url, pipeline, options, allowInsecureConnection,
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.buildBodyPart = buildBodyPart;
 exports.buildMultipartBody = buildMultipartBody;
-const restError_js_1 = __nccwpck_require__(83406);
-const httpHeaders_js_1 = __nccwpck_require__(83980);
-const bytesEncoding_js_1 = __nccwpck_require__(95097);
-const typeGuards_js_1 = __nccwpck_require__(4841);
+const restError_js_1 = __nccwpck_require__(39885);
+const httpHeaders_js_1 = __nccwpck_require__(38411);
+const bytesEncoding_js_1 = __nccwpck_require__(62408);
+const typeGuards_js_1 = __nccwpck_require__(86974);
 /**
  * Get value of a header in the part descriptor ignoring case
  */
@@ -82975,7 +83128,7 @@ function buildMultipartBody(parts) {
 
 /***/ }),
 
-/***/ 8131:
+/***/ 89440:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -83004,7 +83157,7 @@ function operationOptionsToRequestParameters(options) {
 
 /***/ }),
 
-/***/ 83716:
+/***/ 71365:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -83012,8 +83165,8 @@ function operationOptionsToRequestParameters(options) {
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.createRestError = createRestError;
-const restError_js_1 = __nccwpck_require__(83406);
-const httpHeaders_js_1 = __nccwpck_require__(83980);
+const restError_js_1 = __nccwpck_require__(39885);
+const httpHeaders_js_1 = __nccwpck_require__(38411);
 function createRestError(messageOrResponse, response) {
     const resp = typeof messageOrResponse === "string" ? response : messageOrResponse;
     const internalError = resp.body?.error ?? resp.body;
@@ -83042,7 +83195,7 @@ function statusCodeToNumber(statusCode) {
 
 /***/ }),
 
-/***/ 1639:
+/***/ 42526:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -83050,12 +83203,12 @@ function statusCodeToNumber(statusCode) {
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.sendRequest = sendRequest;
-const restError_js_1 = __nccwpck_require__(83406);
-const httpHeaders_js_1 = __nccwpck_require__(83980);
-const pipelineRequest_js_1 = __nccwpck_require__(75553);
-const clientHelpers_js_1 = __nccwpck_require__(28936);
-const typeGuards_js_1 = __nccwpck_require__(4841);
-const multipart_js_1 = __nccwpck_require__(74480);
+const restError_js_1 = __nccwpck_require__(39885);
+const httpHeaders_js_1 = __nccwpck_require__(38411);
+const pipelineRequest_js_1 = __nccwpck_require__(90738);
+const clientHelpers_js_1 = __nccwpck_require__(78005);
+const typeGuards_js_1 = __nccwpck_require__(86974);
+const multipart_js_1 = __nccwpck_require__(44093);
 /**
  * Helper function to send request used by the client
  * @param method - method to use to send the request
@@ -83230,7 +83383,7 @@ function createParseError(response, err) {
 
 /***/ }),
 
-/***/ 19792:
+/***/ 45263:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -83390,7 +83543,7 @@ function replaceAll(value, searchValue, replaceValue) {
 
 /***/ }),
 
-/***/ 61479:
+/***/ 35124:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -83398,13 +83551,13 @@ function replaceAll(value, searchValue, replaceValue) {
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.DEFAULT_RETRY_POLICY_COUNT = exports.SDK_VERSION = void 0;
-exports.SDK_VERSION = "0.3.1";
+exports.SDK_VERSION = "0.3.2";
 exports.DEFAULT_RETRY_POLICY_COUNT = 3;
 //# sourceMappingURL=constants.js.map
 
 /***/ }),
 
-/***/ 21202:
+/***/ 97589:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -83412,18 +83565,18 @@ exports.DEFAULT_RETRY_POLICY_COUNT = 3;
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.createPipelineFromOptions = createPipelineFromOptions;
-const logPolicy_js_1 = __nccwpck_require__(22729);
-const pipeline_js_1 = __nccwpck_require__(76114);
-const redirectPolicy_js_1 = __nccwpck_require__(14027);
-const userAgentPolicy_js_1 = __nccwpck_require__(95515);
-const decompressResponsePolicy_js_1 = __nccwpck_require__(91659);
-const defaultRetryPolicy_js_1 = __nccwpck_require__(65662);
-const formDataPolicy_js_1 = __nccwpck_require__(33989);
-const checkEnvironment_js_1 = __nccwpck_require__(22670);
-const proxyPolicy_js_1 = __nccwpck_require__(33427);
-const agentPolicy_js_1 = __nccwpck_require__(74086);
-const tlsPolicy_js_1 = __nccwpck_require__(19906);
-const multipartPolicy_js_1 = __nccwpck_require__(93651);
+const logPolicy_js_1 = __nccwpck_require__(45108);
+const pipeline_js_1 = __nccwpck_require__(46415);
+const redirectPolicy_js_1 = __nccwpck_require__(8884);
+const userAgentPolicy_js_1 = __nccwpck_require__(49046);
+const decompressResponsePolicy_js_1 = __nccwpck_require__(82576);
+const defaultRetryPolicy_js_1 = __nccwpck_require__(46893);
+const formDataPolicy_js_1 = __nccwpck_require__(94910);
+const checkEnvironment_js_1 = __nccwpck_require__(15777);
+const proxyPolicy_js_1 = __nccwpck_require__(67010);
+const agentPolicy_js_1 = __nccwpck_require__(66683);
+const tlsPolicy_js_1 = __nccwpck_require__(40023);
+const multipartPolicy_js_1 = __nccwpck_require__(72858);
 /**
  * Create a new pipeline with a default set of customizable policies.
  * @param options - Options to configure a custom pipeline.
@@ -83459,7 +83612,7 @@ function createPipelineFromOptions(options) {
 
 /***/ }),
 
-/***/ 10700:
+/***/ 80475:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -83467,7 +83620,7 @@ function createPipelineFromOptions(options) {
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.createDefaultHttpClient = createDefaultHttpClient;
-const nodeHttpClient_js_1 = __nccwpck_require__(77791);
+const nodeHttpClient_js_1 = __nccwpck_require__(67170);
 /**
  * Create the correct HttpClient for the current environment.
  */
@@ -83478,7 +83631,7 @@ function createDefaultHttpClient() {
 
 /***/ }),
 
-/***/ 83980:
+/***/ 38411:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -83576,7 +83729,7 @@ function createHttpHeaders(rawHeaders) {
 
 /***/ }),
 
-/***/ 44758:
+/***/ 60957:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -83585,40 +83738,40 @@ function createHttpHeaders(rawHeaders) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.createRestError = exports.operationOptionsToRequestParameters = exports.getClient = exports.createDefaultHttpClient = exports.uint8ArrayToString = exports.stringToUint8Array = exports.isRestError = exports.RestError = exports.createEmptyPipeline = exports.createPipelineRequest = exports.createHttpHeaders = exports.TypeSpecRuntimeLogger = exports.setLogLevel = exports.getLogLevel = exports.createClientLogger = exports.AbortError = void 0;
 const tslib_1 = __nccwpck_require__(67892);
-var AbortError_js_1 = __nccwpck_require__(99016);
+var AbortError_js_1 = __nccwpck_require__(37455);
 Object.defineProperty(exports, "AbortError", ({ enumerable: true, get: function () { return AbortError_js_1.AbortError; } }));
-var logger_js_1 = __nccwpck_require__(29835);
+var logger_js_1 = __nccwpck_require__(87516);
 Object.defineProperty(exports, "createClientLogger", ({ enumerable: true, get: function () { return logger_js_1.createClientLogger; } }));
 Object.defineProperty(exports, "getLogLevel", ({ enumerable: true, get: function () { return logger_js_1.getLogLevel; } }));
 Object.defineProperty(exports, "setLogLevel", ({ enumerable: true, get: function () { return logger_js_1.setLogLevel; } }));
 Object.defineProperty(exports, "TypeSpecRuntimeLogger", ({ enumerable: true, get: function () { return logger_js_1.TypeSpecRuntimeLogger; } }));
-var httpHeaders_js_1 = __nccwpck_require__(83980);
+var httpHeaders_js_1 = __nccwpck_require__(38411);
 Object.defineProperty(exports, "createHttpHeaders", ({ enumerable: true, get: function () { return httpHeaders_js_1.createHttpHeaders; } }));
-tslib_1.__exportStar(__nccwpck_require__(1553), exports);
-tslib_1.__exportStar(__nccwpck_require__(31433), exports);
-var pipelineRequest_js_1 = __nccwpck_require__(75553);
+tslib_1.__exportStar(__nccwpck_require__(30196), exports);
+tslib_1.__exportStar(__nccwpck_require__(37248), exports);
+var pipelineRequest_js_1 = __nccwpck_require__(90738);
 Object.defineProperty(exports, "createPipelineRequest", ({ enumerable: true, get: function () { return pipelineRequest_js_1.createPipelineRequest; } }));
-var pipeline_js_1 = __nccwpck_require__(76114);
+var pipeline_js_1 = __nccwpck_require__(46415);
 Object.defineProperty(exports, "createEmptyPipeline", ({ enumerable: true, get: function () { return pipeline_js_1.createEmptyPipeline; } }));
-var restError_js_1 = __nccwpck_require__(83406);
+var restError_js_1 = __nccwpck_require__(39885);
 Object.defineProperty(exports, "RestError", ({ enumerable: true, get: function () { return restError_js_1.RestError; } }));
 Object.defineProperty(exports, "isRestError", ({ enumerable: true, get: function () { return restError_js_1.isRestError; } }));
-var bytesEncoding_js_1 = __nccwpck_require__(95097);
+var bytesEncoding_js_1 = __nccwpck_require__(62408);
 Object.defineProperty(exports, "stringToUint8Array", ({ enumerable: true, get: function () { return bytesEncoding_js_1.stringToUint8Array; } }));
 Object.defineProperty(exports, "uint8ArrayToString", ({ enumerable: true, get: function () { return bytesEncoding_js_1.uint8ArrayToString; } }));
-var defaultHttpClient_js_1 = __nccwpck_require__(10700);
+var defaultHttpClient_js_1 = __nccwpck_require__(80475);
 Object.defineProperty(exports, "createDefaultHttpClient", ({ enumerable: true, get: function () { return defaultHttpClient_js_1.createDefaultHttpClient; } }));
-var getClient_js_1 = __nccwpck_require__(54431);
+var getClient_js_1 = __nccwpck_require__(2338);
 Object.defineProperty(exports, "getClient", ({ enumerable: true, get: function () { return getClient_js_1.getClient; } }));
-var operationOptionHelpers_js_1 = __nccwpck_require__(8131);
+var operationOptionHelpers_js_1 = __nccwpck_require__(89440);
 Object.defineProperty(exports, "operationOptionsToRequestParameters", ({ enumerable: true, get: function () { return operationOptionHelpers_js_1.operationOptionsToRequestParameters; } }));
-var restError_js_2 = __nccwpck_require__(83716);
+var restError_js_2 = __nccwpck_require__(71365);
 Object.defineProperty(exports, "createRestError", ({ enumerable: true, get: function () { return restError_js_2.createRestError; } }));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ 3628:
+/***/ 83155:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -83626,20 +83779,20 @@ Object.defineProperty(exports, "createRestError", ({ enumerable: true, get: func
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.logger = void 0;
-const logger_js_1 = __nccwpck_require__(29835);
+const logger_js_1 = __nccwpck_require__(87516);
 exports.logger = (0, logger_js_1.createClientLogger)("ts-http-runtime");
 //# sourceMappingURL=log.js.map
 
 /***/ }),
 
-/***/ 35796:
+/***/ 47801:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const log_js_1 = __nccwpck_require__(12029);
+const log_js_1 = __nccwpck_require__(98340);
 const debugEnvVariable = (typeof process !== "undefined" && process.env && process.env.DEBUG) || undefined;
 let enabledString;
 let enabledNamespaces = [];
@@ -83825,7 +83978,7 @@ exports["default"] = debugObj;
 
 /***/ }),
 
-/***/ 23850:
+/***/ 32033:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -83833,13 +83986,13 @@ exports["default"] = debugObj;
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.createLoggerContext = void 0;
-var logger_js_1 = __nccwpck_require__(29835);
+var logger_js_1 = __nccwpck_require__(87516);
 Object.defineProperty(exports, "createLoggerContext", ({ enumerable: true, get: function () { return logger_js_1.createLoggerContext; } }));
 //# sourceMappingURL=internal.js.map
 
 /***/ }),
 
-/***/ 12029:
+/***/ 98340:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -83858,7 +84011,7 @@ function log(message, ...args) {
 
 /***/ }),
 
-/***/ 29835:
+/***/ 87516:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -83871,7 +84024,7 @@ exports.setLogLevel = setLogLevel;
 exports.getLogLevel = getLogLevel;
 exports.createClientLogger = createClientLogger;
 const tslib_1 = __nccwpck_require__(67892);
-const debug_js_1 = tslib_1.__importDefault(__nccwpck_require__(35796));
+const debug_js_1 = tslib_1.__importDefault(__nccwpck_require__(47801));
 const TYPESPEC_RUNTIME_LOG_LEVELS = ["verbose", "info", "warning", "error"];
 const levelMap = {
     verbose: 400,
@@ -83997,7 +84150,7 @@ function createClientLogger(namespace) {
 
 /***/ }),
 
-/***/ 77791:
+/***/ 67170:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -84011,11 +84164,11 @@ const node_http_1 = tslib_1.__importDefault(__nccwpck_require__(37067));
 const node_https_1 = tslib_1.__importDefault(__nccwpck_require__(44708));
 const node_zlib_1 = tslib_1.__importDefault(__nccwpck_require__(38522));
 const node_stream_1 = __nccwpck_require__(57075);
-const AbortError_js_1 = __nccwpck_require__(99016);
-const httpHeaders_js_1 = __nccwpck_require__(83980);
-const restError_js_1 = __nccwpck_require__(83406);
-const log_js_1 = __nccwpck_require__(3628);
-const sanitizer_js_1 = __nccwpck_require__(31320);
+const AbortError_js_1 = __nccwpck_require__(37455);
+const httpHeaders_js_1 = __nccwpck_require__(38411);
+const restError_js_1 = __nccwpck_require__(39885);
+const log_js_1 = __nccwpck_require__(83155);
+const sanitizer_js_1 = __nccwpck_require__(87017);
 const DEFAULT_TLS_SETTINGS = {};
 function isReadableStream(body) {
     return body && typeof body.pipe === "function";
@@ -84355,7 +84508,7 @@ function createNodeHttpClient() {
 
 /***/ }),
 
-/***/ 76114:
+/***/ 46415:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -84626,7 +84779,7 @@ function createEmptyPipeline() {
 
 /***/ }),
 
-/***/ 75553:
+/***/ 90738:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -84634,8 +84787,8 @@ function createEmptyPipeline() {
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.createPipelineRequest = createPipelineRequest;
-const httpHeaders_js_1 = __nccwpck_require__(83980);
-const uuidUtils_js_1 = __nccwpck_require__(62543);
+const httpHeaders_js_1 = __nccwpck_require__(38411);
+const uuidUtils_js_1 = __nccwpck_require__(58066);
 class PipelineRequestImpl {
     url;
     method;
@@ -84690,7 +84843,7 @@ function createPipelineRequest(options) {
 
 /***/ }),
 
-/***/ 74086:
+/***/ 66683:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -84722,7 +84875,7 @@ function agentPolicy(agent) {
 
 /***/ }),
 
-/***/ 607:
+/***/ 97274:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -84731,7 +84884,7 @@ function agentPolicy(agent) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.apiKeyAuthenticationPolicyName = void 0;
 exports.apiKeyAuthenticationPolicy = apiKeyAuthenticationPolicy;
-const checkInsecureConnection_js_1 = __nccwpck_require__(7726);
+const checkInsecureConnection_js_1 = __nccwpck_require__(3153);
 /**
  * Name of the API Key Authentication Policy
  */
@@ -84762,7 +84915,7 @@ function apiKeyAuthenticationPolicy(options) {
 
 /***/ }),
 
-/***/ 33500:
+/***/ 22535:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -84771,8 +84924,8 @@ function apiKeyAuthenticationPolicy(options) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.basicAuthenticationPolicyName = void 0;
 exports.basicAuthenticationPolicy = basicAuthenticationPolicy;
-const bytesEncoding_js_1 = __nccwpck_require__(95097);
-const checkInsecureConnection_js_1 = __nccwpck_require__(7726);
+const bytesEncoding_js_1 = __nccwpck_require__(62408);
+const checkInsecureConnection_js_1 = __nccwpck_require__(3153);
 /**
  * Name of the Basic Authentication Policy
  */
@@ -84802,7 +84955,7 @@ function basicAuthenticationPolicy(options) {
 
 /***/ }),
 
-/***/ 27357:
+/***/ 82368:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -84811,7 +84964,7 @@ function basicAuthenticationPolicy(options) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.bearerAuthenticationPolicyName = void 0;
 exports.bearerAuthenticationPolicy = bearerAuthenticationPolicy;
-const checkInsecureConnection_js_1 = __nccwpck_require__(7726);
+const checkInsecureConnection_js_1 = __nccwpck_require__(3153);
 /**
  * Name of the Bearer Authentication Policy
  */
@@ -84842,7 +84995,7 @@ function bearerAuthenticationPolicy(options) {
 
 /***/ }),
 
-/***/ 7726:
+/***/ 3153:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -84850,7 +85003,7 @@ function bearerAuthenticationPolicy(options) {
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ensureSecureConnection = ensureSecureConnection;
-const log_js_1 = __nccwpck_require__(3628);
+const log_js_1 = __nccwpck_require__(83155);
 // Ensure the warining is only emitted once
 let insecureConnectionWarningEmmitted = false;
 /**
@@ -84901,7 +85054,7 @@ function ensureSecureConnection(request, options) {
 
 /***/ }),
 
-/***/ 1771:
+/***/ 50842:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -84910,7 +85063,7 @@ function ensureSecureConnection(request, options) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.oauth2AuthenticationPolicyName = void 0;
 exports.oauth2AuthenticationPolicy = oauth2AuthenticationPolicy;
-const checkInsecureConnection_js_1 = __nccwpck_require__(7726);
+const checkInsecureConnection_js_1 = __nccwpck_require__(3153);
 /**
  * Name of the OAuth2 Authentication Policy
  */
@@ -84941,7 +85094,7 @@ function oauth2AuthenticationPolicy(options) {
 
 /***/ }),
 
-/***/ 91659:
+/***/ 82576:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -84974,7 +85127,7 @@ function decompressResponsePolicy() {
 
 /***/ }),
 
-/***/ 65662:
+/***/ 46893:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -84983,10 +85136,10 @@ function decompressResponsePolicy() {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.defaultRetryPolicyName = void 0;
 exports.defaultRetryPolicy = defaultRetryPolicy;
-const exponentialRetryStrategy_js_1 = __nccwpck_require__(84710);
-const throttlingRetryStrategy_js_1 = __nccwpck_require__(29704);
-const retryPolicy_js_1 = __nccwpck_require__(36993);
-const constants_js_1 = __nccwpck_require__(61479);
+const exponentialRetryStrategy_js_1 = __nccwpck_require__(25687);
+const throttlingRetryStrategy_js_1 = __nccwpck_require__(79199);
+const retryPolicy_js_1 = __nccwpck_require__(87180);
+const constants_js_1 = __nccwpck_require__(35124);
 /**
  * Name of the {@link defaultRetryPolicy}
  */
@@ -85009,7 +85162,7 @@ function defaultRetryPolicy(options = {}) {
 
 /***/ }),
 
-/***/ 8272:
+/***/ 60519:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -85018,9 +85171,9 @@ function defaultRetryPolicy(options = {}) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.exponentialRetryPolicyName = void 0;
 exports.exponentialRetryPolicy = exponentialRetryPolicy;
-const exponentialRetryStrategy_js_1 = __nccwpck_require__(84710);
-const retryPolicy_js_1 = __nccwpck_require__(36993);
-const constants_js_1 = __nccwpck_require__(61479);
+const exponentialRetryStrategy_js_1 = __nccwpck_require__(25687);
+const retryPolicy_js_1 = __nccwpck_require__(87180);
+const constants_js_1 = __nccwpck_require__(35124);
 /**
  * The programmatic identifier of the exponentialRetryPolicy.
  */
@@ -85043,7 +85196,7 @@ function exponentialRetryPolicy(options = {}) {
 
 /***/ }),
 
-/***/ 33989:
+/***/ 94910:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -85052,9 +85205,9 @@ function exponentialRetryPolicy(options = {}) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.formDataPolicyName = void 0;
 exports.formDataPolicy = formDataPolicy;
-const bytesEncoding_js_1 = __nccwpck_require__(95097);
-const checkEnvironment_js_1 = __nccwpck_require__(22670);
-const httpHeaders_js_1 = __nccwpck_require__(83980);
+const bytesEncoding_js_1 = __nccwpck_require__(62408);
+const checkEnvironment_js_1 = __nccwpck_require__(15777);
+const httpHeaders_js_1 = __nccwpck_require__(38411);
 /**
  * The programmatic identifier of the formDataPolicy.
  */
@@ -85149,7 +85302,7 @@ async function prepareFormData(formData, request) {
 
 /***/ }),
 
-/***/ 18384:
+/***/ 43507:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -85157,53 +85310,53 @@ async function prepareFormData(formData, request) {
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.userAgentPolicyName = exports.userAgentPolicy = exports.tlsPolicyName = exports.tlsPolicy = exports.redirectPolicyName = exports.redirectPolicy = exports.getDefaultProxySettings = exports.proxyPolicyName = exports.proxyPolicy = exports.multipartPolicyName = exports.multipartPolicy = exports.logPolicyName = exports.logPolicy = exports.formDataPolicyName = exports.formDataPolicy = exports.throttlingRetryPolicyName = exports.throttlingRetryPolicy = exports.systemErrorRetryPolicyName = exports.systemErrorRetryPolicy = exports.retryPolicy = exports.exponentialRetryPolicyName = exports.exponentialRetryPolicy = exports.defaultRetryPolicyName = exports.defaultRetryPolicy = exports.decompressResponsePolicyName = exports.decompressResponsePolicy = exports.agentPolicyName = exports.agentPolicy = void 0;
-var agentPolicy_js_1 = __nccwpck_require__(74086);
+var agentPolicy_js_1 = __nccwpck_require__(66683);
 Object.defineProperty(exports, "agentPolicy", ({ enumerable: true, get: function () { return agentPolicy_js_1.agentPolicy; } }));
 Object.defineProperty(exports, "agentPolicyName", ({ enumerable: true, get: function () { return agentPolicy_js_1.agentPolicyName; } }));
-var decompressResponsePolicy_js_1 = __nccwpck_require__(91659);
+var decompressResponsePolicy_js_1 = __nccwpck_require__(82576);
 Object.defineProperty(exports, "decompressResponsePolicy", ({ enumerable: true, get: function () { return decompressResponsePolicy_js_1.decompressResponsePolicy; } }));
 Object.defineProperty(exports, "decompressResponsePolicyName", ({ enumerable: true, get: function () { return decompressResponsePolicy_js_1.decompressResponsePolicyName; } }));
-var defaultRetryPolicy_js_1 = __nccwpck_require__(65662);
+var defaultRetryPolicy_js_1 = __nccwpck_require__(46893);
 Object.defineProperty(exports, "defaultRetryPolicy", ({ enumerable: true, get: function () { return defaultRetryPolicy_js_1.defaultRetryPolicy; } }));
 Object.defineProperty(exports, "defaultRetryPolicyName", ({ enumerable: true, get: function () { return defaultRetryPolicy_js_1.defaultRetryPolicyName; } }));
-var exponentialRetryPolicy_js_1 = __nccwpck_require__(8272);
+var exponentialRetryPolicy_js_1 = __nccwpck_require__(60519);
 Object.defineProperty(exports, "exponentialRetryPolicy", ({ enumerable: true, get: function () { return exponentialRetryPolicy_js_1.exponentialRetryPolicy; } }));
 Object.defineProperty(exports, "exponentialRetryPolicyName", ({ enumerable: true, get: function () { return exponentialRetryPolicy_js_1.exponentialRetryPolicyName; } }));
-var retryPolicy_js_1 = __nccwpck_require__(36993);
+var retryPolicy_js_1 = __nccwpck_require__(87180);
 Object.defineProperty(exports, "retryPolicy", ({ enumerable: true, get: function () { return retryPolicy_js_1.retryPolicy; } }));
-var systemErrorRetryPolicy_js_1 = __nccwpck_require__(52402);
+var systemErrorRetryPolicy_js_1 = __nccwpck_require__(87849);
 Object.defineProperty(exports, "systemErrorRetryPolicy", ({ enumerable: true, get: function () { return systemErrorRetryPolicy_js_1.systemErrorRetryPolicy; } }));
 Object.defineProperty(exports, "systemErrorRetryPolicyName", ({ enumerable: true, get: function () { return systemErrorRetryPolicy_js_1.systemErrorRetryPolicyName; } }));
-var throttlingRetryPolicy_js_1 = __nccwpck_require__(38472);
+var throttlingRetryPolicy_js_1 = __nccwpck_require__(34197);
 Object.defineProperty(exports, "throttlingRetryPolicy", ({ enumerable: true, get: function () { return throttlingRetryPolicy_js_1.throttlingRetryPolicy; } }));
 Object.defineProperty(exports, "throttlingRetryPolicyName", ({ enumerable: true, get: function () { return throttlingRetryPolicy_js_1.throttlingRetryPolicyName; } }));
-var formDataPolicy_js_1 = __nccwpck_require__(33989);
+var formDataPolicy_js_1 = __nccwpck_require__(94910);
 Object.defineProperty(exports, "formDataPolicy", ({ enumerable: true, get: function () { return formDataPolicy_js_1.formDataPolicy; } }));
 Object.defineProperty(exports, "formDataPolicyName", ({ enumerable: true, get: function () { return formDataPolicy_js_1.formDataPolicyName; } }));
-var logPolicy_js_1 = __nccwpck_require__(22729);
+var logPolicy_js_1 = __nccwpck_require__(45108);
 Object.defineProperty(exports, "logPolicy", ({ enumerable: true, get: function () { return logPolicy_js_1.logPolicy; } }));
 Object.defineProperty(exports, "logPolicyName", ({ enumerable: true, get: function () { return logPolicy_js_1.logPolicyName; } }));
-var multipartPolicy_js_1 = __nccwpck_require__(93651);
+var multipartPolicy_js_1 = __nccwpck_require__(72858);
 Object.defineProperty(exports, "multipartPolicy", ({ enumerable: true, get: function () { return multipartPolicy_js_1.multipartPolicy; } }));
 Object.defineProperty(exports, "multipartPolicyName", ({ enumerable: true, get: function () { return multipartPolicy_js_1.multipartPolicyName; } }));
-var proxyPolicy_js_1 = __nccwpck_require__(33427);
+var proxyPolicy_js_1 = __nccwpck_require__(67010);
 Object.defineProperty(exports, "proxyPolicy", ({ enumerable: true, get: function () { return proxyPolicy_js_1.proxyPolicy; } }));
 Object.defineProperty(exports, "proxyPolicyName", ({ enumerable: true, get: function () { return proxyPolicy_js_1.proxyPolicyName; } }));
 Object.defineProperty(exports, "getDefaultProxySettings", ({ enumerable: true, get: function () { return proxyPolicy_js_1.getDefaultProxySettings; } }));
-var redirectPolicy_js_1 = __nccwpck_require__(14027);
+var redirectPolicy_js_1 = __nccwpck_require__(8884);
 Object.defineProperty(exports, "redirectPolicy", ({ enumerable: true, get: function () { return redirectPolicy_js_1.redirectPolicy; } }));
 Object.defineProperty(exports, "redirectPolicyName", ({ enumerable: true, get: function () { return redirectPolicy_js_1.redirectPolicyName; } }));
-var tlsPolicy_js_1 = __nccwpck_require__(19906);
+var tlsPolicy_js_1 = __nccwpck_require__(40023);
 Object.defineProperty(exports, "tlsPolicy", ({ enumerable: true, get: function () { return tlsPolicy_js_1.tlsPolicy; } }));
 Object.defineProperty(exports, "tlsPolicyName", ({ enumerable: true, get: function () { return tlsPolicy_js_1.tlsPolicyName; } }));
-var userAgentPolicy_js_1 = __nccwpck_require__(95515);
+var userAgentPolicy_js_1 = __nccwpck_require__(49046);
 Object.defineProperty(exports, "userAgentPolicy", ({ enumerable: true, get: function () { return userAgentPolicy_js_1.userAgentPolicy; } }));
 Object.defineProperty(exports, "userAgentPolicyName", ({ enumerable: true, get: function () { return userAgentPolicy_js_1.userAgentPolicyName; } }));
 //# sourceMappingURL=internal.js.map
 
 /***/ }),
 
-/***/ 22729:
+/***/ 45108:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -85212,8 +85365,8 @@ Object.defineProperty(exports, "userAgentPolicyName", ({ enumerable: true, get: 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.logPolicyName = void 0;
 exports.logPolicy = logPolicy;
-const log_js_1 = __nccwpck_require__(3628);
-const sanitizer_js_1 = __nccwpck_require__(31320);
+const log_js_1 = __nccwpck_require__(83155);
+const sanitizer_js_1 = __nccwpck_require__(87017);
 /**
  * The programmatic identifier of the logPolicy.
  */
@@ -85246,7 +85399,7 @@ function logPolicy(options = {}) {
 
 /***/ }),
 
-/***/ 93651:
+/***/ 72858:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -85255,10 +85408,10 @@ function logPolicy(options = {}) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.multipartPolicyName = void 0;
 exports.multipartPolicy = multipartPolicy;
-const bytesEncoding_js_1 = __nccwpck_require__(95097);
-const typeGuards_js_1 = __nccwpck_require__(4841);
-const uuidUtils_js_1 = __nccwpck_require__(62543);
-const concat_js_1 = __nccwpck_require__(36403);
+const bytesEncoding_js_1 = __nccwpck_require__(62408);
+const typeGuards_js_1 = __nccwpck_require__(86974);
+const uuidUtils_js_1 = __nccwpck_require__(58066);
+const concat_js_1 = __nccwpck_require__(12820);
 function generateBoundary() {
     return `----AzSDKFormBoundary${(0, uuidUtils_js_1.randomUUID)()}`;
 }
@@ -85367,7 +85520,7 @@ function multipartPolicy() {
 
 /***/ }),
 
-/***/ 33427:
+/***/ 67010:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -85380,7 +85533,7 @@ exports.getDefaultProxySettings = getDefaultProxySettings;
 exports.proxyPolicy = proxyPolicy;
 const https_proxy_agent_1 = __nccwpck_require__(31475);
 const http_proxy_agent_1 = __nccwpck_require__(74249);
-const log_js_1 = __nccwpck_require__(3628);
+const log_js_1 = __nccwpck_require__(83155);
 const HTTPS_PROXY = "HTTPS_PROXY";
 const HTTP_PROXY = "HTTP_PROXY";
 const ALL_PROXY = "ALL_PROXY";
@@ -85569,7 +85722,7 @@ function proxyPolicy(proxySettings, options) {
 
 /***/ }),
 
-/***/ 14027:
+/***/ 8884:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -85631,7 +85784,7 @@ async function handleRedirect(next, response, maxRetries, currentRetries = 0) {
 
 /***/ }),
 
-/***/ 36993:
+/***/ 87180:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -85639,10 +85792,10 @@ async function handleRedirect(next, response, maxRetries, currentRetries = 0) {
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.retryPolicy = retryPolicy;
-const helpers_js_1 = __nccwpck_require__(75150);
-const AbortError_js_1 = __nccwpck_require__(99016);
-const logger_js_1 = __nccwpck_require__(29835);
-const constants_js_1 = __nccwpck_require__(61479);
+const helpers_js_1 = __nccwpck_require__(67943);
+const AbortError_js_1 = __nccwpck_require__(37455);
+const logger_js_1 = __nccwpck_require__(87516);
+const constants_js_1 = __nccwpck_require__(35124);
 const retryPolicyLogger = (0, logger_js_1.createClientLogger)("ts-http-runtime retryPolicy");
 /**
  * The programmatic identifier of the retryPolicy.
@@ -85744,7 +85897,7 @@ function retryPolicy(strategies, options = { maxRetries: constants_js_1.DEFAULT_
 
 /***/ }),
 
-/***/ 52402:
+/***/ 87849:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -85753,9 +85906,9 @@ function retryPolicy(strategies, options = { maxRetries: constants_js_1.DEFAULT_
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.systemErrorRetryPolicyName = void 0;
 exports.systemErrorRetryPolicy = systemErrorRetryPolicy;
-const exponentialRetryStrategy_js_1 = __nccwpck_require__(84710);
-const retryPolicy_js_1 = __nccwpck_require__(36993);
-const constants_js_1 = __nccwpck_require__(61479);
+const exponentialRetryStrategy_js_1 = __nccwpck_require__(25687);
+const retryPolicy_js_1 = __nccwpck_require__(87180);
+const constants_js_1 = __nccwpck_require__(35124);
 /**
  * Name of the {@link systemErrorRetryPolicy}
  */
@@ -85783,7 +85936,7 @@ function systemErrorRetryPolicy(options = {}) {
 
 /***/ }),
 
-/***/ 38472:
+/***/ 34197:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -85792,9 +85945,9 @@ function systemErrorRetryPolicy(options = {}) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.throttlingRetryPolicyName = void 0;
 exports.throttlingRetryPolicy = throttlingRetryPolicy;
-const throttlingRetryStrategy_js_1 = __nccwpck_require__(29704);
-const retryPolicy_js_1 = __nccwpck_require__(36993);
-const constants_js_1 = __nccwpck_require__(61479);
+const throttlingRetryStrategy_js_1 = __nccwpck_require__(79199);
+const retryPolicy_js_1 = __nccwpck_require__(87180);
+const constants_js_1 = __nccwpck_require__(35124);
 /**
  * Name of the {@link throttlingRetryPolicy}
  */
@@ -85821,7 +85974,7 @@ function throttlingRetryPolicy(options = {}) {
 
 /***/ }),
 
-/***/ 19906:
+/***/ 40023:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -85853,7 +86006,7 @@ function tlsPolicy(tlsSettings) {
 
 /***/ }),
 
-/***/ 95515:
+/***/ 49046:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -85862,7 +86015,7 @@ function tlsPolicy(tlsSettings) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.userAgentPolicyName = void 0;
 exports.userAgentPolicy = userAgentPolicy;
-const userAgent_js_1 = __nccwpck_require__(62811);
+const userAgent_js_1 = __nccwpck_require__(53918);
 const UserAgentHeaderName = (0, userAgent_js_1.getUserAgentHeaderName)();
 /**
  * The programmatic identifier of the userAgentPolicy.
@@ -85889,7 +86042,7 @@ function userAgentPolicy(options = {}) {
 
 /***/ }),
 
-/***/ 83406:
+/***/ 39885:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -85898,9 +86051,9 @@ function userAgentPolicy(options = {}) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.RestError = void 0;
 exports.isRestError = isRestError;
-const error_js_1 = __nccwpck_require__(5581);
-const inspect_js_1 = __nccwpck_require__(32759);
-const sanitizer_js_1 = __nccwpck_require__(31320);
+const error_js_1 = __nccwpck_require__(16356);
+const inspect_js_1 = __nccwpck_require__(1122);
+const sanitizer_js_1 = __nccwpck_require__(87017);
 const errorSanitizer = new sanitizer_js_1.Sanitizer();
 /**
  * A custom error type for failed pipeline requests.
@@ -85989,7 +86142,7 @@ function isRestError(e) {
 
 /***/ }),
 
-/***/ 84710:
+/***/ 25687:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -85999,8 +86152,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.exponentialRetryStrategy = exponentialRetryStrategy;
 exports.isExponentialRetryResponse = isExponentialRetryResponse;
 exports.isSystemError = isSystemError;
-const delay_js_1 = __nccwpck_require__(73960);
-const throttlingRetryStrategy_js_1 = __nccwpck_require__(29704);
+const delay_js_1 = __nccwpck_require__(63721);
+const throttlingRetryStrategy_js_1 = __nccwpck_require__(79199);
 // intervals are in milliseconds
 const DEFAULT_CLIENT_RETRY_INTERVAL = 1000;
 const DEFAULT_CLIENT_MAX_RETRY_INTERVAL = 1000 * 64;
@@ -86063,7 +86216,7 @@ function isSystemError(err) {
 
 /***/ }),
 
-/***/ 29704:
+/***/ 79199:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -86072,7 +86225,7 @@ function isSystemError(err) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.isThrottlingRetryResponse = isThrottlingRetryResponse;
 exports.throttlingRetryStrategy = throttlingRetryStrategy;
-const helpers_js_1 = __nccwpck_require__(75150);
+const helpers_js_1 = __nccwpck_require__(67943);
 /**
  * The header that comes back from services representing
  * the amount of time (minimum) to wait to retry (in seconds or timestamp after which we can retry).
@@ -86147,7 +86300,7 @@ function throttlingRetryStrategy() {
 
 /***/ }),
 
-/***/ 95097:
+/***/ 62408:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -86178,7 +86331,7 @@ function stringToUint8Array(value, format) {
 
 /***/ }),
 
-/***/ 22670:
+/***/ 15777:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -86228,7 +86381,7 @@ exports.isReactNative = typeof navigator !== "undefined" && navigator?.product =
 
 /***/ }),
 
-/***/ 36403:
+/***/ 12820:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -86237,7 +86390,7 @@ exports.isReactNative = typeof navigator !== "undefined" && navigator?.product =
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.concat = concat;
 const stream_1 = __nccwpck_require__(2203);
-const typeGuards_js_1 = __nccwpck_require__(4841);
+const typeGuards_js_1 = __nccwpck_require__(86974);
 async function* streamAsyncIterator() {
     const reader = this.getReader();
     try {
@@ -86306,7 +86459,7 @@ async function concat(sources) {
 
 /***/ }),
 
-/***/ 73960:
+/***/ 63721:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -86314,7 +86467,7 @@ async function concat(sources) {
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.calculateRetryDelay = calculateRetryDelay;
-const random_js_1 = __nccwpck_require__(80832);
+const random_js_1 = __nccwpck_require__(93503);
 /**
  * Calculates the delay interval for retry attempts using exponential delay with jitter.
  * @param retryAttempt - The current retry attempt number.
@@ -86335,7 +86488,7 @@ function calculateRetryDelay(retryAttempt, config) {
 
 /***/ }),
 
-/***/ 5581:
+/***/ 16356:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -86343,7 +86496,7 @@ function calculateRetryDelay(retryAttempt, config) {
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.isError = isError;
-const object_js_1 = __nccwpck_require__(77744);
+const object_js_1 = __nccwpck_require__(33419);
 /**
  * Typeguard for an error object shape (has name and message)
  * @param e - Something caught by a catch clause.
@@ -86360,7 +86513,7 @@ function isError(e) {
 
 /***/ }),
 
-/***/ 75150:
+/***/ 67943:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -86369,7 +86522,7 @@ function isError(e) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.delay = delay;
 exports.parseHeaderValueAsNumber = parseHeaderValueAsNumber;
-const AbortError_js_1 = __nccwpck_require__(99016);
+const AbortError_js_1 = __nccwpck_require__(37455);
 const StandardAbortMessage = "The operation was aborted.";
 /**
  * A wrapper for setTimeout that resolves a promise after delayInMs milliseconds.
@@ -86428,7 +86581,7 @@ function parseHeaderValueAsNumber(response, headerName) {
 
 /***/ }),
 
-/***/ 32759:
+/***/ 1122:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -86442,7 +86595,7 @@ exports.custom = node_util_1.inspect.custom;
 
 /***/ }),
 
-/***/ 49654:
+/***/ 38233:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -86450,20 +86603,20 @@ exports.custom = node_util_1.inspect.custom;
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Sanitizer = exports.uint8ArrayToString = exports.stringToUint8Array = exports.isWebWorker = exports.isReactNative = exports.isDeno = exports.isNodeRuntime = exports.isNodeLike = exports.isBun = exports.isBrowser = exports.randomUUID = exports.computeSha256Hmac = exports.computeSha256Hash = exports.isError = exports.isObject = exports.getRandomIntegerInclusive = exports.calculateRetryDelay = void 0;
-var delay_js_1 = __nccwpck_require__(73960);
+var delay_js_1 = __nccwpck_require__(63721);
 Object.defineProperty(exports, "calculateRetryDelay", ({ enumerable: true, get: function () { return delay_js_1.calculateRetryDelay; } }));
-var random_js_1 = __nccwpck_require__(80832);
+var random_js_1 = __nccwpck_require__(93503);
 Object.defineProperty(exports, "getRandomIntegerInclusive", ({ enumerable: true, get: function () { return random_js_1.getRandomIntegerInclusive; } }));
-var object_js_1 = __nccwpck_require__(77744);
+var object_js_1 = __nccwpck_require__(33419);
 Object.defineProperty(exports, "isObject", ({ enumerable: true, get: function () { return object_js_1.isObject; } }));
-var error_js_1 = __nccwpck_require__(5581);
+var error_js_1 = __nccwpck_require__(16356);
 Object.defineProperty(exports, "isError", ({ enumerable: true, get: function () { return error_js_1.isError; } }));
-var sha256_js_1 = __nccwpck_require__(19664);
+var sha256_js_1 = __nccwpck_require__(73775);
 Object.defineProperty(exports, "computeSha256Hash", ({ enumerable: true, get: function () { return sha256_js_1.computeSha256Hash; } }));
 Object.defineProperty(exports, "computeSha256Hmac", ({ enumerable: true, get: function () { return sha256_js_1.computeSha256Hmac; } }));
-var uuidUtils_js_1 = __nccwpck_require__(62543);
+var uuidUtils_js_1 = __nccwpck_require__(58066);
 Object.defineProperty(exports, "randomUUID", ({ enumerable: true, get: function () { return uuidUtils_js_1.randomUUID; } }));
-var checkEnvironment_js_1 = __nccwpck_require__(22670);
+var checkEnvironment_js_1 = __nccwpck_require__(15777);
 Object.defineProperty(exports, "isBrowser", ({ enumerable: true, get: function () { return checkEnvironment_js_1.isBrowser; } }));
 Object.defineProperty(exports, "isBun", ({ enumerable: true, get: function () { return checkEnvironment_js_1.isBun; } }));
 Object.defineProperty(exports, "isNodeLike", ({ enumerable: true, get: function () { return checkEnvironment_js_1.isNodeLike; } }));
@@ -86471,16 +86624,16 @@ Object.defineProperty(exports, "isNodeRuntime", ({ enumerable: true, get: functi
 Object.defineProperty(exports, "isDeno", ({ enumerable: true, get: function () { return checkEnvironment_js_1.isDeno; } }));
 Object.defineProperty(exports, "isReactNative", ({ enumerable: true, get: function () { return checkEnvironment_js_1.isReactNative; } }));
 Object.defineProperty(exports, "isWebWorker", ({ enumerable: true, get: function () { return checkEnvironment_js_1.isWebWorker; } }));
-var bytesEncoding_js_1 = __nccwpck_require__(95097);
+var bytesEncoding_js_1 = __nccwpck_require__(62408);
 Object.defineProperty(exports, "stringToUint8Array", ({ enumerable: true, get: function () { return bytesEncoding_js_1.stringToUint8Array; } }));
 Object.defineProperty(exports, "uint8ArrayToString", ({ enumerable: true, get: function () { return bytesEncoding_js_1.uint8ArrayToString; } }));
-var sanitizer_js_1 = __nccwpck_require__(31320);
+var sanitizer_js_1 = __nccwpck_require__(87017);
 Object.defineProperty(exports, "Sanitizer", ({ enumerable: true, get: function () { return sanitizer_js_1.Sanitizer; } }));
 //# sourceMappingURL=internal.js.map
 
 /***/ }),
 
-/***/ 77744:
+/***/ 33419:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -86503,7 +86656,7 @@ function isObject(input) {
 
 /***/ }),
 
-/***/ 80832:
+/***/ 93503:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -86533,7 +86686,7 @@ function getRandomIntegerInclusive(min, max) {
 
 /***/ }),
 
-/***/ 31320:
+/***/ 87017:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -86541,7 +86694,7 @@ function getRandomIntegerInclusive(min, max) {
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Sanitizer = void 0;
-const object_js_1 = __nccwpck_require__(77744);
+const object_js_1 = __nccwpck_require__(33419);
 const RedactedString = "REDACTED";
 // Make sure this list is up-to-date with the one under core/logger/Readme#Keyconcepts
 const defaultAllowedHeaderNames = [
@@ -86698,7 +86851,7 @@ exports.Sanitizer = Sanitizer;
 
 /***/ }),
 
-/***/ 19664:
+/***/ 73775:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -86730,7 +86883,7 @@ async function computeSha256Hash(content, encoding) {
 
 /***/ }),
 
-/***/ 4841:
+/***/ 86974:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -86767,7 +86920,7 @@ function isBlob(x) {
 
 /***/ }),
 
-/***/ 62811:
+/***/ 53918:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -86776,8 +86929,8 @@ function isBlob(x) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getUserAgentHeaderName = getUserAgentHeaderName;
 exports.getUserAgentValue = getUserAgentValue;
-const userAgentPlatform_js_1 = __nccwpck_require__(94444);
-const constants_js_1 = __nccwpck_require__(61479);
+const userAgentPlatform_js_1 = __nccwpck_require__(46181);
+const constants_js_1 = __nccwpck_require__(35124);
 function getUserAgentString(telemetryInfo) {
     const parts = [];
     for (const [key, value] of telemetryInfo) {
@@ -86807,7 +86960,7 @@ async function getUserAgentValue(prefix) {
 
 /***/ }),
 
-/***/ 94444:
+/***/ 46181:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 
@@ -86830,52 +86983,47 @@ function getHeaderName() {
  */
 async function setPlatformSpecificData(map) {
     if (node_process_1.default && node_process_1.default.versions) {
+        const osInfo = `${node_os_1.default.type()} ${node_os_1.default.release()}; ${node_os_1.default.arch()}`;
         const versions = node_process_1.default.versions;
         if (versions.bun) {
-            map.set("Bun", versions.bun);
+            map.set("Bun", `${versions.bun} (${osInfo})`);
         }
         else if (versions.deno) {
-            map.set("Deno", versions.deno);
+            map.set("Deno", `${versions.deno} (${osInfo})`);
         }
         else if (versions.node) {
-            map.set("Node", versions.node);
+            map.set("Node", `${versions.node} (${osInfo})`);
         }
     }
-    map.set("OS", `(${node_os_1.default.arch()}-${node_os_1.default.type()}-${node_os_1.default.release()})`);
 }
 //# sourceMappingURL=userAgentPlatform.js.map
 
 /***/ }),
 
-/***/ 62543:
-/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+/***/ 58066:
+/***/ ((__unused_webpack_module, exports) => {
 
 
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.randomUUID = randomUUID;
-const node_crypto_1 = __nccwpck_require__(77598);
-// NOTE: This is a workaround until we can use `globalThis.crypto.randomUUID` in Node.js 19+.
-const uuidFunction = typeof globalThis?.crypto?.randomUUID === "function"
-    ? globalThis.crypto.randomUUID.bind(globalThis.crypto)
-    : node_crypto_1.randomUUID;
 /**
  * Generated Universally Unique Identifier
  *
  * @returns RFC4122 v4 UUID.
  */
 function randomUUID() {
-    return uuidFunction();
+    return crypto.randomUUID();
 }
 //# sourceMappingURL=uuidUtils.js.map
 
 /***/ }),
 
-/***/ 65110:
+/***/ 18743:
 /***/ ((module) => {
 
-(()=>{"use strict";var t={d:(e,n)=>{for(var i in n)t.o(n,i)&&!t.o(e,i)&&Object.defineProperty(e,i,{enumerable:!0,get:n[i]})},o:(t,e)=>Object.prototype.hasOwnProperty.call(t,e),r:t=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})}},e={};t.r(e),t.d(e,{XMLBuilder:()=>lt,XMLParser:()=>tt,XMLValidator:()=>pt});const n=":A-Za-z_\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD",i=new RegExp("^["+n+"]["+n+"\\-.\\d\\u00B7\\u0300-\\u036F\\u203F-\\u2040]*$");function r(t,e){const n=[];let i=e.exec(t);for(;i;){const r=[];r.startIndex=e.lastIndex-i[0].length;const s=i.length;for(let t=0;t<s;t++)r.push(i[t]);n.push(r),i=e.exec(t)}return n}const s=function(t){return!(null==i.exec(t))},o={allowBooleanAttributes:!1,unpairedTags:[]};function a(t,e){e=Object.assign({},o,e);const n=[];let i=!1,r=!1;"\ufeff"===t[0]&&(t=t.substr(1));for(let o=0;o<t.length;o++)if("<"===t[o]&&"?"===t[o+1]){if(o+=2,o=u(t,o),o.err)return o}else{if("<"!==t[o]){if(l(t[o]))continue;return x("InvalidChar","char '"+t[o]+"' is not expected.",N(t,o))}{let a=o;if(o++,"!"===t[o]){o=h(t,o);continue}{let d=!1;"/"===t[o]&&(d=!0,o++);let p="";for(;o<t.length&&">"!==t[o]&&" "!==t[o]&&"\t"!==t[o]&&"\n"!==t[o]&&"\r"!==t[o];o++)p+=t[o];if(p=p.trim(),"/"===p[p.length-1]&&(p=p.substring(0,p.length-1),o--),!s(p)){let e;return e=0===p.trim().length?"Invalid space after '<'.":"Tag '"+p+"' is an invalid name.",x("InvalidTag",e,N(t,o))}const c=f(t,o);if(!1===c)return x("InvalidAttr","Attributes for '"+p+"' have open quote.",N(t,o));let b=c.value;if(o=c.index,"/"===b[b.length-1]){const n=o-b.length;b=b.substring(0,b.length-1);const r=g(b,e);if(!0!==r)return x(r.err.code,r.err.msg,N(t,n+r.err.line));i=!0}else if(d){if(!c.tagClosed)return x("InvalidTag","Closing tag '"+p+"' doesn't have proper closing.",N(t,o));if(b.trim().length>0)return x("InvalidTag","Closing tag '"+p+"' can't have attributes or invalid starting.",N(t,a));if(0===n.length)return x("InvalidTag","Closing tag '"+p+"' has not been opened.",N(t,a));{const e=n.pop();if(p!==e.tagName){let n=N(t,e.tagStartPos);return x("InvalidTag","Expected closing tag '"+e.tagName+"' (opened in line "+n.line+", col "+n.col+") instead of closing tag '"+p+"'.",N(t,a))}0==n.length&&(r=!0)}}else{const s=g(b,e);if(!0!==s)return x(s.err.code,s.err.msg,N(t,o-b.length+s.err.line));if(!0===r)return x("InvalidXml","Multiple possible root nodes found.",N(t,o));-1!==e.unpairedTags.indexOf(p)||n.push({tagName:p,tagStartPos:a}),i=!0}for(o++;o<t.length;o++)if("<"===t[o]){if("!"===t[o+1]){o++,o=h(t,o);continue}if("?"!==t[o+1])break;if(o=u(t,++o),o.err)return o}else if("&"===t[o]){const e=m(t,o);if(-1==e)return x("InvalidChar","char '&' is not expected.",N(t,o));o=e}else if(!0===r&&!l(t[o]))return x("InvalidXml","Extra text at the end",N(t,o));"<"===t[o]&&o--}}}return i?1==n.length?x("InvalidTag","Unclosed tag '"+n[0].tagName+"'.",N(t,n[0].tagStartPos)):!(n.length>0)||x("InvalidXml","Invalid '"+JSON.stringify(n.map((t=>t.tagName)),null,4).replace(/\r?\n/g,"")+"' found.",{line:1,col:1}):x("InvalidXml","Start tag expected.",1)}function l(t){return" "===t||"\t"===t||"\n"===t||"\r"===t}function u(t,e){const n=e;for(;e<t.length;e++)if("?"!=t[e]&&" "!=t[e]);else{const i=t.substr(n,e-n);if(e>5&&"xml"===i)return x("InvalidXml","XML declaration allowed only at the start of the document.",N(t,e));if("?"==t[e]&&">"==t[e+1]){e++;break}}return e}function h(t,e){if(t.length>e+5&&"-"===t[e+1]&&"-"===t[e+2]){for(e+=3;e<t.length;e++)if("-"===t[e]&&"-"===t[e+1]&&">"===t[e+2]){e+=2;break}}else if(t.length>e+8&&"D"===t[e+1]&&"O"===t[e+2]&&"C"===t[e+3]&&"T"===t[e+4]&&"Y"===t[e+5]&&"P"===t[e+6]&&"E"===t[e+7]){let n=1;for(e+=8;e<t.length;e++)if("<"===t[e])n++;else if(">"===t[e]&&(n--,0===n))break}else if(t.length>e+9&&"["===t[e+1]&&"C"===t[e+2]&&"D"===t[e+3]&&"A"===t[e+4]&&"T"===t[e+5]&&"A"===t[e+6]&&"["===t[e+7])for(e+=8;e<t.length;e++)if("]"===t[e]&&"]"===t[e+1]&&">"===t[e+2]){e+=2;break}return e}const d='"',p="'";function f(t,e){let n="",i="",r=!1;for(;e<t.length;e++){if(t[e]===d||t[e]===p)""===i?i=t[e]:i!==t[e]||(i="");else if(">"===t[e]&&""===i){r=!0;break}n+=t[e]}return""===i&&{value:n,index:e,tagClosed:r}}const c=new RegExp("(\\s*)([^\\s=]+)(\\s*=)?(\\s*(['\"])(([\\s\\S])*?)\\5)?","g");function g(t,e){const n=r(t,c),i={};for(let t=0;t<n.length;t++){if(0===n[t][1].length)return x("InvalidAttr","Attribute '"+n[t][2]+"' has no space in starting.",E(n[t]));if(void 0!==n[t][3]&&void 0===n[t][4])return x("InvalidAttr","Attribute '"+n[t][2]+"' is without value.",E(n[t]));if(void 0===n[t][3]&&!e.allowBooleanAttributes)return x("InvalidAttr","boolean attribute '"+n[t][2]+"' is not allowed.",E(n[t]));const r=n[t][2];if(!b(r))return x("InvalidAttr","Attribute '"+r+"' is an invalid name.",E(n[t]));if(i.hasOwnProperty(r))return x("InvalidAttr","Attribute '"+r+"' is repeated.",E(n[t]));i[r]=1}return!0}function m(t,e){if(";"===t[++e])return-1;if("#"===t[e])return function(t,e){let n=/\d/;for("x"===t[e]&&(e++,n=/[\da-fA-F]/);e<t.length;e++){if(";"===t[e])return e;if(!t[e].match(n))break}return-1}(t,++e);let n=0;for(;e<t.length;e++,n++)if(!(t[e].match(/\w/)&&n<20)){if(";"===t[e])break;return-1}return e}function x(t,e,n){return{err:{code:t,msg:e,line:n.line||n,col:n.col}}}function b(t){return s(t)}function N(t,e){const n=t.substring(0,e).split(/\r?\n/);return{line:n.length,col:n[n.length-1].length+1}}function E(t){return t.startIndex+t[1].length}const v={preserveOrder:!1,attributeNamePrefix:"@_",attributesGroupName:!1,textNodeName:"#text",ignoreAttributes:!0,removeNSPrefix:!1,allowBooleanAttributes:!1,parseTagValue:!0,parseAttributeValue:!1,trimValues:!0,cdataPropName:!1,numberParseOptions:{hex:!0,leadingZeros:!0,eNotation:!0},tagValueProcessor:function(t,e){return e},attributeValueProcessor:function(t,e){return e},stopNodes:[],alwaysCreateTextNode:!1,isArray:()=>!1,commentPropName:!1,unpairedTags:[],processEntities:!0,htmlEntities:!1,ignoreDeclaration:!1,ignorePiTags:!1,transformTagName:!1,transformAttributeName:!1,updateTag:function(t,e,n){return t},captureMetaData:!1};let T;T="function"!=typeof Symbol?"@@xmlMetadata":Symbol("XML Node Metadata");class y{constructor(t){this.tagname=t,this.child=[],this[":@"]={}}add(t,e){"__proto__"===t&&(t="#__proto__"),this.child.push({[t]:e})}addChild(t,e){"__proto__"===t.tagname&&(t.tagname="#__proto__"),t[":@"]&&Object.keys(t[":@"]).length>0?this.child.push({[t.tagname]:t.child,":@":t[":@"]}):this.child.push({[t.tagname]:t.child}),void 0!==e&&(this.child[this.child.length-1][T]={startIndex:e})}static getMetaDataSymbol(){return T}}class w{constructor(t){this.suppressValidationErr=!t}readDocType(t,e){const n={};if("O"!==t[e+3]||"C"!==t[e+4]||"T"!==t[e+5]||"Y"!==t[e+6]||"P"!==t[e+7]||"E"!==t[e+8])throw new Error("Invalid Tag instead of DOCTYPE");{e+=9;let i=1,r=!1,s=!1,o="";for(;e<t.length;e++)if("<"!==t[e]||s)if(">"===t[e]){if(s?"-"===t[e-1]&&"-"===t[e-2]&&(s=!1,i--):i--,0===i)break}else"["===t[e]?r=!0:o+=t[e];else{if(r&&P(t,"!ENTITY",e)){let i,r;e+=7,[i,r,e]=this.readEntityExp(t,e+1,this.suppressValidationErr),-1===r.indexOf("&")&&(n[i]={regx:RegExp(`&${i};`,"g"),val:r})}else if(r&&P(t,"!ELEMENT",e)){e+=8;const{index:n}=this.readElementExp(t,e+1);e=n}else if(r&&P(t,"!ATTLIST",e))e+=8;else if(r&&P(t,"!NOTATION",e)){e+=9;const{index:n}=this.readNotationExp(t,e+1,this.suppressValidationErr);e=n}else{if(!P(t,"!--",e))throw new Error("Invalid DOCTYPE");s=!0}i++,o=""}if(0!==i)throw new Error("Unclosed DOCTYPE")}return{entities:n,i:e}}readEntityExp(t,e){e=I(t,e);let n="";for(;e<t.length&&!/\s/.test(t[e])&&'"'!==t[e]&&"'"!==t[e];)n+=t[e],e++;if(O(n),e=I(t,e),!this.suppressValidationErr){if("SYSTEM"===t.substring(e,e+6).toUpperCase())throw new Error("External entities are not supported");if("%"===t[e])throw new Error("Parameter entities are not supported")}let i="";return[e,i]=this.readIdentifierVal(t,e,"entity"),[n,i,--e]}readNotationExp(t,e){e=I(t,e);let n="";for(;e<t.length&&!/\s/.test(t[e]);)n+=t[e],e++;!this.suppressValidationErr&&O(n),e=I(t,e);const i=t.substring(e,e+6).toUpperCase();if(!this.suppressValidationErr&&"SYSTEM"!==i&&"PUBLIC"!==i)throw new Error(`Expected SYSTEM or PUBLIC, found "${i}"`);e+=i.length,e=I(t,e);let r=null,s=null;if("PUBLIC"===i)[e,r]=this.readIdentifierVal(t,e,"publicIdentifier"),'"'!==t[e=I(t,e)]&&"'"!==t[e]||([e,s]=this.readIdentifierVal(t,e,"systemIdentifier"));else if("SYSTEM"===i&&([e,s]=this.readIdentifierVal(t,e,"systemIdentifier"),!this.suppressValidationErr&&!s))throw new Error("Missing mandatory system identifier for SYSTEM notation");return{notationName:n,publicIdentifier:r,systemIdentifier:s,index:--e}}readIdentifierVal(t,e,n){let i="";const r=t[e];if('"'!==r&&"'"!==r)throw new Error(`Expected quoted string, found "${r}"`);for(e++;e<t.length&&t[e]!==r;)i+=t[e],e++;if(t[e]!==r)throw new Error(`Unterminated ${n} value`);return[++e,i]}readElementExp(t,e){e=I(t,e);let n="";for(;e<t.length&&!/\s/.test(t[e]);)n+=t[e],e++;if(!this.suppressValidationErr&&!s(n))throw new Error(`Invalid element name: "${n}"`);let i="";if("E"===t[e=I(t,e)]&&P(t,"MPTY",e))e+=4;else if("A"===t[e]&&P(t,"NY",e))e+=2;else if("("===t[e]){for(e++;e<t.length&&")"!==t[e];)i+=t[e],e++;if(")"!==t[e])throw new Error("Unterminated content model")}else if(!this.suppressValidationErr)throw new Error(`Invalid Element Expression, found "${t[e]}"`);return{elementName:n,contentModel:i.trim(),index:e}}readAttlistExp(t,e){e=I(t,e);let n="";for(;e<t.length&&!/\s/.test(t[e]);)n+=t[e],e++;O(n),e=I(t,e);let i="";for(;e<t.length&&!/\s/.test(t[e]);)i+=t[e],e++;if(!O(i))throw new Error(`Invalid attribute name: "${i}"`);e=I(t,e);let r="";if("NOTATION"===t.substring(e,e+8).toUpperCase()){if(r="NOTATION","("!==t[e=I(t,e+=8)])throw new Error(`Expected '(', found "${t[e]}"`);e++;let n=[];for(;e<t.length&&")"!==t[e];){let i="";for(;e<t.length&&"|"!==t[e]&&")"!==t[e];)i+=t[e],e++;if(i=i.trim(),!O(i))throw new Error(`Invalid notation name: "${i}"`);n.push(i),"|"===t[e]&&(e++,e=I(t,e))}if(")"!==t[e])throw new Error("Unterminated list of notations");e++,r+=" ("+n.join("|")+")"}else{for(;e<t.length&&!/\s/.test(t[e]);)r+=t[e],e++;const n=["CDATA","ID","IDREF","IDREFS","ENTITY","ENTITIES","NMTOKEN","NMTOKENS"];if(!this.suppressValidationErr&&!n.includes(r.toUpperCase()))throw new Error(`Invalid attribute type: "${r}"`)}e=I(t,e);let s="";return"#REQUIRED"===t.substring(e,e+8).toUpperCase()?(s="#REQUIRED",e+=8):"#IMPLIED"===t.substring(e,e+7).toUpperCase()?(s="#IMPLIED",e+=7):[e,s]=this.readIdentifierVal(t,e,"ATTLIST"),{elementName:n,attributeName:i,attributeType:r,defaultValue:s,index:e}}}const I=(t,e)=>{for(;e<t.length&&/\s/.test(t[e]);)e++;return e};function P(t,e,n){for(let i=0;i<e.length;i++)if(e[i]!==t[n+i+1])return!1;return!0}function O(t){if(s(t))return t;throw new Error(`Invalid entity name ${t}`)}const A=/^[-+]?0x[a-fA-F0-9]+$/,S=/^([\-\+])?(0*)([0-9]*(\.[0-9]*)?)$/,C={hex:!0,leadingZeros:!0,decimalPoint:".",eNotation:!0};const V=/^([-+])?(0*)(\d*(\.\d*)?[eE][-\+]?\d+)$/;function $(t){return"function"==typeof t?t:Array.isArray(t)?e=>{for(const n of t){if("string"==typeof n&&e===n)return!0;if(n instanceof RegExp&&n.test(e))return!0}}:()=>!1}class D{constructor(t){this.options=t,this.currentNode=null,this.tagsNodeStack=[],this.docTypeEntities={},this.lastEntities={apos:{regex:/&(apos|#39|#x27);/g,val:"'"},gt:{regex:/&(gt|#62|#x3E);/g,val:">"},lt:{regex:/&(lt|#60|#x3C);/g,val:"<"},quot:{regex:/&(quot|#34|#x22);/g,val:'"'}},this.ampEntity={regex:/&(amp|#38|#x26);/g,val:"&"},this.htmlEntities={space:{regex:/&(nbsp|#160);/g,val:" "},cent:{regex:/&(cent|#162);/g,val:"¢"},pound:{regex:/&(pound|#163);/g,val:"£"},yen:{regex:/&(yen|#165);/g,val:"¥"},euro:{regex:/&(euro|#8364);/g,val:"€"},copyright:{regex:/&(copy|#169);/g,val:"©"},reg:{regex:/&(reg|#174);/g,val:"®"},inr:{regex:/&(inr|#8377);/g,val:"₹"},num_dec:{regex:/&#([0-9]{1,7});/g,val:(t,e)=>String.fromCodePoint(Number.parseInt(e,10))},num_hex:{regex:/&#x([0-9a-fA-F]{1,6});/g,val:(t,e)=>String.fromCodePoint(Number.parseInt(e,16))}},this.addExternalEntities=j,this.parseXml=L,this.parseTextData=M,this.resolveNameSpace=F,this.buildAttributesMap=k,this.isItStopNode=Y,this.replaceEntitiesValue=B,this.readStopNodeData=q,this.saveTextToParentTag=R,this.addChild=U,this.ignoreAttributesFn=$(this.options.ignoreAttributes)}}function j(t){const e=Object.keys(t);for(let n=0;n<e.length;n++){const i=e[n];this.lastEntities[i]={regex:new RegExp("&"+i+";","g"),val:t[i]}}}function M(t,e,n,i,r,s,o){if(void 0!==t&&(this.options.trimValues&&!i&&(t=t.trim()),t.length>0)){o||(t=this.replaceEntitiesValue(t));const i=this.options.tagValueProcessor(e,t,n,r,s);return null==i?t:typeof i!=typeof t||i!==t?i:this.options.trimValues||t.trim()===t?Z(t,this.options.parseTagValue,this.options.numberParseOptions):t}}function F(t){if(this.options.removeNSPrefix){const e=t.split(":"),n="/"===t.charAt(0)?"/":"";if("xmlns"===e[0])return"";2===e.length&&(t=n+e[1])}return t}const _=new RegExp("([^\\s=]+)\\s*(=\\s*(['\"])([\\s\\S]*?)\\3)?","gm");function k(t,e,n){if(!0!==this.options.ignoreAttributes&&"string"==typeof t){const n=r(t,_),i=n.length,s={};for(let t=0;t<i;t++){const i=this.resolveNameSpace(n[t][1]);if(this.ignoreAttributesFn(i,e))continue;let r=n[t][4],o=this.options.attributeNamePrefix+i;if(i.length)if(this.options.transformAttributeName&&(o=this.options.transformAttributeName(o)),"__proto__"===o&&(o="#__proto__"),void 0!==r){this.options.trimValues&&(r=r.trim()),r=this.replaceEntitiesValue(r);const t=this.options.attributeValueProcessor(i,r,e);s[o]=null==t?r:typeof t!=typeof r||t!==r?t:Z(r,this.options.parseAttributeValue,this.options.numberParseOptions)}else this.options.allowBooleanAttributes&&(s[o]=!0)}if(!Object.keys(s).length)return;if(this.options.attributesGroupName){const t={};return t[this.options.attributesGroupName]=s,t}return s}}const L=function(t){t=t.replace(/\r\n?/g,"\n");const e=new y("!xml");let n=e,i="",r="";const s=new w(this.options.processEntities);for(let o=0;o<t.length;o++)if("<"===t[o])if("/"===t[o+1]){const e=G(t,">",o,"Closing Tag is not closed.");let s=t.substring(o+2,e).trim();if(this.options.removeNSPrefix){const t=s.indexOf(":");-1!==t&&(s=s.substr(t+1))}this.options.transformTagName&&(s=this.options.transformTagName(s)),n&&(i=this.saveTextToParentTag(i,n,r));const a=r.substring(r.lastIndexOf(".")+1);if(s&&-1!==this.options.unpairedTags.indexOf(s))throw new Error(`Unpaired tag can not be used as closing tag: </${s}>`);let l=0;a&&-1!==this.options.unpairedTags.indexOf(a)?(l=r.lastIndexOf(".",r.lastIndexOf(".")-1),this.tagsNodeStack.pop()):l=r.lastIndexOf("."),r=r.substring(0,l),n=this.tagsNodeStack.pop(),i="",o=e}else if("?"===t[o+1]){let e=X(t,o,!1,"?>");if(!e)throw new Error("Pi Tag is not closed.");if(i=this.saveTextToParentTag(i,n,r),this.options.ignoreDeclaration&&"?xml"===e.tagName||this.options.ignorePiTags);else{const t=new y(e.tagName);t.add(this.options.textNodeName,""),e.tagName!==e.tagExp&&e.attrExpPresent&&(t[":@"]=this.buildAttributesMap(e.tagExp,r,e.tagName)),this.addChild(n,t,r,o)}o=e.closeIndex+1}else if("!--"===t.substr(o+1,3)){const e=G(t,"--\x3e",o+4,"Comment is not closed.");if(this.options.commentPropName){const s=t.substring(o+4,e-2);i=this.saveTextToParentTag(i,n,r),n.add(this.options.commentPropName,[{[this.options.textNodeName]:s}])}o=e}else if("!D"===t.substr(o+1,2)){const e=s.readDocType(t,o);this.docTypeEntities=e.entities,o=e.i}else if("!["===t.substr(o+1,2)){const e=G(t,"]]>",o,"CDATA is not closed.")-2,s=t.substring(o+9,e);i=this.saveTextToParentTag(i,n,r);let a=this.parseTextData(s,n.tagname,r,!0,!1,!0,!0);null==a&&(a=""),this.options.cdataPropName?n.add(this.options.cdataPropName,[{[this.options.textNodeName]:s}]):n.add(this.options.textNodeName,a),o=e+2}else{let s=X(t,o,this.options.removeNSPrefix),a=s.tagName;const l=s.rawTagName;let u=s.tagExp,h=s.attrExpPresent,d=s.closeIndex;this.options.transformTagName&&(a=this.options.transformTagName(a)),n&&i&&"!xml"!==n.tagname&&(i=this.saveTextToParentTag(i,n,r,!1));const p=n;p&&-1!==this.options.unpairedTags.indexOf(p.tagname)&&(n=this.tagsNodeStack.pop(),r=r.substring(0,r.lastIndexOf("."))),a!==e.tagname&&(r+=r?"."+a:a);const f=o;if(this.isItStopNode(this.options.stopNodes,r,a)){let e="";if(u.length>0&&u.lastIndexOf("/")===u.length-1)"/"===a[a.length-1]?(a=a.substr(0,a.length-1),r=r.substr(0,r.length-1),u=a):u=u.substr(0,u.length-1),o=s.closeIndex;else if(-1!==this.options.unpairedTags.indexOf(a))o=s.closeIndex;else{const n=this.readStopNodeData(t,l,d+1);if(!n)throw new Error(`Unexpected end of ${l}`);o=n.i,e=n.tagContent}const i=new y(a);a!==u&&h&&(i[":@"]=this.buildAttributesMap(u,r,a)),e&&(e=this.parseTextData(e,a,r,!0,h,!0,!0)),r=r.substr(0,r.lastIndexOf(".")),i.add(this.options.textNodeName,e),this.addChild(n,i,r,f)}else{if(u.length>0&&u.lastIndexOf("/")===u.length-1){"/"===a[a.length-1]?(a=a.substr(0,a.length-1),r=r.substr(0,r.length-1),u=a):u=u.substr(0,u.length-1),this.options.transformTagName&&(a=this.options.transformTagName(a));const t=new y(a);a!==u&&h&&(t[":@"]=this.buildAttributesMap(u,r,a)),this.addChild(n,t,r,f),r=r.substr(0,r.lastIndexOf("."))}else{const t=new y(a);this.tagsNodeStack.push(n),a!==u&&h&&(t[":@"]=this.buildAttributesMap(u,r,a)),this.addChild(n,t,r,f),n=t}i="",o=d}}else i+=t[o];return e.child};function U(t,e,n,i){this.options.captureMetaData||(i=void 0);const r=this.options.updateTag(e.tagname,n,e[":@"]);!1===r||("string"==typeof r?(e.tagname=r,t.addChild(e,i)):t.addChild(e,i))}const B=function(t){if(this.options.processEntities){for(let e in this.docTypeEntities){const n=this.docTypeEntities[e];t=t.replace(n.regx,n.val)}for(let e in this.lastEntities){const n=this.lastEntities[e];t=t.replace(n.regex,n.val)}if(this.options.htmlEntities)for(let e in this.htmlEntities){const n=this.htmlEntities[e];t=t.replace(n.regex,n.val)}t=t.replace(this.ampEntity.regex,this.ampEntity.val)}return t};function R(t,e,n,i){return t&&(void 0===i&&(i=0===e.child.length),void 0!==(t=this.parseTextData(t,e.tagname,n,!1,!!e[":@"]&&0!==Object.keys(e[":@"]).length,i))&&""!==t&&e.add(this.options.textNodeName,t),t=""),t}function Y(t,e,n){const i="*."+n;for(const n in t){const r=t[n];if(i===r||e===r)return!0}return!1}function G(t,e,n,i){const r=t.indexOf(e,n);if(-1===r)throw new Error(i);return r+e.length-1}function X(t,e,n,i=">"){const r=function(t,e,n=">"){let i,r="";for(let s=e;s<t.length;s++){let e=t[s];if(i)e===i&&(i="");else if('"'===e||"'"===e)i=e;else if(e===n[0]){if(!n[1])return{data:r,index:s};if(t[s+1]===n[1])return{data:r,index:s}}else"\t"===e&&(e=" ");r+=e}}(t,e+1,i);if(!r)return;let s=r.data;const o=r.index,a=s.search(/\s/);let l=s,u=!0;-1!==a&&(l=s.substring(0,a),s=s.substring(a+1).trimStart());const h=l;if(n){const t=l.indexOf(":");-1!==t&&(l=l.substr(t+1),u=l!==r.data.substr(t+1))}return{tagName:l,tagExp:s,closeIndex:o,attrExpPresent:u,rawTagName:h}}function q(t,e,n){const i=n;let r=1;for(;n<t.length;n++)if("<"===t[n])if("/"===t[n+1]){const s=G(t,">",n,`${e} is not closed`);if(t.substring(n+2,s).trim()===e&&(r--,0===r))return{tagContent:t.substring(i,n),i:s};n=s}else if("?"===t[n+1])n=G(t,"?>",n+1,"StopNode is not closed.");else if("!--"===t.substr(n+1,3))n=G(t,"--\x3e",n+3,"StopNode is not closed.");else if("!["===t.substr(n+1,2))n=G(t,"]]>",n,"StopNode is not closed.")-2;else{const i=X(t,n,">");i&&((i&&i.tagName)===e&&"/"!==i.tagExp[i.tagExp.length-1]&&r++,n=i.closeIndex)}}function Z(t,e,n){if(e&&"string"==typeof t){const e=t.trim();return"true"===e||"false"!==e&&function(t,e={}){if(e=Object.assign({},C,e),!t||"string"!=typeof t)return t;let n=t.trim();if(void 0!==e.skipLike&&e.skipLike.test(n))return t;if("0"===t)return 0;if(e.hex&&A.test(n))return function(t){if(parseInt)return parseInt(t,16);if(Number.parseInt)return Number.parseInt(t,16);if(window&&window.parseInt)return window.parseInt(t,16);throw new Error("parseInt, Number.parseInt, window.parseInt are not supported")}(n);if(-1!==n.search(/.+[eE].+/))return function(t,e,n){if(!n.eNotation)return t;const i=e.match(V);if(i){let r=i[1]||"";const s=-1===i[3].indexOf("e")?"E":"e",o=i[2],a=r?t[o.length+1]===s:t[o.length]===s;return o.length>1&&a?t:1!==o.length||!i[3].startsWith(`.${s}`)&&i[3][0]!==s?n.leadingZeros&&!a?(e=(i[1]||"")+i[3],Number(e)):t:Number(e)}return t}(t,n,e);{const r=S.exec(n);if(r){const s=r[1]||"",o=r[2];let a=(i=r[3])&&-1!==i.indexOf(".")?("."===(i=i.replace(/0+$/,""))?i="0":"."===i[0]?i="0"+i:"."===i[i.length-1]&&(i=i.substring(0,i.length-1)),i):i;const l=s?"."===t[o.length+1]:"."===t[o.length];if(!e.leadingZeros&&(o.length>1||1===o.length&&!l))return t;{const i=Number(n),r=String(i);if(0===i||-0===i)return i;if(-1!==r.search(/[eE]/))return e.eNotation?i:t;if(-1!==n.indexOf("."))return"0"===r||r===a||r===`${s}${a}`?i:t;let l=o?a:n;return o?l===r||s+l===r?i:t:l===r||l===s+r?i:t}}return t}var i}(t,n)}return void 0!==t?t:""}const W=y.getMetaDataSymbol();function K(t,e){return Q(t,e)}function Q(t,e,n){let i;const r={};for(let s=0;s<t.length;s++){const o=t[s],a=z(o);let l="";if(l=void 0===n?a:n+"."+a,a===e.textNodeName)void 0===i?i=o[a]:i+=""+o[a];else{if(void 0===a)continue;if(o[a]){let t=Q(o[a],e,l);const n=H(t,e);void 0!==o[W]&&(t[W]=o[W]),o[":@"]?J(t,o[":@"],l,e):1!==Object.keys(t).length||void 0===t[e.textNodeName]||e.alwaysCreateTextNode?0===Object.keys(t).length&&(e.alwaysCreateTextNode?t[e.textNodeName]="":t=""):t=t[e.textNodeName],void 0!==r[a]&&r.hasOwnProperty(a)?(Array.isArray(r[a])||(r[a]=[r[a]]),r[a].push(t)):e.isArray(a,l,n)?r[a]=[t]:r[a]=t}}}return"string"==typeof i?i.length>0&&(r[e.textNodeName]=i):void 0!==i&&(r[e.textNodeName]=i),r}function z(t){const e=Object.keys(t);for(let t=0;t<e.length;t++){const n=e[t];if(":@"!==n)return n}}function J(t,e,n,i){if(e){const r=Object.keys(e),s=r.length;for(let o=0;o<s;o++){const s=r[o];i.isArray(s,n+"."+s,!0,!0)?t[s]=[e[s]]:t[s]=e[s]}}}function H(t,e){const{textNodeName:n}=e,i=Object.keys(t).length;return 0===i||!(1!==i||!t[n]&&"boolean"!=typeof t[n]&&0!==t[n])}class tt{constructor(t){this.externalEntities={},this.options=function(t){return Object.assign({},v,t)}(t)}parse(t,e){if("string"!=typeof t&&t.toString)t=t.toString();else if("string"!=typeof t)throw new Error("XML data is accepted in String or Bytes[] form.");if(e){!0===e&&(e={});const n=a(t,e);if(!0!==n)throw Error(`${n.err.msg}:${n.err.line}:${n.err.col}`)}const n=new D(this.options);n.addExternalEntities(this.externalEntities);const i=n.parseXml(t);return this.options.preserveOrder||void 0===i?i:K(i,this.options)}addEntity(t,e){if(-1!==e.indexOf("&"))throw new Error("Entity value can't have '&'");if(-1!==t.indexOf("&")||-1!==t.indexOf(";"))throw new Error("An entity must be set without '&' and ';'. Eg. use '#xD' for '&#xD;'");if("&"===e)throw new Error("An entity with value '&' is not permitted");this.externalEntities[t]=e}static getMetaDataSymbol(){return y.getMetaDataSymbol()}}function et(t,e){let n="";return e.format&&e.indentBy.length>0&&(n="\n"),nt(t,e,"",n)}function nt(t,e,n,i){let r="",s=!1;for(let o=0;o<t.length;o++){const a=t[o],l=it(a);if(void 0===l)continue;let u="";if(u=0===n.length?l:`${n}.${l}`,l===e.textNodeName){let t=a[l];st(u,e)||(t=e.tagValueProcessor(l,t),t=ot(t,e)),s&&(r+=i),r+=t,s=!1;continue}if(l===e.cdataPropName){s&&(r+=i),r+=`<![CDATA[${a[l][0][e.textNodeName]}]]>`,s=!1;continue}if(l===e.commentPropName){r+=i+`\x3c!--${a[l][0][e.textNodeName]}--\x3e`,s=!0;continue}if("?"===l[0]){const t=rt(a[":@"],e),n="?xml"===l?"":i;let o=a[l][0][e.textNodeName];o=0!==o.length?" "+o:"",r+=n+`<${l}${o}${t}?>`,s=!0;continue}let h=i;""!==h&&(h+=e.indentBy);const d=i+`<${l}${rt(a[":@"],e)}`,p=nt(a[l],e,u,h);-1!==e.unpairedTags.indexOf(l)?e.suppressUnpairedNode?r+=d+">":r+=d+"/>":p&&0!==p.length||!e.suppressEmptyNode?p&&p.endsWith(">")?r+=d+`>${p}${i}</${l}>`:(r+=d+">",p&&""!==i&&(p.includes("/>")||p.includes("</"))?r+=i+e.indentBy+p+i:r+=p,r+=`</${l}>`):r+=d+"/>",s=!0}return r}function it(t){const e=Object.keys(t);for(let n=0;n<e.length;n++){const i=e[n];if(t.hasOwnProperty(i)&&":@"!==i)return i}}function rt(t,e){let n="";if(t&&!e.ignoreAttributes)for(let i in t){if(!t.hasOwnProperty(i))continue;let r=e.attributeValueProcessor(i,t[i]);r=ot(r,e),!0===r&&e.suppressBooleanAttributes?n+=` ${i.substr(e.attributeNamePrefix.length)}`:n+=` ${i.substr(e.attributeNamePrefix.length)}="${r}"`}return n}function st(t,e){let n=(t=t.substr(0,t.length-e.textNodeName.length-1)).substr(t.lastIndexOf(".")+1);for(let i in e.stopNodes)if(e.stopNodes[i]===t||e.stopNodes[i]==="*."+n)return!0;return!1}function ot(t,e){if(t&&t.length>0&&e.processEntities)for(let n=0;n<e.entities.length;n++){const i=e.entities[n];t=t.replace(i.regex,i.val)}return t}const at={attributeNamePrefix:"@_",attributesGroupName:!1,textNodeName:"#text",ignoreAttributes:!0,cdataPropName:!1,format:!1,indentBy:"  ",suppressEmptyNode:!1,suppressUnpairedNode:!0,suppressBooleanAttributes:!0,tagValueProcessor:function(t,e){return e},attributeValueProcessor:function(t,e){return e},preserveOrder:!1,commentPropName:!1,unpairedTags:[],entities:[{regex:new RegExp("&","g"),val:"&amp;"},{regex:new RegExp(">","g"),val:"&gt;"},{regex:new RegExp("<","g"),val:"&lt;"},{regex:new RegExp("'","g"),val:"&apos;"},{regex:new RegExp('"',"g"),val:"&quot;"}],processEntities:!0,stopNodes:[],oneListGroup:!1};function lt(t){this.options=Object.assign({},at,t),!0===this.options.ignoreAttributes||this.options.attributesGroupName?this.isAttribute=function(){return!1}:(this.ignoreAttributesFn=$(this.options.ignoreAttributes),this.attrPrefixLen=this.options.attributeNamePrefix.length,this.isAttribute=dt),this.processTextOrObjNode=ut,this.options.format?(this.indentate=ht,this.tagEndChar=">\n",this.newLine="\n"):(this.indentate=function(){return""},this.tagEndChar=">",this.newLine="")}function ut(t,e,n,i){const r=this.j2x(t,n+1,i.concat(e));return void 0!==t[this.options.textNodeName]&&1===Object.keys(t).length?this.buildTextValNode(t[this.options.textNodeName],e,r.attrStr,n):this.buildObjectNode(r.val,e,r.attrStr,n)}function ht(t){return this.options.indentBy.repeat(t)}function dt(t){return!(!t.startsWith(this.options.attributeNamePrefix)||t===this.options.textNodeName)&&t.substr(this.attrPrefixLen)}lt.prototype.build=function(t){return this.options.preserveOrder?et(t,this.options):(Array.isArray(t)&&this.options.arrayNodeName&&this.options.arrayNodeName.length>1&&(t={[this.options.arrayNodeName]:t}),this.j2x(t,0,[]).val)},lt.prototype.j2x=function(t,e,n){let i="",r="";const s=n.join(".");for(let o in t)if(Object.prototype.hasOwnProperty.call(t,o))if(void 0===t[o])this.isAttribute(o)&&(r+="");else if(null===t[o])this.isAttribute(o)||o===this.options.cdataPropName?r+="":"?"===o[0]?r+=this.indentate(e)+"<"+o+"?"+this.tagEndChar:r+=this.indentate(e)+"<"+o+"/"+this.tagEndChar;else if(t[o]instanceof Date)r+=this.buildTextValNode(t[o],o,"",e);else if("object"!=typeof t[o]){const n=this.isAttribute(o);if(n&&!this.ignoreAttributesFn(n,s))i+=this.buildAttrPairStr(n,""+t[o]);else if(!n)if(o===this.options.textNodeName){let e=this.options.tagValueProcessor(o,""+t[o]);r+=this.replaceEntitiesValue(e)}else r+=this.buildTextValNode(t[o],o,"",e)}else if(Array.isArray(t[o])){const i=t[o].length;let s="",a="";for(let l=0;l<i;l++){const i=t[o][l];if(void 0===i);else if(null===i)"?"===o[0]?r+=this.indentate(e)+"<"+o+"?"+this.tagEndChar:r+=this.indentate(e)+"<"+o+"/"+this.tagEndChar;else if("object"==typeof i)if(this.options.oneListGroup){const t=this.j2x(i,e+1,n.concat(o));s+=t.val,this.options.attributesGroupName&&i.hasOwnProperty(this.options.attributesGroupName)&&(a+=t.attrStr)}else s+=this.processTextOrObjNode(i,o,e,n);else if(this.options.oneListGroup){let t=this.options.tagValueProcessor(o,i);t=this.replaceEntitiesValue(t),s+=t}else s+=this.buildTextValNode(i,o,"",e)}this.options.oneListGroup&&(s=this.buildObjectNode(s,o,a,e)),r+=s}else if(this.options.attributesGroupName&&o===this.options.attributesGroupName){const e=Object.keys(t[o]),n=e.length;for(let r=0;r<n;r++)i+=this.buildAttrPairStr(e[r],""+t[o][e[r]])}else r+=this.processTextOrObjNode(t[o],o,e,n);return{attrStr:i,val:r}},lt.prototype.buildAttrPairStr=function(t,e){return e=this.options.attributeValueProcessor(t,""+e),e=this.replaceEntitiesValue(e),this.options.suppressBooleanAttributes&&"true"===e?" "+t:" "+t+'="'+e+'"'},lt.prototype.buildObjectNode=function(t,e,n,i){if(""===t)return"?"===e[0]?this.indentate(i)+"<"+e+n+"?"+this.tagEndChar:this.indentate(i)+"<"+e+n+this.closeTag(e)+this.tagEndChar;{let r="</"+e+this.tagEndChar,s="";return"?"===e[0]&&(s="?",r=""),!n&&""!==n||-1!==t.indexOf("<")?!1!==this.options.commentPropName&&e===this.options.commentPropName&&0===s.length?this.indentate(i)+`\x3c!--${t}--\x3e`+this.newLine:this.indentate(i)+"<"+e+n+s+this.tagEndChar+t+this.indentate(i)+r:this.indentate(i)+"<"+e+n+s+">"+t+r}},lt.prototype.closeTag=function(t){let e="";return-1!==this.options.unpairedTags.indexOf(t)?this.options.suppressUnpairedNode||(e="/"):e=this.options.suppressEmptyNode?"/":`></${t}`,e},lt.prototype.buildTextValNode=function(t,e,n,i){if(!1!==this.options.cdataPropName&&e===this.options.cdataPropName)return this.indentate(i)+`<![CDATA[${t}]]>`+this.newLine;if(!1!==this.options.commentPropName&&e===this.options.commentPropName)return this.indentate(i)+`\x3c!--${t}--\x3e`+this.newLine;if("?"===e[0])return this.indentate(i)+"<"+e+n+"?"+this.tagEndChar;{let r=this.options.tagValueProcessor(e,t);return r=this.replaceEntitiesValue(r),""===r?this.indentate(i)+"<"+e+n+this.closeTag(e)+this.tagEndChar:this.indentate(i)+"<"+e+n+">"+r+"</"+e+this.tagEndChar}},lt.prototype.replaceEntitiesValue=function(t){if(t&&t.length>0&&this.options.processEntities)for(let e=0;e<this.options.entities.length;e++){const n=this.options.entities[e];t=t.replace(n.regex,n.val)}return t};const pt={validate:a};module.exports=e})();
+(()=>{"use strict";var t={d:(e,i)=>{for(var n in i)t.o(i,n)&&!t.o(e,n)&&Object.defineProperty(e,n,{enumerable:!0,get:i[n]})},o:(t,e)=>Object.prototype.hasOwnProperty.call(t,e),r:t=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})}},e={};t.r(e),t.d(e,{XMLBuilder:()=>lt,XMLParser:()=>tt,XMLValidator:()=>pt});const i=":A-Za-z_\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD",n=new RegExp("^["+i+"]["+i+"\\-.\\d\\u00B7\\u0300-\\u036F\\u203F-\\u2040]*$");function s(t,e){const i=[];let n=e.exec(t);for(;n;){const s=[];s.startIndex=e.lastIndex-n[0].length;const r=n.length;for(let t=0;t<r;t++)s.push(n[t]);i.push(s),n=e.exec(t)}return i}const r=function(t){return!(null==n.exec(t))},o={allowBooleanAttributes:!1,unpairedTags:[]};function a(t,e){e=Object.assign({},o,e);const i=[];let n=!1,s=!1;"\ufeff"===t[0]&&(t=t.substr(1));for(let o=0;o<t.length;o++)if("<"===t[o]&&"?"===t[o+1]){if(o+=2,o=u(t,o),o.err)return o}else{if("<"!==t[o]){if(l(t[o]))continue;return x("InvalidChar","char '"+t[o]+"' is not expected.",b(t,o))}{let a=o;if(o++,"!"===t[o]){o=h(t,o);continue}{let d=!1;"/"===t[o]&&(d=!0,o++);let p="";for(;o<t.length&&">"!==t[o]&&" "!==t[o]&&"\t"!==t[o]&&"\n"!==t[o]&&"\r"!==t[o];o++)p+=t[o];if(p=p.trim(),"/"===p[p.length-1]&&(p=p.substring(0,p.length-1),o--),!r(p)){let e;return e=0===p.trim().length?"Invalid space after '<'.":"Tag '"+p+"' is an invalid name.",x("InvalidTag",e,b(t,o))}const c=f(t,o);if(!1===c)return x("InvalidAttr","Attributes for '"+p+"' have open quote.",b(t,o));let N=c.value;if(o=c.index,"/"===N[N.length-1]){const i=o-N.length;N=N.substring(0,N.length-1);const s=g(N,e);if(!0!==s)return x(s.err.code,s.err.msg,b(t,i+s.err.line));n=!0}else if(d){if(!c.tagClosed)return x("InvalidTag","Closing tag '"+p+"' doesn't have proper closing.",b(t,o));if(N.trim().length>0)return x("InvalidTag","Closing tag '"+p+"' can't have attributes or invalid starting.",b(t,a));if(0===i.length)return x("InvalidTag","Closing tag '"+p+"' has not been opened.",b(t,a));{const e=i.pop();if(p!==e.tagName){let i=b(t,e.tagStartPos);return x("InvalidTag","Expected closing tag '"+e.tagName+"' (opened in line "+i.line+", col "+i.col+") instead of closing tag '"+p+"'.",b(t,a))}0==i.length&&(s=!0)}}else{const r=g(N,e);if(!0!==r)return x(r.err.code,r.err.msg,b(t,o-N.length+r.err.line));if(!0===s)return x("InvalidXml","Multiple possible root nodes found.",b(t,o));-1!==e.unpairedTags.indexOf(p)||i.push({tagName:p,tagStartPos:a}),n=!0}for(o++;o<t.length;o++)if("<"===t[o]){if("!"===t[o+1]){o++,o=h(t,o);continue}if("?"!==t[o+1])break;if(o=u(t,++o),o.err)return o}else if("&"===t[o]){const e=m(t,o);if(-1==e)return x("InvalidChar","char '&' is not expected.",b(t,o));o=e}else if(!0===s&&!l(t[o]))return x("InvalidXml","Extra text at the end",b(t,o));"<"===t[o]&&o--}}}return n?1==i.length?x("InvalidTag","Unclosed tag '"+i[0].tagName+"'.",b(t,i[0].tagStartPos)):!(i.length>0)||x("InvalidXml","Invalid '"+JSON.stringify(i.map((t=>t.tagName)),null,4).replace(/\r?\n/g,"")+"' found.",{line:1,col:1}):x("InvalidXml","Start tag expected.",1)}function l(t){return" "===t||"\t"===t||"\n"===t||"\r"===t}function u(t,e){const i=e;for(;e<t.length;e++)if("?"!=t[e]&&" "!=t[e]);else{const n=t.substr(i,e-i);if(e>5&&"xml"===n)return x("InvalidXml","XML declaration allowed only at the start of the document.",b(t,e));if("?"==t[e]&&">"==t[e+1]){e++;break}}return e}function h(t,e){if(t.length>e+5&&"-"===t[e+1]&&"-"===t[e+2]){for(e+=3;e<t.length;e++)if("-"===t[e]&&"-"===t[e+1]&&">"===t[e+2]){e+=2;break}}else if(t.length>e+8&&"D"===t[e+1]&&"O"===t[e+2]&&"C"===t[e+3]&&"T"===t[e+4]&&"Y"===t[e+5]&&"P"===t[e+6]&&"E"===t[e+7]){let i=1;for(e+=8;e<t.length;e++)if("<"===t[e])i++;else if(">"===t[e]&&(i--,0===i))break}else if(t.length>e+9&&"["===t[e+1]&&"C"===t[e+2]&&"D"===t[e+3]&&"A"===t[e+4]&&"T"===t[e+5]&&"A"===t[e+6]&&"["===t[e+7])for(e+=8;e<t.length;e++)if("]"===t[e]&&"]"===t[e+1]&&">"===t[e+2]){e+=2;break}return e}const d='"',p="'";function f(t,e){let i="",n="",s=!1;for(;e<t.length;e++){if(t[e]===d||t[e]===p)""===n?n=t[e]:n!==t[e]||(n="");else if(">"===t[e]&&""===n){s=!0;break}i+=t[e]}return""===n&&{value:i,index:e,tagClosed:s}}const c=new RegExp("(\\s*)([^\\s=]+)(\\s*=)?(\\s*(['\"])(([\\s\\S])*?)\\5)?","g");function g(t,e){const i=s(t,c),n={};for(let t=0;t<i.length;t++){if(0===i[t][1].length)return x("InvalidAttr","Attribute '"+i[t][2]+"' has no space in starting.",E(i[t]));if(void 0!==i[t][3]&&void 0===i[t][4])return x("InvalidAttr","Attribute '"+i[t][2]+"' is without value.",E(i[t]));if(void 0===i[t][3]&&!e.allowBooleanAttributes)return x("InvalidAttr","boolean attribute '"+i[t][2]+"' is not allowed.",E(i[t]));const s=i[t][2];if(!N(s))return x("InvalidAttr","Attribute '"+s+"' is an invalid name.",E(i[t]));if(n.hasOwnProperty(s))return x("InvalidAttr","Attribute '"+s+"' is repeated.",E(i[t]));n[s]=1}return!0}function m(t,e){if(";"===t[++e])return-1;if("#"===t[e])return function(t,e){let i=/\d/;for("x"===t[e]&&(e++,i=/[\da-fA-F]/);e<t.length;e++){if(";"===t[e])return e;if(!t[e].match(i))break}return-1}(t,++e);let i=0;for(;e<t.length;e++,i++)if(!(t[e].match(/\w/)&&i<20)){if(";"===t[e])break;return-1}return e}function x(t,e,i){return{err:{code:t,msg:e,line:i.line||i,col:i.col}}}function N(t){return r(t)}function b(t,e){const i=t.substring(0,e).split(/\r?\n/);return{line:i.length,col:i[i.length-1].length+1}}function E(t){return t.startIndex+t[1].length}const v={preserveOrder:!1,attributeNamePrefix:"@_",attributesGroupName:!1,textNodeName:"#text",ignoreAttributes:!0,removeNSPrefix:!1,allowBooleanAttributes:!1,parseTagValue:!0,parseAttributeValue:!1,trimValues:!0,cdataPropName:!1,numberParseOptions:{hex:!0,leadingZeros:!0,eNotation:!0},tagValueProcessor:function(t,e){return e},attributeValueProcessor:function(t,e){return e},stopNodes:[],alwaysCreateTextNode:!1,isArray:()=>!1,commentPropName:!1,unpairedTags:[],processEntities:!0,htmlEntities:!1,ignoreDeclaration:!1,ignorePiTags:!1,transformTagName:!1,transformAttributeName:!1,updateTag:function(t,e,i){return t},captureMetaData:!1};let T;T="function"!=typeof Symbol?"@@xmlMetadata":Symbol("XML Node Metadata");class y{constructor(t){this.tagname=t,this.child=[],this[":@"]={}}add(t,e){"__proto__"===t&&(t="#__proto__"),this.child.push({[t]:e})}addChild(t,e){"__proto__"===t.tagname&&(t.tagname="#__proto__"),t[":@"]&&Object.keys(t[":@"]).length>0?this.child.push({[t.tagname]:t.child,":@":t[":@"]}):this.child.push({[t.tagname]:t.child}),void 0!==e&&(this.child[this.child.length-1][T]={startIndex:e})}static getMetaDataSymbol(){return T}}class w{constructor(t){this.suppressValidationErr=!t}readDocType(t,e){const i={};if("O"!==t[e+3]||"C"!==t[e+4]||"T"!==t[e+5]||"Y"!==t[e+6]||"P"!==t[e+7]||"E"!==t[e+8])throw new Error("Invalid Tag instead of DOCTYPE");{e+=9;let n=1,s=!1,r=!1,o="";for(;e<t.length;e++)if("<"!==t[e]||r)if(">"===t[e]){if(r?"-"===t[e-1]&&"-"===t[e-2]&&(r=!1,n--):n--,0===n)break}else"["===t[e]?s=!0:o+=t[e];else{if(s&&P(t,"!ENTITY",e)){let n,s;e+=7,[n,s,e]=this.readEntityExp(t,e+1,this.suppressValidationErr),-1===s.indexOf("&")&&(i[n]={regx:RegExp(`&${n};`,"g"),val:s})}else if(s&&P(t,"!ELEMENT",e)){e+=8;const{index:i}=this.readElementExp(t,e+1);e=i}else if(s&&P(t,"!ATTLIST",e))e+=8;else if(s&&P(t,"!NOTATION",e)){e+=9;const{index:i}=this.readNotationExp(t,e+1,this.suppressValidationErr);e=i}else{if(!P(t,"!--",e))throw new Error("Invalid DOCTYPE");r=!0}n++,o=""}if(0!==n)throw new Error("Unclosed DOCTYPE")}return{entities:i,i:e}}readEntityExp(t,e){e=I(t,e);let i="";for(;e<t.length&&!/\s/.test(t[e])&&'"'!==t[e]&&"'"!==t[e];)i+=t[e],e++;if(O(i),e=I(t,e),!this.suppressValidationErr){if("SYSTEM"===t.substring(e,e+6).toUpperCase())throw new Error("External entities are not supported");if("%"===t[e])throw new Error("Parameter entities are not supported")}let n="";return[e,n]=this.readIdentifierVal(t,e,"entity"),[i,n,--e]}readNotationExp(t,e){e=I(t,e);let i="";for(;e<t.length&&!/\s/.test(t[e]);)i+=t[e],e++;!this.suppressValidationErr&&O(i),e=I(t,e);const n=t.substring(e,e+6).toUpperCase();if(!this.suppressValidationErr&&"SYSTEM"!==n&&"PUBLIC"!==n)throw new Error(`Expected SYSTEM or PUBLIC, found "${n}"`);e+=n.length,e=I(t,e);let s=null,r=null;if("PUBLIC"===n)[e,s]=this.readIdentifierVal(t,e,"publicIdentifier"),'"'!==t[e=I(t,e)]&&"'"!==t[e]||([e,r]=this.readIdentifierVal(t,e,"systemIdentifier"));else if("SYSTEM"===n&&([e,r]=this.readIdentifierVal(t,e,"systemIdentifier"),!this.suppressValidationErr&&!r))throw new Error("Missing mandatory system identifier for SYSTEM notation");return{notationName:i,publicIdentifier:s,systemIdentifier:r,index:--e}}readIdentifierVal(t,e,i){let n="";const s=t[e];if('"'!==s&&"'"!==s)throw new Error(`Expected quoted string, found "${s}"`);for(e++;e<t.length&&t[e]!==s;)n+=t[e],e++;if(t[e]!==s)throw new Error(`Unterminated ${i} value`);return[++e,n]}readElementExp(t,e){e=I(t,e);let i="";for(;e<t.length&&!/\s/.test(t[e]);)i+=t[e],e++;if(!this.suppressValidationErr&&!r(i))throw new Error(`Invalid element name: "${i}"`);let n="";if("E"===t[e=I(t,e)]&&P(t,"MPTY",e))e+=4;else if("A"===t[e]&&P(t,"NY",e))e+=2;else if("("===t[e]){for(e++;e<t.length&&")"!==t[e];)n+=t[e],e++;if(")"!==t[e])throw new Error("Unterminated content model")}else if(!this.suppressValidationErr)throw new Error(`Invalid Element Expression, found "${t[e]}"`);return{elementName:i,contentModel:n.trim(),index:e}}readAttlistExp(t,e){e=I(t,e);let i="";for(;e<t.length&&!/\s/.test(t[e]);)i+=t[e],e++;O(i),e=I(t,e);let n="";for(;e<t.length&&!/\s/.test(t[e]);)n+=t[e],e++;if(!O(n))throw new Error(`Invalid attribute name: "${n}"`);e=I(t,e);let s="";if("NOTATION"===t.substring(e,e+8).toUpperCase()){if(s="NOTATION","("!==t[e=I(t,e+=8)])throw new Error(`Expected '(', found "${t[e]}"`);e++;let i=[];for(;e<t.length&&")"!==t[e];){let n="";for(;e<t.length&&"|"!==t[e]&&")"!==t[e];)n+=t[e],e++;if(n=n.trim(),!O(n))throw new Error(`Invalid notation name: "${n}"`);i.push(n),"|"===t[e]&&(e++,e=I(t,e))}if(")"!==t[e])throw new Error("Unterminated list of notations");e++,s+=" ("+i.join("|")+")"}else{for(;e<t.length&&!/\s/.test(t[e]);)s+=t[e],e++;const i=["CDATA","ID","IDREF","IDREFS","ENTITY","ENTITIES","NMTOKEN","NMTOKENS"];if(!this.suppressValidationErr&&!i.includes(s.toUpperCase()))throw new Error(`Invalid attribute type: "${s}"`)}e=I(t,e);let r="";return"#REQUIRED"===t.substring(e,e+8).toUpperCase()?(r="#REQUIRED",e+=8):"#IMPLIED"===t.substring(e,e+7).toUpperCase()?(r="#IMPLIED",e+=7):[e,r]=this.readIdentifierVal(t,e,"ATTLIST"),{elementName:i,attributeName:n,attributeType:s,defaultValue:r,index:e}}}const I=(t,e)=>{for(;e<t.length&&/\s/.test(t[e]);)e++;return e};function P(t,e,i){for(let n=0;n<e.length;n++)if(e[n]!==t[i+n+1])return!1;return!0}function O(t){if(r(t))return t;throw new Error(`Invalid entity name ${t}`)}const A=/^[-+]?0x[a-fA-F0-9]+$/,S=/^([\-\+])?(0*)([0-9]*(\.[0-9]*)?)$/,C={hex:!0,leadingZeros:!0,decimalPoint:".",eNotation:!0};const V=/^([-+])?(0*)(\d*(\.\d*)?[eE][-\+]?\d+)$/;function $(t){return"function"==typeof t?t:Array.isArray(t)?e=>{for(const i of t){if("string"==typeof i&&e===i)return!0;if(i instanceof RegExp&&i.test(e))return!0}}:()=>!1}class D{constructor(t){if(this.options=t,this.currentNode=null,this.tagsNodeStack=[],this.docTypeEntities={},this.lastEntities={apos:{regex:/&(apos|#39|#x27);/g,val:"'"},gt:{regex:/&(gt|#62|#x3E);/g,val:">"},lt:{regex:/&(lt|#60|#x3C);/g,val:"<"},quot:{regex:/&(quot|#34|#x22);/g,val:'"'}},this.ampEntity={regex:/&(amp|#38|#x26);/g,val:"&"},this.htmlEntities={space:{regex:/&(nbsp|#160);/g,val:" "},cent:{regex:/&(cent|#162);/g,val:"¢"},pound:{regex:/&(pound|#163);/g,val:"£"},yen:{regex:/&(yen|#165);/g,val:"¥"},euro:{regex:/&(euro|#8364);/g,val:"€"},copyright:{regex:/&(copy|#169);/g,val:"©"},reg:{regex:/&(reg|#174);/g,val:"®"},inr:{regex:/&(inr|#8377);/g,val:"₹"},num_dec:{regex:/&#([0-9]{1,7});/g,val:(t,e)=>String.fromCodePoint(Number.parseInt(e,10))},num_hex:{regex:/&#x([0-9a-fA-F]{1,6});/g,val:(t,e)=>String.fromCodePoint(Number.parseInt(e,16))}},this.addExternalEntities=j,this.parseXml=L,this.parseTextData=M,this.resolveNameSpace=F,this.buildAttributesMap=k,this.isItStopNode=Y,this.replaceEntitiesValue=B,this.readStopNodeData=W,this.saveTextToParentTag=R,this.addChild=U,this.ignoreAttributesFn=$(this.options.ignoreAttributes),this.options.stopNodes&&this.options.stopNodes.length>0){this.stopNodesExact=new Set,this.stopNodesWildcard=new Set;for(let t=0;t<this.options.stopNodes.length;t++){const e=this.options.stopNodes[t];"string"==typeof e&&(e.startsWith("*.")?this.stopNodesWildcard.add(e.substring(2)):this.stopNodesExact.add(e))}}}}function j(t){const e=Object.keys(t);for(let i=0;i<e.length;i++){const n=e[i];this.lastEntities[n]={regex:new RegExp("&"+n+";","g"),val:t[n]}}}function M(t,e,i,n,s,r,o){if(void 0!==t&&(this.options.trimValues&&!n&&(t=t.trim()),t.length>0)){o||(t=this.replaceEntitiesValue(t));const n=this.options.tagValueProcessor(e,t,i,s,r);return null==n?t:typeof n!=typeof t||n!==t?n:this.options.trimValues||t.trim()===t?q(t,this.options.parseTagValue,this.options.numberParseOptions):t}}function F(t){if(this.options.removeNSPrefix){const e=t.split(":"),i="/"===t.charAt(0)?"/":"";if("xmlns"===e[0])return"";2===e.length&&(t=i+e[1])}return t}const _=new RegExp("([^\\s=]+)\\s*(=\\s*(['\"])([\\s\\S]*?)\\3)?","gm");function k(t,e){if(!0!==this.options.ignoreAttributes&&"string"==typeof t){const i=s(t,_),n=i.length,r={};for(let t=0;t<n;t++){const n=this.resolveNameSpace(i[t][1]);if(this.ignoreAttributesFn(n,e))continue;let s=i[t][4],o=this.options.attributeNamePrefix+n;if(n.length)if(this.options.transformAttributeName&&(o=this.options.transformAttributeName(o)),"__proto__"===o&&(o="#__proto__"),void 0!==s){this.options.trimValues&&(s=s.trim()),s=this.replaceEntitiesValue(s);const t=this.options.attributeValueProcessor(n,s,e);r[o]=null==t?s:typeof t!=typeof s||t!==s?t:q(s,this.options.parseAttributeValue,this.options.numberParseOptions)}else this.options.allowBooleanAttributes&&(r[o]=!0)}if(!Object.keys(r).length)return;if(this.options.attributesGroupName){const t={};return t[this.options.attributesGroupName]=r,t}return r}}const L=function(t){t=t.replace(/\r\n?/g,"\n");const e=new y("!xml");let i=e,n="",s="";const r=new w(this.options.processEntities);for(let o=0;o<t.length;o++)if("<"===t[o])if("/"===t[o+1]){const e=G(t,">",o,"Closing Tag is not closed.");let r=t.substring(o+2,e).trim();if(this.options.removeNSPrefix){const t=r.indexOf(":");-1!==t&&(r=r.substr(t+1))}this.options.transformTagName&&(r=this.options.transformTagName(r)),i&&(n=this.saveTextToParentTag(n,i,s));const a=s.substring(s.lastIndexOf(".")+1);if(r&&-1!==this.options.unpairedTags.indexOf(r))throw new Error(`Unpaired tag can not be used as closing tag: </${r}>`);let l=0;a&&-1!==this.options.unpairedTags.indexOf(a)?(l=s.lastIndexOf(".",s.lastIndexOf(".")-1),this.tagsNodeStack.pop()):l=s.lastIndexOf("."),s=s.substring(0,l),i=this.tagsNodeStack.pop(),n="",o=e}else if("?"===t[o+1]){let e=X(t,o,!1,"?>");if(!e)throw new Error("Pi Tag is not closed.");if(n=this.saveTextToParentTag(n,i,s),this.options.ignoreDeclaration&&"?xml"===e.tagName||this.options.ignorePiTags);else{const t=new y(e.tagName);t.add(this.options.textNodeName,""),e.tagName!==e.tagExp&&e.attrExpPresent&&(t[":@"]=this.buildAttributesMap(e.tagExp,s)),this.addChild(i,t,s,o)}o=e.closeIndex+1}else if("!--"===t.substr(o+1,3)){const e=G(t,"--\x3e",o+4,"Comment is not closed.");if(this.options.commentPropName){const r=t.substring(o+4,e-2);n=this.saveTextToParentTag(n,i,s),i.add(this.options.commentPropName,[{[this.options.textNodeName]:r}])}o=e}else if("!D"===t.substr(o+1,2)){const e=r.readDocType(t,o);this.docTypeEntities=e.entities,o=e.i}else if("!["===t.substr(o+1,2)){const e=G(t,"]]>",o,"CDATA is not closed.")-2,r=t.substring(o+9,e);n=this.saveTextToParentTag(n,i,s);let a=this.parseTextData(r,i.tagname,s,!0,!1,!0,!0);null==a&&(a=""),this.options.cdataPropName?i.add(this.options.cdataPropName,[{[this.options.textNodeName]:r}]):i.add(this.options.textNodeName,a),o=e+2}else{let r=X(t,o,this.options.removeNSPrefix),a=r.tagName;const l=r.rawTagName;let u=r.tagExp,h=r.attrExpPresent,d=r.closeIndex;if(this.options.transformTagName){const t=this.options.transformTagName(a);u===a&&(u=t),a=t}i&&n&&"!xml"!==i.tagname&&(n=this.saveTextToParentTag(n,i,s,!1));const p=i;p&&-1!==this.options.unpairedTags.indexOf(p.tagname)&&(i=this.tagsNodeStack.pop(),s=s.substring(0,s.lastIndexOf("."))),a!==e.tagname&&(s+=s?"."+a:a);const f=o;if(this.isItStopNode(this.stopNodesExact,this.stopNodesWildcard,s,a)){let e="";if(u.length>0&&u.lastIndexOf("/")===u.length-1)"/"===a[a.length-1]?(a=a.substr(0,a.length-1),s=s.substr(0,s.length-1),u=a):u=u.substr(0,u.length-1),o=r.closeIndex;else if(-1!==this.options.unpairedTags.indexOf(a))o=r.closeIndex;else{const i=this.readStopNodeData(t,l,d+1);if(!i)throw new Error(`Unexpected end of ${l}`);o=i.i,e=i.tagContent}const n=new y(a);a!==u&&h&&(n[":@"]=this.buildAttributesMap(u,s)),e&&(e=this.parseTextData(e,a,s,!0,h,!0,!0)),s=s.substr(0,s.lastIndexOf(".")),n.add(this.options.textNodeName,e),this.addChild(i,n,s,f)}else{if(u.length>0&&u.lastIndexOf("/")===u.length-1){if("/"===a[a.length-1]?(a=a.substr(0,a.length-1),s=s.substr(0,s.length-1),u=a):u=u.substr(0,u.length-1),this.options.transformTagName){const t=this.options.transformTagName(a);u===a&&(u=t),a=t}const t=new y(a);a!==u&&h&&(t[":@"]=this.buildAttributesMap(u,s)),this.addChild(i,t,s,f),s=s.substr(0,s.lastIndexOf("."))}else{const t=new y(a);this.tagsNodeStack.push(i),a!==u&&h&&(t[":@"]=this.buildAttributesMap(u,s)),this.addChild(i,t,s,f),i=t}n="",o=d}}else n+=t[o];return e.child};function U(t,e,i,n){this.options.captureMetaData||(n=void 0);const s=this.options.updateTag(e.tagname,i,e[":@"]);!1===s||("string"==typeof s?(e.tagname=s,t.addChild(e,n)):t.addChild(e,n))}const B=function(t){if(this.options.processEntities){for(let e in this.docTypeEntities){const i=this.docTypeEntities[e];t=t.replace(i.regx,i.val)}for(let e in this.lastEntities){const i=this.lastEntities[e];t=t.replace(i.regex,i.val)}if(this.options.htmlEntities)for(let e in this.htmlEntities){const i=this.htmlEntities[e];t=t.replace(i.regex,i.val)}t=t.replace(this.ampEntity.regex,this.ampEntity.val)}return t};function R(t,e,i,n){return t&&(void 0===n&&(n=0===e.child.length),void 0!==(t=this.parseTextData(t,e.tagname,i,!1,!!e[":@"]&&0!==Object.keys(e[":@"]).length,n))&&""!==t&&e.add(this.options.textNodeName,t),t=""),t}function Y(t,e,i,n){return!(!e||!e.has(n))||!(!t||!t.has(i))}function G(t,e,i,n){const s=t.indexOf(e,i);if(-1===s)throw new Error(n);return s+e.length-1}function X(t,e,i,n=">"){const s=function(t,e,i=">"){let n,s="";for(let r=e;r<t.length;r++){let e=t[r];if(n)e===n&&(n="");else if('"'===e||"'"===e)n=e;else if(e===i[0]){if(!i[1])return{data:s,index:r};if(t[r+1]===i[1])return{data:s,index:r}}else"\t"===e&&(e=" ");s+=e}}(t,e+1,n);if(!s)return;let r=s.data;const o=s.index,a=r.search(/\s/);let l=r,u=!0;-1!==a&&(l=r.substring(0,a),r=r.substring(a+1).trimStart());const h=l;if(i){const t=l.indexOf(":");-1!==t&&(l=l.substr(t+1),u=l!==s.data.substr(t+1))}return{tagName:l,tagExp:r,closeIndex:o,attrExpPresent:u,rawTagName:h}}function W(t,e,i){const n=i;let s=1;for(;i<t.length;i++)if("<"===t[i])if("/"===t[i+1]){const r=G(t,">",i,`${e} is not closed`);if(t.substring(i+2,r).trim()===e&&(s--,0===s))return{tagContent:t.substring(n,i),i:r};i=r}else if("?"===t[i+1])i=G(t,"?>",i+1,"StopNode is not closed.");else if("!--"===t.substr(i+1,3))i=G(t,"--\x3e",i+3,"StopNode is not closed.");else if("!["===t.substr(i+1,2))i=G(t,"]]>",i,"StopNode is not closed.")-2;else{const n=X(t,i,">");n&&((n&&n.tagName)===e&&"/"!==n.tagExp[n.tagExp.length-1]&&s++,i=n.closeIndex)}}function q(t,e,i){if(e&&"string"==typeof t){const e=t.trim();return"true"===e||"false"!==e&&function(t,e={}){if(e=Object.assign({},C,e),!t||"string"!=typeof t)return t;let i=t.trim();if(void 0!==e.skipLike&&e.skipLike.test(i))return t;if("0"===t)return 0;if(e.hex&&A.test(i))return function(t){if(parseInt)return parseInt(t,16);if(Number.parseInt)return Number.parseInt(t,16);if(window&&window.parseInt)return window.parseInt(t,16);throw new Error("parseInt, Number.parseInt, window.parseInt are not supported")}(i);if(-1!==i.search(/.+[eE].+/))return function(t,e,i){if(!i.eNotation)return t;const n=e.match(V);if(n){let s=n[1]||"";const r=-1===n[3].indexOf("e")?"E":"e",o=n[2],a=s?t[o.length+1]===r:t[o.length]===r;return o.length>1&&a?t:1!==o.length||!n[3].startsWith(`.${r}`)&&n[3][0]!==r?i.leadingZeros&&!a?(e=(n[1]||"")+n[3],Number(e)):t:Number(e)}return t}(t,i,e);{const s=S.exec(i);if(s){const r=s[1]||"",o=s[2];let a=(n=s[3])&&-1!==n.indexOf(".")?("."===(n=n.replace(/0+$/,""))?n="0":"."===n[0]?n="0"+n:"."===n[n.length-1]&&(n=n.substring(0,n.length-1)),n):n;const l=r?"."===t[o.length+1]:"."===t[o.length];if(!e.leadingZeros&&(o.length>1||1===o.length&&!l))return t;{const n=Number(i),s=String(n);if(0===n||-0===n)return n;if(-1!==s.search(/[eE]/))return e.eNotation?n:t;if(-1!==i.indexOf("."))return"0"===s||s===a||s===`${r}${a}`?n:t;let l=o?a:i;return o?l===s||r+l===s?n:t:l===s||l===r+s?n:t}}return t}var n}(t,i)}return void 0!==t?t:""}const Z=y.getMetaDataSymbol();function K(t,e){return Q(t,e)}function Q(t,e,i){let n;const s={};for(let r=0;r<t.length;r++){const o=t[r],a=z(o);let l="";if(l=void 0===i?a:i+"."+a,a===e.textNodeName)void 0===n?n=o[a]:n+=""+o[a];else{if(void 0===a)continue;if(o[a]){let t=Q(o[a],e,l);const i=H(t,e);void 0!==o[Z]&&(t[Z]=o[Z]),o[":@"]?J(t,o[":@"],l,e):1!==Object.keys(t).length||void 0===t[e.textNodeName]||e.alwaysCreateTextNode?0===Object.keys(t).length&&(e.alwaysCreateTextNode?t[e.textNodeName]="":t=""):t=t[e.textNodeName],void 0!==s[a]&&s.hasOwnProperty(a)?(Array.isArray(s[a])||(s[a]=[s[a]]),s[a].push(t)):e.isArray(a,l,i)?s[a]=[t]:s[a]=t}}}return"string"==typeof n?n.length>0&&(s[e.textNodeName]=n):void 0!==n&&(s[e.textNodeName]=n),s}function z(t){const e=Object.keys(t);for(let t=0;t<e.length;t++){const i=e[t];if(":@"!==i)return i}}function J(t,e,i,n){if(e){const s=Object.keys(e),r=s.length;for(let o=0;o<r;o++){const r=s[o];n.isArray(r,i+"."+r,!0,!0)?t[r]=[e[r]]:t[r]=e[r]}}}function H(t,e){const{textNodeName:i}=e,n=Object.keys(t).length;return 0===n||!(1!==n||!t[i]&&"boolean"!=typeof t[i]&&0!==t[i])}class tt{constructor(t){this.externalEntities={},this.options=function(t){return Object.assign({},v,t)}(t)}parse(t,e){if("string"!=typeof t&&t.toString)t=t.toString();else if("string"!=typeof t)throw new Error("XML data is accepted in String or Bytes[] form.");if(e){!0===e&&(e={});const i=a(t,e);if(!0!==i)throw Error(`${i.err.msg}:${i.err.line}:${i.err.col}`)}const i=new D(this.options);i.addExternalEntities(this.externalEntities);const n=i.parseXml(t);return this.options.preserveOrder||void 0===n?n:K(n,this.options)}addEntity(t,e){if(-1!==e.indexOf("&"))throw new Error("Entity value can't have '&'");if(-1!==t.indexOf("&")||-1!==t.indexOf(";"))throw new Error("An entity must be set without '&' and ';'. Eg. use '#xD' for '&#xD;'");if("&"===e)throw new Error("An entity with value '&' is not permitted");this.externalEntities[t]=e}static getMetaDataSymbol(){return y.getMetaDataSymbol()}}function et(t,e){let i="";return e.format&&e.indentBy.length>0&&(i="\n"),it(t,e,"",i)}function it(t,e,i,n){let s="",r=!1;for(let o=0;o<t.length;o++){const a=t[o],l=nt(a);if(void 0===l)continue;let u="";if(u=0===i.length?l:`${i}.${l}`,l===e.textNodeName){let t=a[l];rt(u,e)||(t=e.tagValueProcessor(l,t),t=ot(t,e)),r&&(s+=n),s+=t,r=!1;continue}if(l===e.cdataPropName){r&&(s+=n),s+=`<![CDATA[${a[l][0][e.textNodeName]}]]>`,r=!1;continue}if(l===e.commentPropName){s+=n+`\x3c!--${a[l][0][e.textNodeName]}--\x3e`,r=!0;continue}if("?"===l[0]){const t=st(a[":@"],e),i="?xml"===l?"":n;let o=a[l][0][e.textNodeName];o=0!==o.length?" "+o:"",s+=i+`<${l}${o}${t}?>`,r=!0;continue}let h=n;""!==h&&(h+=e.indentBy);const d=n+`<${l}${st(a[":@"],e)}`,p=it(a[l],e,u,h);-1!==e.unpairedTags.indexOf(l)?e.suppressUnpairedNode?s+=d+">":s+=d+"/>":p&&0!==p.length||!e.suppressEmptyNode?p&&p.endsWith(">")?s+=d+`>${p}${n}</${l}>`:(s+=d+">",p&&""!==n&&(p.includes("/>")||p.includes("</"))?s+=n+e.indentBy+p+n:s+=p,s+=`</${l}>`):s+=d+"/>",r=!0}return s}function nt(t){const e=Object.keys(t);for(let i=0;i<e.length;i++){const n=e[i];if(t.hasOwnProperty(n)&&":@"!==n)return n}}function st(t,e){let i="";if(t&&!e.ignoreAttributes)for(let n in t){if(!t.hasOwnProperty(n))continue;let s=e.attributeValueProcessor(n,t[n]);s=ot(s,e),!0===s&&e.suppressBooleanAttributes?i+=` ${n.substr(e.attributeNamePrefix.length)}`:i+=` ${n.substr(e.attributeNamePrefix.length)}="${s}"`}return i}function rt(t,e){let i=(t=t.substr(0,t.length-e.textNodeName.length-1)).substr(t.lastIndexOf(".")+1);for(let n in e.stopNodes)if(e.stopNodes[n]===t||e.stopNodes[n]==="*."+i)return!0;return!1}function ot(t,e){if(t&&t.length>0&&e.processEntities)for(let i=0;i<e.entities.length;i++){const n=e.entities[i];t=t.replace(n.regex,n.val)}return t}const at={attributeNamePrefix:"@_",attributesGroupName:!1,textNodeName:"#text",ignoreAttributes:!0,cdataPropName:!1,format:!1,indentBy:"  ",suppressEmptyNode:!1,suppressUnpairedNode:!0,suppressBooleanAttributes:!0,tagValueProcessor:function(t,e){return e},attributeValueProcessor:function(t,e){return e},preserveOrder:!1,commentPropName:!1,unpairedTags:[],entities:[{regex:new RegExp("&","g"),val:"&amp;"},{regex:new RegExp(">","g"),val:"&gt;"},{regex:new RegExp("<","g"),val:"&lt;"},{regex:new RegExp("'","g"),val:"&apos;"},{regex:new RegExp('"',"g"),val:"&quot;"}],processEntities:!0,stopNodes:[],oneListGroup:!1};function lt(t){this.options=Object.assign({},at,t),!0===this.options.ignoreAttributes||this.options.attributesGroupName?this.isAttribute=function(){return!1}:(this.ignoreAttributesFn=$(this.options.ignoreAttributes),this.attrPrefixLen=this.options.attributeNamePrefix.length,this.isAttribute=dt),this.processTextOrObjNode=ut,this.options.format?(this.indentate=ht,this.tagEndChar=">\n",this.newLine="\n"):(this.indentate=function(){return""},this.tagEndChar=">",this.newLine="")}function ut(t,e,i,n){const s=this.j2x(t,i+1,n.concat(e));return void 0!==t[this.options.textNodeName]&&1===Object.keys(t).length?this.buildTextValNode(t[this.options.textNodeName],e,s.attrStr,i):this.buildObjectNode(s.val,e,s.attrStr,i)}function ht(t){return this.options.indentBy.repeat(t)}function dt(t){return!(!t.startsWith(this.options.attributeNamePrefix)||t===this.options.textNodeName)&&t.substr(this.attrPrefixLen)}lt.prototype.build=function(t){return this.options.preserveOrder?et(t,this.options):(Array.isArray(t)&&this.options.arrayNodeName&&this.options.arrayNodeName.length>1&&(t={[this.options.arrayNodeName]:t}),this.j2x(t,0,[]).val)},lt.prototype.j2x=function(t,e,i){let n="",s="";const r=i.join(".");for(let o in t)if(Object.prototype.hasOwnProperty.call(t,o))if(void 0===t[o])this.isAttribute(o)&&(s+="");else if(null===t[o])this.isAttribute(o)||o===this.options.cdataPropName?s+="":"?"===o[0]?s+=this.indentate(e)+"<"+o+"?"+this.tagEndChar:s+=this.indentate(e)+"<"+o+"/"+this.tagEndChar;else if(t[o]instanceof Date)s+=this.buildTextValNode(t[o],o,"",e);else if("object"!=typeof t[o]){const i=this.isAttribute(o);if(i&&!this.ignoreAttributesFn(i,r))n+=this.buildAttrPairStr(i,""+t[o]);else if(!i)if(o===this.options.textNodeName){let e=this.options.tagValueProcessor(o,""+t[o]);s+=this.replaceEntitiesValue(e)}else s+=this.buildTextValNode(t[o],o,"",e)}else if(Array.isArray(t[o])){const n=t[o].length;let r="",a="";for(let l=0;l<n;l++){const n=t[o][l];if(void 0===n);else if(null===n)"?"===o[0]?s+=this.indentate(e)+"<"+o+"?"+this.tagEndChar:s+=this.indentate(e)+"<"+o+"/"+this.tagEndChar;else if("object"==typeof n)if(this.options.oneListGroup){const t=this.j2x(n,e+1,i.concat(o));r+=t.val,this.options.attributesGroupName&&n.hasOwnProperty(this.options.attributesGroupName)&&(a+=t.attrStr)}else r+=this.processTextOrObjNode(n,o,e,i);else if(this.options.oneListGroup){let t=this.options.tagValueProcessor(o,n);t=this.replaceEntitiesValue(t),r+=t}else r+=this.buildTextValNode(n,o,"",e)}this.options.oneListGroup&&(r=this.buildObjectNode(r,o,a,e)),s+=r}else if(this.options.attributesGroupName&&o===this.options.attributesGroupName){const e=Object.keys(t[o]),i=e.length;for(let s=0;s<i;s++)n+=this.buildAttrPairStr(e[s],""+t[o][e[s]])}else s+=this.processTextOrObjNode(t[o],o,e,i);return{attrStr:n,val:s}},lt.prototype.buildAttrPairStr=function(t,e){return e=this.options.attributeValueProcessor(t,""+e),e=this.replaceEntitiesValue(e),this.options.suppressBooleanAttributes&&"true"===e?" "+t:" "+t+'="'+e+'"'},lt.prototype.buildObjectNode=function(t,e,i,n){if(""===t)return"?"===e[0]?this.indentate(n)+"<"+e+i+"?"+this.tagEndChar:this.indentate(n)+"<"+e+i+this.closeTag(e)+this.tagEndChar;{let s="</"+e+this.tagEndChar,r="";return"?"===e[0]&&(r="?",s=""),!i&&""!==i||-1!==t.indexOf("<")?!1!==this.options.commentPropName&&e===this.options.commentPropName&&0===r.length?this.indentate(n)+`\x3c!--${t}--\x3e`+this.newLine:this.indentate(n)+"<"+e+i+r+this.tagEndChar+t+this.indentate(n)+s:this.indentate(n)+"<"+e+i+r+">"+t+s}},lt.prototype.closeTag=function(t){let e="";return-1!==this.options.unpairedTags.indexOf(t)?this.options.suppressUnpairedNode||(e="/"):e=this.options.suppressEmptyNode?"/":`></${t}`,e},lt.prototype.buildTextValNode=function(t,e,i,n){if(!1!==this.options.cdataPropName&&e===this.options.cdataPropName)return this.indentate(n)+`<![CDATA[${t}]]>`+this.newLine;if(!1!==this.options.commentPropName&&e===this.options.commentPropName)return this.indentate(n)+`\x3c!--${t}--\x3e`+this.newLine;if("?"===e[0])return this.indentate(n)+"<"+e+i+"?"+this.tagEndChar;{let s=this.options.tagValueProcessor(e,t);return s=this.replaceEntitiesValue(s),""===s?this.indentate(n)+"<"+e+i+this.closeTag(e)+this.tagEndChar:this.indentate(n)+"<"+e+i+">"+s+"</"+e+this.tagEndChar}},lt.prototype.replaceEntitiesValue=function(t){if(t&&t.length>0&&this.options.processEntities)for(let e=0;e<this.options.entities.length;e++){const i=this.options.entities[e];t=t.replace(i.regex,i.val)}return t};const pt={validate:a};module.exports=e})();
 
 /***/ }),
 
@@ -86886,7 +87034,7 @@ __nccwpck_require__.a(__webpack_module__, async (__webpack_handle_async_dependen
 /* harmony export */ __nccwpck_require__.d(__webpack_exports__, {
 /* harmony export */   X: () => (/* binding */ getRollingMinor)
 /* harmony export */ });
-/* harmony import */ var detsys_ts__WEBPACK_IMPORTED_MODULE_0__ = __nccwpck_require__(99585);
+/* harmony import */ var detsys_ts__WEBPACK_IMPORTED_MODULE_0__ = __nccwpck_require__(72901);
 /* harmony import */ var _actions_core__WEBPACK_IMPORTED_MODULE_1__ = __nccwpck_require__(16966);
 /* harmony import */ var _actions_github__WEBPACK_IMPORTED_MODULE_2__ = __nccwpck_require__(84903);
 // src/index.ts
@@ -87000,7 +87148,7 @@ __webpack_async_result__();
 
 /***/ }),
 
-/***/ 99585:
+/***/ 72901:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __nccwpck_require__) => {
 
 
@@ -87012,15 +87160,20 @@ __nccwpck_require__.d(__webpack_exports__, {
 
 // UNUSED EXPORTS: DetSysAction, IdsHost, platform
 
-;// CONCATENATED MODULE: ./node_modules/.pnpm/detsys-ts@https+++codeload.github.com+DeterminateSystems+detsys-ts+tar.gz+285768c0d657f_c9f3de82f778b67727761493310aa570/node_modules/detsys-ts/dist/chunk-CTAAG5j7.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/detsys-ts@https+++codeload.github.com+DeterminateSystems+detsys-ts+tar.gz+f335f0d0939f2_6fc1e86e704ad6e8ec4532a003a36ae8/node_modules/detsys-ts/dist/chunk-C6wwvPpM.mjs
 //#region rolldown:runtime
 var __defProp = Object.defineProperty;
-var __export = (all) => {
+var __export = (all, symbols) => {
 	let target = {};
-	for (var name in all) __defProp(target, name, {
-		get: all[name],
-		enumerable: true
-	});
+	for (var name in all) {
+		__defProp(target, name, {
+			get: all[name],
+			enumerable: true
+		});
+	}
+	if (symbols) {
+		__defProp(target, Symbol.toStringTag, { value: "Module" });
+	}
 	return target;
 };
 
@@ -87052,7 +87205,7 @@ var cache = __nccwpck_require__(31866);
 const external_node_child_process_namespaceObject = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("node:child_process");
 ;// CONCATENATED MODULE: external "node:path"
 const external_node_path_namespaceObject = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("node:path");
-;// CONCATENATED MODULE: ./node_modules/.pnpm/detsys-ts@https+++codeload.github.com+DeterminateSystems+detsys-ts+tar.gz+285768c0d657f_c9f3de82f778b67727761493310aa570/node_modules/detsys-ts/dist/index.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/detsys-ts@https+++codeload.github.com+DeterminateSystems+detsys-ts+tar.gz+f335f0d0939f2_6fc1e86e704ad6e8ec4532a003a36ae8/node_modules/detsys-ts/dist/index.mjs
 
 
 
@@ -87072,6 +87225,16 @@ const external_node_path_namespaceObject = __WEBPACK_EXTERNAL_createRequire(impo
 
 
 //#region src/linux-release-info.ts
+/*!
+* linux-release-info
+* Get Linux release info (distribution name, version, arch, release, etc.)
+* from '/etc/os-release' or '/usr/lib/os-release' files and from native os
+* module. On Windows and Darwin platforms it only returns common node os module
+* info (platform, hostname, release, and arch)
+*
+* Licensed under MIT
+* Copyright (c) 2018-2020 [Samuel Carreira]
+*/
 const readFileAsync = (0,external_node_util_.promisify)(external_node_fs_.readFile);
 const linuxReleaseInfoOptionsDefaults = {
 	mode: "async",
@@ -87280,6 +87443,10 @@ function stringifyError(e) {
 
 //#endregion
 //#region src/backtrace.ts
+/**
+* @packageDocumentation
+* Collects backtraces for executables for diagnostics
+*/
 const START_SLOP_SECONDS = 5;
 async function collectBacktraces(prefixes, programNameDenyList, startTimestampMs) {
 	if (isMacOS) return await collectBacktracesMacOS(prefixes, programNameDenyList, startTimestampMs);
@@ -87321,8 +87488,7 @@ async function collectBacktracesMacOS(prefixes, programNameDenyList, startTimest
 		const doGzip = promisify(gzip);
 		for (const fileName of fileNames) try {
 			if ((await stat(`${dir}/${fileName}`)).ctimeMs >= startTimestampMs) {
-				const logText = await readFile(`${dir}/${fileName}`);
-				const buf = await doGzip(logText);
+				const buf = await doGzip(await readFile(`${dir}/${fileName}`));
 				backtraces.set(`backtrace_value_${source}_${fileName}`, buf.toString("base64"));
 			}
 		} catch (innerError) {
@@ -87461,6 +87627,10 @@ function hashEnvironmentVariables(prefix, variables) {
 
 //#endregion
 //#region src/ids-host.ts
+/**
+* @packageDocumentation
+* Identifies and discovers backend servers for install.determinate.systems
+*/
 const DEFAULT_LOOKUP = "_detsys_ids._tcp.install.determinate.systems.";
 const ALLOWED_SUFFIXES = (/* unused pure expression or super */ null && ([".install.determinate.systems", ".install.detsys.dev"]));
 const DEFAULT_IDS_HOST = "https://install.determinate.systems";
@@ -87622,7 +87792,11 @@ function weightedRandom(records) {
 
 //#endregion
 //#region src/inputs.ts
-var inputs_exports = __export({
+/**
+* @packageDocumentation
+* Helpers for getting values from an Action's configuration.
+*/
+var inputs_exports = /* @__PURE__ */ __export({
 	getArrayOfStrings: () => getArrayOfStrings,
 	getArrayOfStringsOrNull: () => getArrayOfStringsOrNull,
 	getBool: () => getBool,
@@ -87652,8 +87826,7 @@ const getBoolOrUndefined = (name) => {
 * all whitespace is removed from the string before converting to an array.
 */
 const getArrayOfStrings = (name, separator) => {
-	const original = getString(name);
-	return handleString(original, separator);
+	return handleString(getString(name), separator);
 };
 /**
 * Convert a string input into an array of strings or `null` if no value is set.
@@ -87710,7 +87883,11 @@ const getStringOrUndefined = (name) => {
 
 //#endregion
 //#region src/platform.ts
-var platform_exports = __export({
+/**
+* @packageDocumentation
+* Helpers for determining system attributes of the current runner.
+*/
+var platform_exports = /* @__PURE__ */ __export({
 	getArchOs: () => getArchOs,
 	getNixPlatform: () => getNixPlatform
 });
@@ -87770,6 +87947,10 @@ function noisilyGetInput(suffix, legacyPrefix) {
 
 //#endregion
 //#region src/index.ts
+/**
+* @packageDocumentation
+* Determinate Systems' TypeScript library for creating GitHub Actions logic.
+*/
 const pkgVersion = "1.0";
 const EVENT_BACKTRACES = "backtrace";
 const EVENT_EXCEPTION = "exception";
@@ -87805,7 +87986,7 @@ const PROGRAM_NAME_CRASH_DENY_LIST = (/* unused pure expression or super */ null
 ]));
 const determinateStateDir = "/var/lib/determinate";
 const determinateIdentityFile = external_node_path_namespaceObject.join(determinateStateDir, "identity.json");
-const isRoot = external_node_os_.userInfo().uid === 0;
+const isRoot = typeof process.geteuid === "function" && process.geteuid() === 0;
 /** Create the Determinate state directory by escalating via sudo */
 async function sudoEnsureDeterminateStateDir() {
 	const code = await exec$1.exec("sudo", [
@@ -87863,14 +88044,13 @@ var DetSysAction = class {
 			project: this.actionOptions.name,
 			ids_project: this.actionOptions.idsProjectName
 		};
-		const params = [
+		for (const [target, env] of [
 			["github_action_ref", "GITHUB_ACTION_REF"],
 			["github_action_repository", "GITHUB_ACTION_REPOSITORY"],
 			["github_event_name", "GITHUB_EVENT_NAME"],
 			["$os", "RUNNER_OS"],
 			["arch", "RUNNER_ARCH"]
-		];
-		for (const [target, env] of params) {
+		]) {
 			const value = process.env[env];
 			if (value) this.facts[target] = value;
 		}
@@ -88011,8 +88191,7 @@ var DetSysAction = class {
 			const doGzip = promisify(gzip);
 			const exceptionContext = /* @__PURE__ */ new Map();
 			for (const [attachmentLabel, filePath] of this.exceptionAttachments) try {
-				const logText = readFileSync(filePath);
-				const buf = await doGzip(logText);
+				const buf = await doGzip(readFileSync(filePath));
 				exceptionContext.set(`staple_value_${attachmentLabel}`, buf.toString("base64"));
 			} catch (innerError) {
 				exceptionContext.set(`staple_failure_${attachmentLabel}`, stringifyError$1(innerError));
@@ -88404,7 +88583,7 @@ function makeOptionsConfident(actionOptions) {
 
 //#endregion
 
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=index.mjs.map
 
 /***/ }),
 
