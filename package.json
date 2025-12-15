@@ -31,12 +31,12 @@
     "@actions/exec": "^1.1.1",
     "@actions/github": "^6.0.1",
     "detsys-ts": "github:DeterminateSystems/detsys-ts",
-    "got": "^14.5.0",
-    "type-fest": "^5.1.0"
+    "got": "^14.6.5",
+    "type-fest": "^5.3.1"
   },
   "devDependencies": {
-    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
-    "@types/node": "^24.7.2",
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@types/node": "^20.19.27",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@vercel/ncc": "^0.38.4",
     "eslint": "^8.57.1",
@@ -44,9 +44,9 @@
     "eslint-plugin-github": "^4.10.2",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-prettier": "^5.5.4",
-    "prettier": "^3.6.2",
-    "tsup": "^8.5.0",
+    "prettier": "^3.7.4",
+    "tsup": "^8.5.1",
     "typescript": "^5.9.3",
-    "vitest": "^4.0.0"
+    "vitest": "^3.2.4"
   }
 }

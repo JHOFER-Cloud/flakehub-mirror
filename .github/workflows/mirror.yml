@@ -168,6 +168,12 @@ jobs:
           #   too-big: true
           #   run-on: UbuntuLatest32Cores128G
 
+          # - repo: nix-community/home-manager
+          #   branch: release-25.11
+          #   rolling-minor: 2511
+          #   too-big: true
+          #   run-on: UbuntuLatest32Cores128G
+
     runs-on: ${{ matrix.run-on || 'ubuntu-latest' }}
     permissions:
       contents: write # In order to upload artifacts to GitHub releases
