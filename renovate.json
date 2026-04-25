@@ -12,7 +12,7 @@
   "packageRules": [
     {
       "groupName": "ESLint packages",
-      "matchPackagePatterns": ["^eslint", "@typescript-eslint"]
+      "matchPackageNames": ["/^eslint/", "/@typescript-eslint/"]
     }
   ]
 }
