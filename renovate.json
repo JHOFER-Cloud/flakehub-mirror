@@ -1,18 +1,4 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "nix": {
-    "enabled": true
-  },
-  "lockFileMaintenance": {
-    "enabled": true,
-    "automerge": true,
-    "schedule": ["at any time"]
-  },
-  "automergeType": "pr",
-  "packageRules": [
-    {
-      "groupName": "ESLint packages",
-      "matchPackagePatterns": ["^eslint", "@typescript-eslint"]
-    }
-  ]
+  "enabled": false
 }

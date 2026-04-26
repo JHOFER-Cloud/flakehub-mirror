@@ -4,29 +4,43 @@
 
   inputs.nixpkgs.url = "https://flakehub.com/f/JHOFER-Cloud/NixOS-nixpkgs/0.1.tar.gz";
 
-  outputs = {self, ...} @ inputs: let
-    supportedSystems = [
-      "x86_64-linux"
-      "aarch64-darwin"
-    ];
-    forEachSupportedSystem = f:
-      inputs.nixpkgs.lib.genAttrs supportedSystems (
-        system: f {pkgs = import inputs.nixpkgs {inherit system;};}
-      );
-  in {
-    formatter = forEachSupportedSystem ({pkgs}: pkgs.nixfmt-rfc-style);
+  outputs =
+    { self, ... }@inputs:
+    let
+      supportedSystems = [
+        "x86_64-linux"
+        "aarch64-darwin"
+      ];
+      forEachSupportedSystem =
+        f:
+        inputs.nixpkgs.lib.genAttrs supportedSystems (
+          system:
+          f {
+            inherit system;
+            pkgs = import inputs.nixpkgs { inherit system; };
+          }
+        );
+    in
+    {
+      formatter = forEachSupportedSystem ({ pkgs, ... }: pkgs.nixfmt);
 
-    devShells = forEachSupportedSystem (
-      {pkgs}: {
-        default = pkgs.mkShell {
-          packages = with pkgs; [
-            nodejs_latest
-            nodePackages_latest.pnpm
-            nodePackages_latest.typescript-language-server
-            self.formatter.${system}
-          ];
-        };
-      }
-    );
-  };
+      devShells = forEachSupportedSystem (
+        { pkgs, system }:
+        {
+          default = pkgs.mkShell {
+            packages = with pkgs; [
+              nodejs_latest
+
+              self.formatter.${system}
+
+              # Keep people from accidentally running pnpm
+              (writeScriptBin "pnpm" ''
+                echo "pnpm is no longer used in this repo; use npm instead"
+                exit 1
+              '')
+            ];
+          };
+        }
+      );
+    };
 }
