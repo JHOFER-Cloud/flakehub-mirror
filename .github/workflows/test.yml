@@ -28,10 +28,14 @@ jobs:
           repository: ${{ matrix.repo }}
           ref: ${{ steps.tagfetch.outputs.tag }}
 
+      - name: Set FlakeHub name
+        id: flake-name
+        run: echo "name=jhofer-cloud/$(echo '${{ matrix.repo }}' | tr '/' '-')" >> $GITHUB_OUTPUT
+
       - name: Release to FlakeHub
         uses: DeterminateSystems/flakehub-push@detsys-ts
         with:
-          mirror: true
+          name: ${{ steps.flake-name.outputs.name }}
           visibility: public
           repository: ${{ matrix.repo }}
           tag: ${{ steps.tagfetch.outputs.tag }}
@@ -62,10 +66,14 @@ jobs:
           repository: ${{ matrix.repo }}
           ref: ${{ matrix.branch }}
 
+      - name: Set FlakeHub name
+        id: flake-name-rolling
+        run: echo "name=jhofer-cloud/$(echo '${{ matrix.repo }}' | tr '/' '-')" >> $GITHUB_OUTPUT
+
       - name: Release to FlakeHub
         uses: DeterminateSystems/flakehub-push@detsys-ts
         with:
-          mirror: true
+          name: ${{ steps.flake-name-rolling.outputs.name }}
           visibility: public
           repository: ${{ matrix.repo }}
           rolling: true

@@ -35,11 +35,15 @@ jobs:
           repository: ${{ inputs.repo }}
           ref: ${{ inputs.branch }}
 
+      - name: Set FlakeHub name
+        id: flake-name
+        run: echo "name=jhofer-cloud/$(echo '${{ inputs.repo }}' | tr '/' '-')" >> $GITHUB_OUTPUT
+
       - uses: "DeterminateSystems/nix-installer-action@main"
       - uses: "DeterminateSystems/flakehub-cache-action@main"
       - uses: "DeterminateSystems/flakehub-push@main"
         with:
-          mirror: true
+          name: ${{ steps.flake-name.outputs.name }}
           visibility: public
           repository: ${{ inputs.repo }}
           rolling: true

@@ -1,0 +1,121 @@
+name: Sync Fork with Upstream
+
+on:
+  schedule:
+    - cron: "0 7 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      BRANCH_NAME: sync-upstream
+    steps:
+      - name: Generate GitHub App Token
+        id: generate_token
+        uses: actions/create-github-app-token@d72941d797fd3113feb6b93fd0dec494b13a2547 # v1
+        with:
+          app-id: ${{ secrets.UPSTREAM_SYNC_APP_ID }}
+          private-key: ${{ secrets.UPSTREAM_SYNC_PRIV_KEY }}
+
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          token: ${{ steps.generate_token.outputs.token }}
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Add upstream remote and fetch
+        run: |
+          git remote add upstream https://github.com/DeterminateSystems/flakehub-mirror.git
+          git fetch upstream
+
+      - name: Check for new upstream commits
+        id: check
+        run: |
+          UPSTREAM_SHA=$(git rev-parse upstream/main)
+          echo "upstream_sha=$UPSTREAM_SHA" >> "$GITHUB_OUTPUT"
+
+          if git merge-base --is-ancestor upstream/main HEAD; then
+            echo "has_updates=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_updates=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Check for existing PR
+        if: steps.check.outputs.has_updates == 'true'
+        id: existing_pr
+        env:
+          GH_TOKEN: ${{ steps.generate_token.outputs.token }}
+        run: |
+          PR_NUMBER=$(gh pr list --repo "${{ github.repository }}" --head "$BRANCH_NAME" --json number --jq '.[0].number' || echo "")
+          echo "pr_number=$PR_NUMBER" >> "$GITHUB_OUTPUT"
+
+      - name: Create or update sync branch
+        if: steps.check.outputs.has_updates == 'true'
+        id: merge
+        run: |
+          git checkout -B "$BRANCH_NAME" HEAD
+          if git merge upstream/main --no-edit; then
+            echo "conflicts=false" >> "$GITHUB_OUTPUT"
+          else
+            git merge --abort
+            echo "conflicts=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Push sync branch
+        if: steps.check.outputs.has_updates == 'true'
+        run: |
+          if [ "${{ steps.merge.outputs.conflicts }}" = "false" ]; then
+            git push origin "$BRANCH_NAME" --force
+          else
+            # Push upstream/main directly so the PR shows what needs merging
+            git checkout -B "$BRANCH_NAME" upstream/main
+            git push origin "$BRANCH_NAME" --force
+          fi
+
+      - name: Create or update Pull Request
+        if: steps.check.outputs.has_updates == 'true'
+        env:
+          GH_TOKEN: ${{ steps.generate_token.outputs.token }}
+        run: |
+          if [ "${{ steps.merge.outputs.conflicts }}" = "false" ]; then
+            TITLE="chore: sync upstream"
+            BODY="Automated sync from [DeterminateSystems/flakehub-mirror](https://github.com/DeterminateSystems/flakehub-mirror) main.
+
+          Merged cleanly — safe to auto-merge."
+          else
+            TITLE="chore: sync upstream (conflicts)"
+            BODY="Automated sync from [DeterminateSystems/flakehub-mirror](https://github.com/DeterminateSystems/flakehub-mirror) main.
+
+          ⚠️ Merge conflicts detected — manual resolution required before merging."
+          fi
+
+          if [ -n "${{ steps.existing_pr.outputs.pr_number }}" ]; then
+            gh pr edit ${{ steps.existing_pr.outputs.pr_number }} \
+              --repo "${{ github.repository }}" \
+              --title "$TITLE" \
+              --body "$BODY"
+          else
+            gh pr create --repo "${{ github.repository }}" \
+              --title "$TITLE" \
+              --body "$BODY" \
+              --base main \
+              --head "$BRANCH_NAME"
+          fi
+
+          if [ "${{ steps.merge.outputs.conflicts }}" = "false" ]; then
+            gh pr merge --auto --merge "$BRANCH_NAME" --repo "${{ github.repository }}"
+          fi
+
+      - name: No updates
+        if: steps.check.outputs.has_updates == 'false'
+        run: echo "✅ Fork is already up to date with upstream"
