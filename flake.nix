@@ -2,7 +2,7 @@
 {
   description = "Development environment for the flakehub-mirror Action";
 
-  inputs.nixpkgs.url = "https://flakehub.com/f/JHOFER-Cloud/NixOS-nixpkgs/0.1.tar.gz";
+  inputs.nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.1";
 
   outputs =
     { self, ... }@inputs:
